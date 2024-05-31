@@ -1,4 +1,6 @@
 site_name: Project Norn
+site_description: Serralq's personal blog
+site_author: Serralq
 
 theme:
   name: material
