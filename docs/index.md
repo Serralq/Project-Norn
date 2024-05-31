@@ -39,6 +39,7 @@ template:
 </div>
 
 ## Projects
+<!-- Add Reds in Roam/Norn -->
 
 === "Tech"
 
@@ -65,3 +66,11 @@ template:
         * [ ] Get tools
             * [ ] Magnifying glass
         * [ ] Research type of architect nibs
+
+=== "Timesheets"
+
+    ??? danger "Reds"
+        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+    ??? quote "Whites"
+        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=1434088627&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
