@@ -1,56 +1,88 @@
 site_name: Project Norn
+
 theme:
   name: material
   features:
     - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
+    - navigation.tracking
+    - navigation.path
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
     - content.code.copy
+
   language: en
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: teal
-      accent: purple
-    - scheme: slate
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-      primary: teal
-      accent: lime
+    scheme: slate
+    primary: custom
+    accent: light blue
+  font:
+    text: JetBrains Mono
+  icon:
+    logo: simple/bookstack
+  custom_dir: docs/overrides
+
+docs_dir: "docs"
+
+draft_docs: drafts/
+
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/highlight.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Serralq
 
 plugins:
   - social
   - search
-
-extra:
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/Serralq
+  - offline
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
   - admonition
-  - pymdownx.arithmatex:
-      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: "#"
+  - tables
+  - pymdownx.betterem
+  - pymdownx.details
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
-copyright: |
-  &copy; 2023 <a href="https://github.com/Serralq"  target="_blank" rel="noopener">Serralq</a>
+nav:
+  - Index: index.md
+  - Tech:
+      - tech/index.md
+  - Stationaries:
+      - stationary/index.md
+  - Travels:
+      - travels/index.md
+  - About:
+      - about/index.md
+      - Why Bother Writing: about/about.md

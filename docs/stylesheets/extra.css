@@ -1,0 +1,160 @@
+/* Variables */
+.twemoji {
+  --md-icon-size: 1.3em !important;
+}
+@hermit {
+  font-family: "Hermit";
+  src: "./docs/stylesheets/fonts/Hermit/Hermit-Regular.otf";
+}
+
+/* Removes the top level header */
+.hidden-header {
+  display: none;
+}
+.hidden-header-cleanup {
+  margin-top: -40px;
+}
+
+h1 {
+  margin-bottom: 0px !important;
+}
+/* Linked cards */
+.card-link {
+  color: var(--md-typeset-color) !important;
+  transition:
+    background-color 0.25s,
+    color 125ms,
+    border 0.25s,
+    box-shadow 0.25s !important;
+}
+.card-link.deep-purple:hover {
+  background-color: #7e56c2 !important;
+}
+.card-link.brown:hover {
+  background-color: #795649 !important;
+}
+.card-link.green:hover {
+  background-color: #4cae4f !important;
+}
+.card-link.blue-grey:hover {
+  background-color: #546d78 !important;
+}
+
+/* Use dashed unordered lists */
+.md-content li:not(.task-list-item)::marker {
+  content: "- ";
+  font-size: 1.2em;
+}
+
+/* Smaller grids */
+.grid-smaller {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 12rem), 1fr)
+  ) !important;
+}
+
+/* Add underline under headers */
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+h6:after {
+  content: " ";
+  display: block;
+  border: 1px solid var(--md-typeset-color);
+}
+
+/* Poor mans progress bar */
+
+.border-5plus:after {
+  content: " ";
+  display: block;
+  border: 1px solid #f50057;
+  width: 5%;
+  animation: plus5 2s ease forwards;
+}
+@keyframes plus5 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 5%;
+  }
+}
+.border-20plus:after {
+  content: " ";
+  display: block;
+  border: 1px solid #ff1744;
+  width: 20%;
+  animation: plus20 2s ease forwards;
+}
+@keyframes plus20 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+.border-40plus:after {
+  content: " ";
+  display: block;
+  border: 1px solid #ff5252;
+  width: 40%;
+  animation: plus40 2s ease forwards;
+}
+@keyframes plus40 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.border-60plus:after {
+  content: " ";
+  display: block;
+  border: 1px solid #ff9100;
+  width: 60%;
+  animation: plus60 2s ease forwards;
+}
+@keyframes plus60 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+.border-80plus:after {
+  content: " ";
+  display: block;
+  border: 1px solid #fbc02d;
+  width: 80%;
+  animation: plus80 2s ease forwards;
+}
+@keyframes plus80 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.border-100plus:after {
+  content: " ";
+  display: block;
+  border: 1px solid #00e676;
+  width: 100%;
+  animation: plus100 2s ease forwards;
+}
+@keyframes plus100 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
