@@ -38,7 +38,7 @@ template:
   </a>
 </div>
 
-## Projects (as of 5/30)
+## Projects
 
 === "Tech"
 
