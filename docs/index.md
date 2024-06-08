@@ -47,12 +47,16 @@ template:
     {: .border-60plus }
     ??? note "Tasks"
         * [ ] Check maintainability
+        * [ ] Write another article about time management
     * Build server pc [80%]
     {: .border-80plus }
     ??? note "Tasks"
         * [X] Choose parts
         * [X] Create requirements
         * [ ] Build the actual pc
+    * Re-build [Chocofi](https://github.com/pashutk/chocofi) keyboard
+        * [ ] Log previous issues
+        * [ ] Order parts
 
 === "Japanese"
 
@@ -69,6 +73,7 @@ template:
     {: .border-5plus }
     ??? note "Tasks"
         * [X] Try naginata style nib
+        * [ ] Order parts from Aliexpress
         * [ ] Photograph current nibs
         * [ ] Photograph current inks
         * [ ] Get parts
