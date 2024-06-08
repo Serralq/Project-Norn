@@ -54,6 +54,15 @@ template:
         * [X] Create requirements
         * [ ] Build the actual pc
 
+=== "Japanese"
+
+    * Read Bunpro/N3 grammer
+    * Read [ましろ色シンフォニー](https://vndb.org/v1552)
+    {: .border-5plus }
+    ??? note "Tasks"
+        * [X] Setup Texthooker
+        * [ ] Read
+
 === "Stationaries"
 
     * Grind custom architect nib [5%]
@@ -67,10 +76,15 @@ template:
             * [ ] Magnifying glass
         * [ ] Research type of architect nibs
 
-=== "Timesheets"
+=== "Input Logs"
 
-    ??? danger "Reds"
+    ??? Dailies
+        * [ ] Daily Japanese/Anki
+        * [ ] Daily Japanese/Bunpro
+
+    ??? success "Chart"
+        <iframe width="950" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+
+    ??? example "Table"
         <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
-    ??? quote "Whites"
-        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=1434088627&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
