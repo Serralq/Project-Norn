@@ -41,12 +41,14 @@ template:
 ## Projects
 <!-- Add Reds in Roam/Norn -->
 
-=== "Tech"
+=== "Tech {3}" 
+
+    Deliverables (MVP):
 
     * Create blog [60%]
     {: .border-60plus }
     ??? note "Tasks"
-        * [ ] Check maintainability
+        * [X] Check maintainability
         * [ ] Write another article about time management
     * Build server pc [80%]
     {: .border-80plus }
@@ -55,10 +57,14 @@ template:
         * [X] Create requirements
         * [ ] Build the actual pc
     * Re-build [Chocofi](https://github.com/pashutk/chocofi) keyboard
+    {: .border-80plus }
+    ??? note "Tasks"
         * [ ] Log previous issues
         * [ ] Order parts
 
-=== "Japanese"
+=== "Japanese {2}" 
+
+    Deliverables (MVP):
 
     * Read Bunpro/N3 grammer
     * Read [ましろ色シンフォニー](https://vndb.org/v1552)
@@ -67,7 +73,9 @@ template:
         * [X] Setup Texthooker
         * [ ] Read
 
-=== "Stationaries"
+=== "Stationaries {1}" 
+
+    Deliverables (MVP):
 
     * Grind custom architect nib [5%]
     {: .border-5plus }
@@ -81,7 +89,7 @@ template:
             * [ ] Magnifying glass
         * [ ] Research type of architect nibs
 
-=== "Input Logs"
+=== "Input Logs {Max: 5}" 
 
     ??? Dailies
         * [ ] Daily Japanese/Anki
