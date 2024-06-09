@@ -46,6 +46,7 @@ plugins:
   - social
   - search
   - offline
+  - glightbox
 
 markdown_extensions:
   - admonition
