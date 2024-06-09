@@ -46,18 +46,25 @@ template:
     Deliverables (MVP):
 
     * Create blog [60%]
-    {: .border-60plus }
+    {: .border-80plus }
     ??? note "Tasks"
         * [X] Check maintainability
         * [ ] Write another article about time management
     * Build server pc [80%]
-    {: .border-80plus }
+    {: .border-60plus }
     ??? note "Tasks"
         * [X] Choose parts
         * [X] Create requirements
+        * [ ] Create PiKVM
+            * [ ] Get HDMI cables
+            * [X] Physically crete PiKVM
+            * [ ] Flash PiKVM
         * [ ] Build the actual pc
+            * [ ] Power on pc
+            * [ ] Use PiKVM to flash bios
+            * [ ] Install Poxmox
     * Re-build [Chocofi](https://github.com/pashutk/chocofi) keyboard
-    {: .border-80plus }
+    {: .border-5plus }
     ??? note "Tasks"
         * [ ] Log previous issues
         * [ ] Order parts
@@ -82,12 +89,13 @@ template:
     ??? note "Tasks"
         * [X] Try naginata style nib
         * [ ] Order parts from Aliexpress
-        * [ ] Photograph current nibs
-        * [ ] Photograph current inks
-        * [ ] Get parts
-        * [ ] Get tools
             * [ ] Magnifying glass
-        * [ ] Research type of architect nibs
+        * [ ] Create blog posts
+            * [ ] Photograph current nibs
+            * [ ] Photograph current inks
+        * [X] Research type of architect nibs
+        * [ ] Try out pen nibs
+            * [ ] Visit Miami pen show
 
 === "Input Logs {Max: 5}" 
 
