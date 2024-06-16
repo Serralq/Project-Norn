@@ -38,8 +38,50 @@ template:
   </a>
 </div>
 
+## Timeline
+
+=== "2024"
+
+``` mermaid
+gantt
+    dateFormat YY-MM-DD
+    axisFormat %m-%d
+    tickInterval 1week
+    todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
+    section Travels
+        DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
+
+    section Tech
+        Blogging                  :active,     t1, 24-05-31, 24-06-17
+        Server PC                 :            t2, 24-06-04, 31d
+        Chocofi                   :            t3, 24-06-04, 31d
+
+    section Japanese
+        BunproN3                  :active,     j1, 24-06-01, 24-06-15
+    
+    section Stationaries
+        Architect Nib             :            s1, 24-06-15, 31d
+
+    
+```
+
 ## Projects
 <!-- Add Reds in Roam/Norn -->
+
+=== "Input Logs {Max: 5}" 
+
+    !!! Dailies
+        * [ ] Daily Japanese/Anki
+        * [ ] Daily Japanese/Bunpro
+
+    ??? success "Chart (Warning: Light mode)"
+        <iframe width="750" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+
+    ??? success "Historical Charts"
+        For now, empty
+
+    ??? example "Table (Warning: Light mode)"
+        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 === "Tech {3}" 
 
@@ -96,19 +138,3 @@ template:
         * [X] Research type of architect nibs
         * [ ] Try out pen nibs
             * [ ] Visit Miami pen show
-
-=== "Input Logs {Max: 5}" 
-
-    ??? Dailies
-        * [ ] Daily Japanese/Anki
-        * [ ] Daily Japanese/Bunpro
-
-    ??? success "Chart"
-        <iframe width="950" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
-
-    ??? success "Historical Charts"
-        For now, empty
-
-    ??? example "Table"
-        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
