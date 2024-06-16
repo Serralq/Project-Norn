@@ -47,6 +47,7 @@ plugins:
   - search
   - offline
   - glightbox
+  - autolinks
 
 markdown_extensions:
   - admonition
