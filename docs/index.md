@@ -40,7 +40,9 @@ template:
 
 ## Timeline
 
-=== "2024"
+=== "2024~Q3"
+
+
 
 ``` mermaid
 gantt
@@ -57,31 +59,35 @@ gantt
         Chocofi                   :            t3, 24-06-04, 31d
 
     section Japanese
-        BunproN3                  :active,     j1, 24-06-01, 24-06-15
+        Bunpro/N3                  :active,     j1, 24-06-01, 24-06-15
     
     section Stationaries
         Architect Nib             :            s1, 24-06-15, 31d
-
-    
 ```
+
+??? success "Chart (Warning: Light mode)"
+    
+    === "Visual"
+
+        <iframe width="750" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+
+    === "Historical"
+
+         For now, empty
+   
+    === "Raw Table"
+
+        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
 
 ## Projects
 <!-- Add Reds in Roam/Norn -->
 
-=== "Input Logs {Max: 5}" 
+=== "Dailies {Max: 5}" 
 
-    !!! Dailies
-        * [ ] Daily Japanese/Anki
-        * [ ] Daily Japanese/Bunpro
+    * [ ] Daily Japanese/Anki
+    * [ ] Daily Japanese/Bunpro
 
-    ??? success "Chart (Warning: Light mode)"
-        <iframe width="750" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
-
-    ??? success "Historical Charts"
-        For now, empty
-
-    ??? example "Table (Warning: Light mode)"
-        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 === "Tech {3}" 
 
