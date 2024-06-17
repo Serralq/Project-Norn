@@ -41,8 +41,7 @@ template:
 ## Timeline
 
 === "2024~Q3"
-
-
+<div class="margin-bot-neg"></div>
 
 ``` mermaid
 gantt
@@ -64,6 +63,8 @@ gantt
     section Stationaries
         Architect Nib             :            s1, 24-06-15, 31d
 ```
+
+<div class="margin-bot-neg"></div>
 
 ??? success "Chart (Warning: Light mode)"
     

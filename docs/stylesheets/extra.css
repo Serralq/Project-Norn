@@ -158,3 +158,8 @@ h6:after {
     width: 100%;
   }
 }
+
+/* Custom application */
+.margin-bot-neg {
+  margin-bottom: -20px;
+}
