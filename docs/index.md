@@ -55,7 +55,8 @@ template:
             'primaryBorderColor': '#16181D',
             'tertiaryColor': '#546d78',
             'tertiaryTextColor': '#E2E4E9D1',
-            'textColor': '#E2E4E9D1'
+            'textColor': '#E2E4E9D1',
+            'noteTextColor': '#E2E4E9D1'
         }
       }
     }%%
@@ -64,19 +65,28 @@ template:
         axisFormat %m-%d
         tickInterval 1week
         todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
+        
+        section Meta
+            ReAssessment              :milestone,  m1, 24-06-26, 0d
+
         section Travels
             DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
     
         section Tech
-            Blogging                  :active,     t1, 24-05-31, 24-06-17
-            Server PC                 :            t2, 24-06-04, 31d
-            Chocofi                   :            t3, 24-06-04, 31d
+            Blogging                  :            t1, 24-05-31, 24-06-17
+            Server PC                 :            t2, 24-06-04, until m1
+            Chocofi                   :active,     t3, 24-06-04, until m1
     
         section Japanese
-            Bunpro/N3                  :active,     j1, 24-06-01, 24-06-15
+            Bunpro/N3                 :            j1, 24-06-01, 24-06-15
         
         section Stationaries
-            Architect Nib             :            s1, 24-06-15, 31d
+            Architect Nib             :            s1, 24-06-15, until m1
+            cond                      :active,     24-06-01, until m1
+            top                       :active,     24-06-01, until m1
+            any                       :            24-06-01, until m1
+            wait                      :done,       24-06-01, until m1
+            complete                  :active,     24-06-01, until m1
     ```
 
     <div class="margin-bot-neg"></div>
@@ -90,6 +100,56 @@ template:
         === "Raw Table"
     
             <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            
+    ??? quote "Gantt Chart Priority"
+    
+        ```mermaid
+        %%{
+          init: {
+            'theme': 'base',
+            'themeVariables': {
+                'darkMode': 'true',
+                'fontFamily': 'hermit',
+                'primaryColor': '#4051b5',
+                'primaryBorderColor': '#16181D',
+                'tertiaryColor': '#546d78',
+                'tertiaryTextColor': '#E2E4E9D1',
+                'textColor': '#E2E4E9D1',
+                'noteTextColor': '#E2E4E9D1'
+            }
+          }
+        }%%
+        stateDiagram
+          direction LR
+          
+          Main: In-progress
+          Conditional: [Order#][ cond ] 
+          Defaults: [Order#] Defaults
+
+          classDef waiting fill:lightgrey,stroke:grey,stroke-width:2
+          classDef any fill:#4051b5,stroke:#16181D, stroke-width:2
+          classDef complete fill:#929CD8,stroke:#4051b5,stroke-width:2
+        
+          class Waiting waiting
+          class Conditional any
+          class Defaults complete
+          class Complete any
+
+          [*] --> Main
+
+          state Main {
+            direction LR
+            
+            Conditional --> Defaults
+            Defaults --> Waiting
+            Waiting --> Defaults
+            
+            note right of Defaults
+              #1 == Daily
+            end note
+          }
+          Main --> Complete
+        ```
 
 ## Projects
 <!-- Add Reds in Roam/Norn -->
