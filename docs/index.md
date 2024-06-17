@@ -39,6 +39,7 @@ template:
 </div>
 
 ## Timeline
+<!-- Projects + Post Sections -->
 
 === "2024~Q3"
 
@@ -49,44 +50,47 @@ template:
       init: {
         'theme': 'base',
         'themeVariables': {
-            'darkMode': 'true',
-            'fontFamily': 'hermit',
-            'primaryColor': '#4051b5',
-            'primaryBorderColor': '#16181D',
-            'tertiaryColor': '#546d78',
-            'tertiaryTextColor': '#E2E4E9D1',
-            'textColor': '#E2E4E9D1',
-            'noteTextColor': '#E2E4E9D1'
+          'darkMode': 'true',
+          'fontFamily': 'hermit',
+          'primaryColor': '#4051b5',
+          'primaryBorderColor': '#16181D',
+          'tertiaryColor': '#546d78',
+          'tertiaryTextColor': '#E2E4E9D1',
+          'textColor': '#E2E4E9D1',
+          'noteTextColor': '#E2E4E9D1'
         }
       }
     }%%
     gantt
-        dateFormat YY-MM-DD
-        axisFormat %m-%d
-        tickInterval 1week
-        todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
-        
-        section Meta
-            ReAssessment              :milestone,  m1, 24-06-26, 0d
+      dateFormat YY-MM-DD
+      axisFormat %m-%d
+      tickInterval 1week
+      todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
+      
+      section Meta
+        ReAssessment              :milestone,  m1, 24-06-26, 0d
 
-        section Travels
-            DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
+      section Travels
+        DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
+          
+      section Exceptions
+        %% Active
+        [1] Todoist/PreJustify        :active,     m2, 24-06-01, until m1
+        [0] ReOrganization            :active,     m3, 24-06-17, until m1
     
-        section Tech
-            Blogging                  :            t1, 24-05-31, 24-06-17
-            Server PC                 :            t2, 24-06-04, until m1
-            Chocofi                   :active,     t3, 24-06-04, until m1
+      section Tech
+        [X] Blogging                  :done,       t1, 24-06-01, until m1
+        [2] Server PC                 :active,     t2, 24-06-04, until m1
+        [3] Chocofi                   :active,     t3, 24-06-04, until m1
     
-        section Japanese
-            Bunpro/N3                 :            j1, 24-06-01, 24-06-15
-        
-        section Stationaries
-            Architect Nib             :            s1, 24-06-15, until m1
-            cond                      :active,     24-06-01, until m1
-            top                       :active,     24-06-01, until m1
-            any                       :            24-06-01, until m1
-            wait                      :done,       24-06-01, until m1
-            complete                  :active,     24-06-01, until m1
+      section Japanese
+        Bunpro/N3                 :            j1, 24-06-01, 24-06-15
+        [4] BunPro + Anki             :active,     j2, after j1, until m1
+        [5] Read VN                   :active,     j3, after j1, until m1
+      
+      section Stationaries
+        %% Active
+        [X] Architect Nib             :done,       s1, 24-06-17, until m1
     ```
 
     <div class="margin-bot-neg"></div>
@@ -108,14 +112,14 @@ template:
           init: {
             'theme': 'base',
             'themeVariables': {
-                'darkMode': 'true',
-                'fontFamily': 'hermit',
-                'primaryColor': '#4051b5',
-                'primaryBorderColor': '#16181D',
-                'tertiaryColor': '#546d78',
-                'tertiaryTextColor': '#E2E4E9D1',
-                'textColor': '#E2E4E9D1',
-                'noteTextColor': '#E2E4E9D1'
+              'darkMode': 'true',
+              'fontFamily': 'hermit',
+              'primaryColor': '#4051b5',
+              'primaryBorderColor': '#16181D',
+              'tertiaryColor': '#546d78',
+              'tertiaryTextColor': '#E2E4E9D1',
+              'textColor': '#E2E4E9D1',
+              'noteTextColor': '#E2E4E9D1'
             }
           }
         }%%
@@ -145,66 +149,74 @@ template:
             Waiting --> Defaults
             
             note right of Defaults
-              #1 == Daily
+              Different Numberspace
             end note
           }
           Main --> Complete
         ```
 
 ## Projects
-<!-- Add Reds in Roam/Norn -->
+<!-- [ Size > Session ] - Duplicates -->
+<!-- Public by Default, else hidden.org -->
+<!-- [ n+1 > can ] ? Roam/Norn -->
+<!-- Follow templates  -->
 
-=== "Dailies {Max: 5}" 
-
-    * [ ] Daily Japanese/Anki
-    * [ ] Daily Japanese/Bunpro
-
-=== "Tech {3}" 
+=== "Exceptions" 
 
     Deliverables (MVP):
 
-    * Create blog [60%]
+    * Todoist/PreJustify
+    {: .border-100plus }
+
+    * ReOrganization into only boxes
     {: .border-80plus }
-    ??? note "Tasks"
-        * [X] Check maintainability
-        * [ ] Write another article about time management
-    * Build server pc [80%]
+
+=== "Tech" 
+
+    Deliverables (MVP):
+
+    * Create blog
     {: .border-60plus }
-    ??? note "Tasks"
+
+        * [X] Check maintainability
+        * [ ] Week of no change
+        * [ ] Write another article about time management
+
+    * Build server pc
+    {: .border-60plus }
+
         * [X] Choose parts
         * [X] Create requirements
         * [ ] Create PiKVM
-            * [ ] Get HDMI cables
-            * [X] Physically crete PiKVM
-            * [ ] Flash PiKVM
-        * [ ] Build the actual pc
-            * [ ] Power on pc
-            * [ ] Use PiKVM to flash bios
-            * [ ] Install Poxmox
+        * [ ] Build the actual pc w/ Proxmox
+
     * Re-build [Chocofi](https://github.com/pashutk/chocofi) keyboard
     {: .border-5plus }
-    ??? note "Tasks"
+
         * [ ] Log previous issues
+        * [ ] Reuse parts
         * [ ] Order parts
 
-=== "Japanese {2}" 
+=== "Japanese"
 
     Deliverables (MVP):
 
-    * Read Bunpro/N3 grammer
+    * Continue Bunpro + Anki
+    {: .border-100plus }
+
     * Read [ましろ色シンフォニー](https://vndb.org/v1552)
     {: .border-5plus }
-    ??? note "Tasks"
+
         * [X] Setup Texthooker
         * [ ] Read
 
-=== "Stationaries {1}" 
+=== "Stationaries" 
 
     Deliverables (MVP):
 
-    * Grind custom architect nib [5%]
+    * Grind custom architect nib
     {: .border-5plus }
-    ??? note "Tasks"
+
         * [X] Try naginata style nib
         * [ ] Order parts from Aliexpress
             * [ ] Magnifying glass
