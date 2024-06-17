@@ -22,5 +22,4 @@ jobs:
       - run: pip install pillow cairosvg
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-autolinks-plugin
-      - run: pip install mkdocs-mermaid2-plugin
       - run: mkdocs gh-deploy --force

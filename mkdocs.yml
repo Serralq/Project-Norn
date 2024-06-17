@@ -48,17 +48,6 @@ plugins:
   - offline
   - glightbox
   - autolinks
-  - mermaid2:
-      arguments:
-        theme: "base"
-        themeVariables:
-          darkMode: "true"
-          fontFamily: "hermit"
-          primaryColor: "#4051b5" #matching with project
-          primaryBorderColor: "#16181D" #md-footer-bg
-          tertiaryColor: "#546d78" #about grey
-          tertiaryTextColor: "#E2E4E9D1"
-          textColor: "#E2E4E9D1" #--md-typeset-color
 
 markdown_extensions:
   - admonition
@@ -84,6 +73,11 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Index: index.md

@@ -41,45 +41,55 @@ template:
 ## Timeline
 
 === "2024~Q3"
-<div class="margin-bot-neg"></div>
 
-``` mermaid
-gantt
-    dateFormat YY-MM-DD
-    axisFormat %m-%d
-    tickInterval 1week
-    todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
-    section Travels
-        DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
-
-    section Tech
-        Blogging                  :active,     t1, 24-05-31, 24-06-17
-        Server PC                 :            t2, 24-06-04, 31d
-        Chocofi                   :            t3, 24-06-04, 31d
-
-    section Japanese
-        Bunpro/N3                  :active,     j1, 24-06-01, 24-06-15
+    <div class="margin-bot-neg"></div>
     
-    section Stationaries
-        Architect Nib             :            s1, 24-06-15, 31d
-```
-
-<div class="margin-bot-neg"></div>
-
-??? success "Chart (Warning: Light mode)"
+    ``` mermaid
+    %%{
+      init: {
+        'theme': 'base',
+        'themeVariables': {
+            'darkMode': 'true',
+            'fontFamily': 'hermit',
+            'primaryColor': '#4051b5',
+            'primaryBorderColor': '#16181D',
+            'tertiaryColor': '#546d78',
+            'tertiaryTextColor': '#E2E4E9D1',
+            'textColor': '#E2E4E9D1'
+        }
+      }
+    }%%
+    gantt
+        dateFormat YY-MM-DD
+        axisFormat %m-%d
+        tickInterval 1week
+        todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
+        section Travels
+            DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
     
-    === "Visual"
+        section Tech
+            Blogging                  :active,     t1, 24-05-31, 24-06-17
+            Server PC                 :            t2, 24-06-04, 31d
+            Chocofi                   :            t3, 24-06-04, 31d
+    
+        section Japanese
+            Bunpro/N3                  :active,     j1, 24-06-01, 24-06-15
+        
+        section Stationaries
+            Architect Nib             :            s1, 24-06-15, 31d
+    ```
 
-        <iframe width="750" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+    <div class="margin-bot-neg"></div>
 
-    === "Historical"
-
-         For now, empty
-   
-    === "Raw Table"
-
-        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
+    ??? note "Chart (Warning: Light mode)"
+        
+        === "Visual"
+    
+            <iframe width="100%" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+    
+        === "Raw Table"
+    
+            <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 ## Projects
 <!-- Add Reds in Roam/Norn -->
@@ -88,7 +98,6 @@ gantt
 
     * [ ] Daily Japanese/Anki
     * [ ] Daily Japanese/Bunpro
-
 
 === "Tech {3}" 
 
