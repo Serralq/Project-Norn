@@ -74,12 +74,11 @@ template:
         DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
           
       section Exceptions
-        %% Active
         [1] Todoist/PreJustify        :active,     m2, 24-06-01, until m1
         [0] ReOrganization            :active,     m3, 24-06-17, until m1
     
       section Tech
-        [X] Blogging                  :done,       t1, 24-06-01, until m1
+        Blogging                  :            t1, 24-06-01, 24-06-17
         [2] Server PC                 :active,     t2, 24-06-04, until m1
         [3] Chocofi                   :active,     t3, 24-06-04, until m1
     
@@ -174,13 +173,6 @@ template:
 === "Tech" 
 
     Deliverables (MVP):
-
-    * Create blog
-    {: .border-60plus }
-
-        * [X] Check maintainability
-        * [ ] Week of no change
-        * [ ] Write another article about time management
 
     * Build server pc
     {: .border-60plus }
