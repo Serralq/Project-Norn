@@ -79,17 +79,15 @@ template:
     
       section Tech
         Blogging                  :            t1, 24-06-01, 24-06-17
-        [2] Server PC                 :active,     t2, 24-06-04, until m1
-        [3] Chocofi                   :active,     t3, 24-06-04, until m1
+        Server PC                 :            t2, 24-06-04, 24-06-19
+        [4] Centralize Data           :active,     t3, 24-06-19, until m1 
     
       section Japanese
         Bunpro/N3                 :            j1, 24-06-01, 24-06-15
-        [4] BunPro + Anki             :active,     j2, after j1, until m1
-        [5] Read VN                   :active,     j3, after j1, until m1
+        [2] BunPro + Anki             :active,     j2, after j1, until m1
+        [3] Read VN                   :active,     j3, after j1, until m1
       
       section Stationaries
-        %% Active
-        [X] Architect Nib             :done,       s1, 24-06-17, until m1
     ```
 
     <div class="margin-bot-neg"></div>
@@ -173,21 +171,9 @@ template:
 === "Tech" 
 
     Deliverables (MVP):
-
-    * Build server pc
-    {: .border-60plus }
-
-        * [X] Choose parts
-        * [X] Create requirements
-        * [ ] Create PiKVM
-        * [ ] Build the actual pc w/ Proxmox
-
-    * Re-build [Chocofi](https://github.com/pashutk/chocofi) keyboard
-    {: .border-5plus }
-
-        * [ ] Log previous issues
-        * [ ] Reuse parts
-        * [ ] Order parts
+        
+    * Centralize all data
+        * [ ] List all possible data points
 
 === "Japanese"
 
@@ -206,15 +192,3 @@ template:
 
     Deliverables (MVP):
 
-    * Grind custom architect nib
-    {: .border-5plus }
-
-        * [X] Try naginata style nib
-        * [ ] Order parts from Aliexpress
-            * [ ] Magnifying glass
-        * [ ] Create blog posts
-            * [ ] Photograph current nibs
-            * [ ] Photograph current inks
-        * [X] Research type of architect nibs
-        * [ ] Try out pen nibs
-            * [ ] Visit Miami pen show
