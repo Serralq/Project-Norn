@@ -38,6 +38,7 @@ template:
   </a>
 </div>
 
+
 ## Timeline
 <!-- Projects + Post Sections -->
 
@@ -71,23 +72,23 @@ template:
         ReAssessment              :milestone,  m1, 24-06-26, 0d
 
       section Travels
-        DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
-
+        DreamHack Dallas          :milestone,  v1 , 24-06-01, 0d
       section Exceptions
-        [1] Todoist/PreJustify        :active,     m2, 24-06-01, until m1
-        [0] ReOrganization            :active,     m3, 24-06-17, until m1
-
+        [1] Todoist/PreJustify        :active,     m2 , 24-06-01, until m1
+        ReOrganization            :            m3 , 24-06-17, 24-06-20
       section Tech
-        Blogging                  :            t1, 24-06-01, 24-06-17
-        Server PC                 :            t2, 24-06-04, 24-06-19
-        [4] Centralize Data           :active,     t3, 24-06-19, until m1
+        Blogging                  :            t1 , 24-06-01, 24-06-17
+        Server PC                 :            t2 , 24-06-04, 24-06-19
+        [4] Centralize Data           :active,     t3 , 24-06-19, until m1
 
       section Japanese
-        Bunpro/N3                 :            j1, 24-06-01, 24-06-15
-        [2] BunPro + Anki             :active,     j2, after j1, until m1
-        [3] Read VN                   :active,     j3, after j1, until m1
-        Visa                      :            j4, 24-06-15, 24-06-21
+        Bunpro/N3                 :            j1 , 24-06-01, 24-06-15
+        [2] BunPro + Anki             :active,     j2 , after j1, until m1
+        [3] Read VN                   :active,     j3 , after j1, until m1
+        Visa                      :            j4 , 24-06-15, 24-06-21
 
+        %% Futures
+        ReAmission                :milestone,  j10, 24-10-26, 0d
       section Stationaries
 
     ```
@@ -154,6 +155,7 @@ template:
           Main --> Complete
         ```
 
+
 ## Projects
 === "Exceptions"
 
@@ -162,33 +164,38 @@ template:
     * Todoist/PreJustify
     {: .border-100plus }
 
-    * ReOrganization into only boxes
-    {: .border-80plus }
-
+    ??? note "Future"
 === "Tech"
 
     Deliverables (MVP):
 
-    * Centralize all data
+    * Centralize Data
         * [ ] List all possible data points
 
+    ??? note "Future"
 === "Japanese"
 
     Deliverables (MVP):
 
-    * Continue Bunpro + Anki
+    * Bunpro + Anki
     {: .border-100plus }
-
-    * Read [ましろ色シンフォニー](https://vndb.org/v1552)
+    * Read [VN](https://vndb.org/v1552)
     {: .border-5plus }
-
         * [X] Setup Texthooker
         * [ ] Read
 
+    ??? note "Future"
+
+        * ReAdmission
+        {: .border-5plus }
+            * [ ] Ask about this
 === "Stationaries"
 
     Deliverables (MVP):
 
+    ??? note "Future"
 === "Travels"
 
     Deliverables (MVP):
+
+    ??? note "Future"
