@@ -89,6 +89,7 @@ template:
         Visa                      :            j4, 24-06-15, 24-06-21
 
       section Stationaries
+
     ```
 
     <div class="margin-bot-neg"></div>
@@ -154,11 +155,6 @@ template:
         ```
 
 ## Projects
-<!-- [ Size > Session ] - Duplicates -->
-<!-- Public by Default, else hidden.org -->
-<!-- [ n+1 > can ] ? Roam/Norn -->
-<!-- Follow templates  -->
-
 === "Exceptions"
 
     Deliverables (MVP):
@@ -190,5 +186,9 @@ template:
         * [ ] Read
 
 === "Stationaries"
+
+    Deliverables (MVP):
+
+=== "Travels"
 
     Deliverables (MVP):
