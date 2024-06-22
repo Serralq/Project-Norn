@@ -5,7 +5,7 @@ hide:
 template:
   unique/index.html
 ---
-# Welcome (ﾉ ◕ ヮ ◕)ﾉ*:・ﾟ ✧ 
+# Welcome (ﾉ ◕ ヮ ◕)ﾉ*:・ﾟ ✧
 
 <div class="grid grid-smaller">
   <a href="tech/index.html" class="card card-link deep-purple">
@@ -44,7 +44,7 @@ template:
 === "2024~Q3"
 
     <div class="margin-bot-neg"></div>
-    
+
     ``` mermaid
     %%{
       init: {
@@ -66,44 +66,45 @@ template:
       axisFormat %m-%d
       tickInterval 1week
       todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
-      
+
       section Meta
         ReAssessment              :milestone,  m1, 24-06-26, 0d
 
       section Travels
         DreamHack Dallas          :milestone,  v1, 24-06-01, 0d
-          
+
       section Exceptions
         [1] Todoist/PreJustify        :active,     m2, 24-06-01, until m1
         [0] ReOrganization            :active,     m3, 24-06-17, until m1
-    
+
       section Tech
         Blogging                  :            t1, 24-06-01, 24-06-17
         Server PC                 :            t2, 24-06-04, 24-06-19
-        [4] Centralize Data           :active,     t3, 24-06-19, until m1 
-    
+        [4] Centralize Data           :active,     t3, 24-06-19, until m1
+
       section Japanese
         Bunpro/N3                 :            j1, 24-06-01, 24-06-15
         [2] BunPro + Anki             :active,     j2, after j1, until m1
         [3] Read VN                   :active,     j3, after j1, until m1
-      
+        Visa                      :            j4, 24-06-15, 24-06-21
+
       section Stationaries
     ```
 
     <div class="margin-bot-neg"></div>
 
     ??? note "Chart (Warning: Light mode)"
-        
+
         === "Visual"
-    
+
             <iframe width="100%" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
-    
+
         === "Raw Table"
-    
+
             <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-            
+
     ??? quote "Gantt Chart Priority"
-    
+
         ```mermaid
         %%{
           init: {
@@ -122,15 +123,15 @@ template:
         }%%
         stateDiagram
           direction LR
-          
+
           Main: In-progress
-          Conditional: [Order#][ cond ] 
+          Conditional: [Order#][ cond ]
           Defaults: [Order#] Defaults
 
           classDef waiting fill:lightgrey,stroke:grey,stroke-width:2
           classDef any fill:#4051b5,stroke:#16181D, stroke-width:2
           classDef complete fill:#929CD8,stroke:#4051b5,stroke-width:2
-        
+
           class Waiting waiting
           class Conditional any
           class Defaults complete
@@ -140,11 +141,11 @@ template:
 
           state Main {
             direction LR
-            
+
             Conditional --> Defaults
             Defaults --> Waiting
             Waiting --> Defaults
-            
+
             note right of Defaults
               Different Numberspace
             end note
@@ -158,7 +159,7 @@ template:
 <!-- [ n+1 > can ] ? Roam/Norn -->
 <!-- Follow templates  -->
 
-=== "Exceptions" 
+=== "Exceptions"
 
     Deliverables (MVP):
 
@@ -168,10 +169,10 @@ template:
     * ReOrganization into only boxes
     {: .border-80plus }
 
-=== "Tech" 
+=== "Tech"
 
     Deliverables (MVP):
-        
+
     * Centralize all data
         * [ ] List all possible data points
 
@@ -188,7 +189,6 @@ template:
         * [X] Setup Texthooker
         * [ ] Read
 
-=== "Stationaries" 
+=== "Stationaries"
 
     Deliverables (MVP):
-
