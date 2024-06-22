@@ -1,3 +1,5 @@
+# Custom
+docs/ignore.md
 # From default gitignore, mkdocs, mkdocs-material
 .DS_Store
 .idea
