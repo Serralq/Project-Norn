@@ -49,6 +49,9 @@ plugins:
   - glightbox
   - autolinks
   - privacy
+  - tags:
+      enabled: true
+      tags_file: travels/tags.md
 
 markdown_extensions:
   - admonition
@@ -88,6 +91,9 @@ nav:
       - stationary/index.md
   - Travels:
       - travels/index.md
+      - 2024:
+          - South East Tour: travels/south-east-tour.md
+      - Tags: travels/tags.md
   - About:
       - about/index.md
       - Why Bother Writing: about/about.md

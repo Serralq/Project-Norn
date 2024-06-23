@@ -23,7 +23,12 @@ if (path.match(/about/)) {
   var fgColor = "#795649";
   var fgLight = "#8d6e62";
   var fgDark = "#5d4037";
-} else if (path.match(/index/) || path == "/" || path == "/Project-Norn/") {
+} else if (
+  path.match(/index/) ||
+  path == "/" ||
+  path == "/Project-Norn/" ||
+  path == "/tags.html"
+) {
   // Indigo
   console.log("indigo");
   var fgColor = "#4051b5";
