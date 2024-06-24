@@ -164,7 +164,7 @@ template:
     * Todoist/PreJustify
     {: .border-100plus }
 
-    ??? note "Future"
+    !!! note "Future"
 === "Tech"
 
     Deliverables (MVP):
@@ -173,7 +173,7 @@ template:
         * [ ] List all possible data points
             * [ ] Delete playlist type of slugish
 
-    ??? note "Future"
+    !!! note "Future"
 === "Japanese"
 
     Deliverables (MVP):
@@ -185,7 +185,7 @@ template:
         * [X] Setup Texthooker
         * [ ] Read
 
-    ??? note "Future"
+    !!! note "Future"
 
         * ReAdmission
         {: .border-5plus }
@@ -194,9 +194,9 @@ template:
 
     Deliverables (MVP):
 
-    ??? note "Future"
+    !!! note "Future"
 === "Travels"
 
     Deliverables (MVP):
 
-    ??? note "Future"
+    !!! note "Future"
