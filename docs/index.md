@@ -171,6 +171,7 @@ template:
 
     * Centralize Data
         * [ ] List all possible data points
+            * [ ] Delete playlist type of slugish
 
     ??? note "Future"
 === "Japanese"
