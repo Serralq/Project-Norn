@@ -84,7 +84,7 @@ template:
       section Japanese
         Bunpro/N3                 :            j1 , 24-06-01, 24-06-15
         [2] BunPro + Anki             :active,     j2 , after j1, until m1
-        [3] Read VN                   :active,     j3 , after j1, until m1
+        [*3] Read VN                  :active,     j3 , after j1, until m1
         Visa                      :            j4 , 24-06-15, 24-06-21
 
         %% Futures
@@ -149,7 +149,8 @@ template:
             Waiting --> Defaults
 
             note right of Defaults
-              Different Numberspace
+              [#] Numberspace
+              [*] To measure all against
             end note
           }
           Main --> Complete
