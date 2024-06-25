@@ -74,7 +74,7 @@ template:
       section Travels
         DreamHack Dallas          :milestone,  v1 , 24-06-01, 0d
       section Exceptions
-        [1] Todoist/PreJustify        :active,     m2 , 24-06-01, until m1
+        [1] [Atri/Limits, Todoist/PreJustify]            :active,     m2 , 24-06-01, until m1
         ReOrganization            :            m3 , 24-06-17, 24-06-20
       section Tech
         Blogging                  :            t1 , 24-06-01, 24-06-17
@@ -172,6 +172,7 @@ template:
     * Centralize Data
         * [ ] List all possible data points
             * [ ] Delete playlist type of slugish
+            * [ ] Remove stack type tasks
 
     !!! note "Future"
 === "Japanese"
