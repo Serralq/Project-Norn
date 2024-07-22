@@ -63,7 +63,6 @@ template:
       section Travels
         DreamHack Dallas          :milestone,  v1 , 24-06-01, 0d
       section Exceptions
-
         ReOrganization            :            m3 , 24-06-17, 24-06-20
       section Tech
         Blogging                  :            t1 , 24-06-01, 24-06-17
@@ -128,7 +127,7 @@ template:
           Main --> Complete
         ```
 ## Projects
-\* for offline-able (aka. 80% of constant content)
+\(*) for offline-able (aka. 80% of constant content)
 === "Exceptions"
     Deliverables (MVP):
    
