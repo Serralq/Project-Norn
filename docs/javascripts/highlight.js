@@ -25,6 +25,7 @@ if (path.match(/about/)) {
   var fgDark = "#5d4037";
 } else if (
   path.match(/index/) ||
+  path.match(/ignore\.html/) ||
   path == "/" ||
   path == "/Project-Norn/" ||
   path == "/tags.html"
