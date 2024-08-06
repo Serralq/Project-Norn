@@ -59,7 +59,7 @@ template:
       tickInterval 1week
       todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
       section Meta
-        ReAssessment              :milestone,  m1, 24-07-26, 0d
+        ReAssessment              :milestone,  m1, 24-08-26, 0d
       section Travels
         DreamHack Dallas          :milestone,  v1 , 24-06-01, 0d
       section Exceptions
