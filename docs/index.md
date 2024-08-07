@@ -59,18 +59,22 @@ template:
         ReAssessment              :milestone,  m1, 24-08-26, 0d
       section Exceptions
         ReOrganization            :            m3 , 24-06-17, 24-06-20
+        Travel System             :active,     m4 , 24-07-07, until m1
+      section TechTimeline
+        cont. data                    :milestone,  t4 , after m1, 0d
       section Tech
         Blogging                  :            t1 , 24-06-01, 24-06-17
         Server PC                 :            t2 , 24-06-04, 24-06-19
-        [4] Centralize Data           :active,     t3 , 24-06-19, until m1
-      section Japanese
-        Bunpro/N3                 :            j1 , 24-06-01, 24-06-15
-        [2] BunPro + Anki             :active,     j2 , after j1, until m1
-        [*3] Read VN                  :active,     j3 , after j1, until m1
-        Visa                      :            j4 , 24-06-15, 24-06-21
-        %% Futures
+        Centralize Data           :            t3 , 24-06-19, 24-07-07
+      section JpTimeline
         Monolingual start         :milestone,  j11, 24-09-26, 0d
         ReAdmission               :milestone,  j10, 24-10-26, 0d
+      section Japanese
+        Bunpro/N3                 :            j1 , 24-06-01, 24-06-15
+        BunPro + Anki             :active,     j2 , after j1, until m1
+        Read VN                  :active,     j3 , after j1, until m1
+        Visa                      :            j4 , 24-06-15, 24-06-21
+        %% Futures
       section Stationaries
     ```
     <div class="margin-bot-neg"></div>
