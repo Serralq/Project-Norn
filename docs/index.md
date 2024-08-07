@@ -32,6 +32,9 @@ template:
 === "2024~Q3"
     <div class="margin-bot-neg"></div>
     ``` mermaid
+    ---
+    displayMode: compact
+    ---
     %%{
       init: {
         'theme': 'base',
