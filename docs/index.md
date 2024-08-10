@@ -59,7 +59,7 @@ template:
         ReAssessment              :milestone,  m1, 24-08-26, 0d
       section Exceptions
         ReOrganization            :            m3 , 24-06-17, 24-06-20
-        Travel System             :active,     m4 , 24-07-07, until m1
+        Travel System             :            m4 , 24-07-07, 24-08-10
       section TechTimeline
         cont. data                    :milestone,  t4 , after m1, 0d
       section Tech
