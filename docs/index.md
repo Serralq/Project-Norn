@@ -71,9 +71,10 @@ template:
         ReAdmission               :milestone,  j10, 24-10-26, 0d
       section Japanese
         Bunpro/N3                 :            j1 , 24-06-01, 24-06-15
-        BunPro + Anki             :active,     j2 , after j1, until m1
-        Read VN                  :active,     j3 , after j1, until m1
+        BunPro + Anki             :            j2 , after j1, 24-08-14
+        Read VN                   :active,     j3 , after j1, until m1
         Visa                      :            j4 , 24-06-15, 24-06-21
+        Read Wandering Witch      :active,     j5 , 24-08-14, until m1
         %% Futures
       section Stationaries
     ```
