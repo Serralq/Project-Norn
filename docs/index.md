@@ -74,7 +74,7 @@ template:
         BunPro + Anki             :            j2 , after j1, 24-08-14
         Read VN                   :active,     j3 , after j1, until m1
         Visa                      :            j4 , 24-06-15, 24-06-21
-        Read Wandering Witch      :active,     j5 , 24-08-14, until m1
+        Read Wandering Witch      :active,     j5 , 24-08-14, 24-09-05
         %% Futures
       section Stationaries
     ```
@@ -143,11 +143,12 @@ template:
 === "Japanese"
     Deliverables (MVP):
    
-    * Bunpro + Anki
-    {: .border-100plus }
     * Read [VN](https://vndb.org/v1552)
-    {: .border-5plus }
+    {: .border-60plus }
         * [X] Setup Texthooker
+        * [ ] Read
+    * Read Wandering Witch by Sept 5
+    {: .border-60plus }
         * [ ] Read
     !!! note "Future"
         * ReAdmission
