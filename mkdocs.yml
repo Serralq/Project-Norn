@@ -29,8 +29,6 @@ theme:
 
 docs_dir: "docs"
 
-draft_docs: drafts/
-
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
