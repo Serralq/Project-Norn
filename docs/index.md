@@ -70,11 +70,12 @@ template:
         Monolingual start         :milestone,  j11, 24-09-26, 0d
         ReAdmission               :milestone,  j10, 24-10-26, 0d
       section Japanese
-        Bunpro/N3                 :            j1 , 24-06-01, 24-06-15
-        BunPro + Anki             :            j2 , after j1, 24-08-14
-        Read VN                   :active,     j3 , after j1, until m1
-        Visa                      :            j4 , 24-06-15, 24-06-21
-        Read Wandering Witch      :active,     j5 , 24-08-14, 24-09-05
+        Bunpro/N3                     :            j1 , 24-06-01, 24-06-15
+        BunPro + Anki                 :            j2 , after j1, 24-08-14
+        Read VN                       :active,     j3 , after j1, until m1
+        Visa                          :            j4 , 24-06-15, 24-06-21
+        Read Wandering Witch          :active,     j5 , 24-08-14, 24-09-05
+        Practice (8hr * 7d = X / 56)  :active,     j6 , 24-08-28, 24-09-04
         %% Futures
       section Stationaries
     ```
