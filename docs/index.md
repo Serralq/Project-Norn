@@ -69,6 +69,7 @@ template:
       section JpTimeline
         Monolingual start         :milestone,  j11, 24-09-26, 0d
         ReAdmission               :milestone,  j10, 24-10-26, 0d
+        Internship Deadline       :milestone,  j12, 25-02-26, 0d
       section Japanese
         Bunpro/N3                     :            j1 , 24-06-01, 24-06-15
         BunPro + Anki                 :            j2 , after j1, 24-08-14
