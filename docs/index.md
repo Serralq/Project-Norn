@@ -53,7 +53,7 @@ template:
     gantt
       dateFormat YY-MM-DD
       axisFormat %m-%d
-      tickInterval 1week
+      tickInterval 2week
       todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
       section Meta
         ReAssessment              :milestone,  m1, 24-09-26, 0d
