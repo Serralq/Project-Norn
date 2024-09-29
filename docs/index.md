@@ -56,7 +56,7 @@ template:
       tickInterval 2week
       todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
       section Meta
-        ReAssessment              :milestone,  m1, 24-09-26, 0d
+        ReAssessment              :milestone,  m1, 24-10-26, 0d
       section Exceptions
         ReOrganization            :            m3 , 24-06-17, 24-06-20
         Travel System             :            m4 , 24-07-07, 24-08-10
@@ -67,7 +67,7 @@ template:
         Server PC                 :            t2 , 24-06-04, 24-06-19
         Centralize Data           :            t3 , 24-06-19, 24-07-07
       section JpTimeline
-        Monolingual start         :milestone,  j11, 24-09-26, 0d
+        Monolingual start         :milestone,  j11, 24-10-26, 0d
         ReAdmission               :milestone,  j10, 24-10-26, 0d
         Internship Deadline       :milestone,  j12, 25-02-26, 0d
       section Japanese
@@ -75,17 +75,18 @@ template:
         BunPro + Anki                 :            j2 , after j1, 24-08-14
         Read VN                       :active,     j3 , after j1, until m1
         Visa                          :            j4 , 24-06-15, 24-06-21
-        Read Wandering Witch          :active,     j5 , 24-08-14, 24-09-05
-        Practice (8hr * 7d = X / 56)  :active,     j6 , 24-08-28, 24-09-04
+        Practice (8hr * 7d = X / 56)  :            j6 , 24-08-28, 24-09-04
         %% Futures
       section Stationaries
     ```
     <div class="margin-bot-neg"></div>
     ??? note "Chart (Warning: Light mode)"
         === "Visual"
-            <iframe width="100%" height="350"  frameborder="0"" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1071971459&amp;format=interactive"></iframe>
+        === "Visual (24Q3)"
+            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
         === "Raw Table"
-            <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false"></iframe>
     ??? quote "Gantt Chart Priority"
         ```mermaid
         %%{
@@ -143,7 +144,7 @@ template:
             * [ ] Remove stack type tasks
     !!! note "Future"
 === "Japanese"
-    Deliverables (MVP):
+    Deliverables (MVP): Pass off as JP for pricing and coupons
    
     * Read [VN](https://vndb.org/v1552)
     {: .border-60plus }
