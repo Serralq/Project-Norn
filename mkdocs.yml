@@ -88,3 +88,5 @@ nav:
       - about/index.md
       - Why Bother Writing: about/about.md
       - Argumentative Zettelkasten: about/zettlr.md
+  - Travels:
+      - travels/index.md
