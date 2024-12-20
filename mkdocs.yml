@@ -86,6 +86,8 @@ nav:
       - stationary/index.md
   - Travels:
       - travels/index.md
+      # Alphabetical order
+      - "ATRI: My Dear Moments": travels/atri.md
   - About:
       - about/index.md
       - Why Bother Writing: about/about.md

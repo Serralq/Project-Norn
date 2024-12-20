@@ -1,0 +1,28 @@
+.row {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    max-height: 250px !important;
+}
+
+figure.inline {
+    float: left;
+    margin-right: 10px !important;
+}
+
+figure {
+    margin: 0px auto !important;
+}
+figcaption {
+    margin: 1em auto 0px !important;
+}
+iframe {
+    width: 640px;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+}
