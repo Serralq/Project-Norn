@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="./travels.css" />
 
 # ATRI: My Dear Moments
-Both the anime and game locations
+Both the [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and [visual novel](https://vndb.org/v27448) locations
 
 ??? note "Blu-ray Release Exhibitions"
     The following are images from around the release of Blu-ray discs.
@@ -152,7 +152,7 @@ going inside as late as 2023.
 <sup><a class="footnote-ref" style="margin-left: -10px;" href="#sources">&#8595;</a></sup>
 
 ??? note "Next Time"
-    - get lots of shots like [this](https://togetter.com/li/2093392)
+    - Get lots of shots like [this](https://togetter.com/li/2093392)
 
 ## Sources
 - Base Google Maps
