@@ -101,6 +101,231 @@ the night in Choshi.
     staffed. There's also a nearby walking trail with another gate at the end
     of the path.
 
+
+<h3>Choshi Shiritsu Choshi Junior High School</h3>
+<div class="row">
+  <figure>
+    <img src='./Atri/3.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/3a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+Try to come during weekend to avoid taking photo of actual students.
+
+<h3>Somewhere in Choshi (Incomplete)</h3>
+<figure class="inline"> 
+  <img src='./Atri/71.jpeg'/>
+  <figcaption>Original</figcaption>
+</figure>
+No particular street as there's no store names, but somewhere along the walk this
+location should be found.
+<br style="clear:both" />
+
+<h3>Nakanocho Rail Yard (Incomplete)</h3>
+<div class="row">
+  <figure>
+    <img src='./Atri/4.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/4a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+It is possible to get a tour in the weekends but from Oct, 2024 to March, 2025,
+tours are cancelled for maintenance.
+
+??? note "For Train Nerds"
+    <div class="row">
+      <figure>
+        <img src='./Atri/45.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/46.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/47.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/44.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    This also had some anime collab and parts of the exhibition is still here.
+
+
+<h3>Choko Shrine</h3>
+<div class="row">
+  <figure>
+    <img src='./Atri/5.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/5a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+    <figure>
+     <img src='./Atri/38.jpeg'/>
+     <figcaption>Twitter</figcaption>
+  </figure>
+</div>
+
+??? note "Festivals"
+    <figure class="inline"> 
+      <img src='./Atri/48.jpg'/>
+      <figcaption>Original</figcaption>
+    </figure>
+    This is an active shrine, so it is very possible to have a festival here, as seen
+    to the left.
+
+<h3>Sanoya</h3>
+<div class="row">
+  <figure>
+    <img src='./Atri/6.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/6a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+
+<h3>Choshi Port Tower</h3>
+<div class="row">
+  <figure>
+    <img src='./Atri/7.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/7a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+
+??? note "Amagami Anime Campaign"
+    <div class="row">
+      <figure>
+        <img src='./Atri/49.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/50.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/51.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    <div class="row">
+      <figure>
+        <img src='./Atri/53.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/52.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/54.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    Little bit miffed that the Amagami Campaign will last multiple months, when then
+    Atri collab only lasts until Oct 2024. Prepare a stamp card for the Anime88Tourism
+    campaign has a stamp post on the very top. Moreover, the ticket to the Port Tower
+    and Ocean View Observatory can be bought together for a lower cost.
+    
+??? note "Walking Path and Picnic Area"
+    <div class="row">
+      <figure>
+        <img src='./Atri/55.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/56.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    <div class="row">
+      <figure>
+        <img src='./Atri/58.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/57.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    There's a walking path from the port tower to the next hill with a small picnic
+    table before leading to the beach. It was quite fun taking a breather there and
+    imagining that the characters would've been here before (even if it was most 
+    likely flooded given the condition of the port tower in the ad break image).
+
+<h3>The HILL</h3>
+<div class="row">
+  <figure>
+    <img src='./Atri/27a.jpg'/>
+    <figcaption>Game CG</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/60.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/41.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/27.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+This is the only hill with a view of a lighthouse, so this is most likely the correct
+place. This is above a house but if you come from the left side there is a way to hike up,
+but there will be a few sections that requires climbing a bit with both hands.
+
+??? note "Additional views"
+    <figure class="inline"> 
+      <img src='./Atri/59.jpg'/>
+      <figcaption>Original</figcaption>
+    </figure>
+    This comes from the lower outer layer walkway on the cliffside. This portion
+    does not require any climbing.
+
+<h3>Inubōsaki Lighthouse</h3>
+<figure class="inline"> 
+  <img src='./Atri/61.jpg'/>
+  <figcaption>Original</figcaption>
+</figure>
+This is not directly featured anywhere, but the lighthouse is always in the background.
+Moreover, here it's possible to buy a lighthouse keychain and call it an auxiliary merch
+of Atri. This is also a popular place to get some food too.
+
+<br style="clear:both" />
+??? note "Additional views"
+    <div class="row">
+      <figure>
+        <img src='./Atri/63.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/62.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    Inside of the lighthouse area is a small museum of the Japan coast guards with
+    a pad to write that you've been here. Also, across the street is a dino statue.
+
+
 ??? note "Next Time"
     - Don't forget to reserve a bike
     - Try to get mamori, which requires reservation
