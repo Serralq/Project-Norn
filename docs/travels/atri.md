@@ -1,7 +1,13 @@
+---
+description: ATRI anime and visual novel IRL locations 
+date:
+  created: 2024-12-18
+---
 <link rel="stylesheet" href="./travels.css" />
 
 # ATRI: My Dear Moments
-Both the [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and [visual novel](https://vndb.org/v27448) locations
+Both the ATRI [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and 
+[visual novel](https://vndb.org/v27448) IRL locations w/ tips to make the trip better
 
 ??? note "Blu-ray Release Exhibitions"
     The following are images from around the release of Blu-ray discs.
@@ -12,16 +18,26 @@ Both the [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and [visu
         <figcaption>Original</figcaption>
       </figure>
       <figure>
-        <img src='./Atri/73.jpg'/>
-        <figcaption>Original</figcaption>
-      </figure>
-      <figure>
-        <img src='./Atri/78.jpg'/>
-        <figcaption>Twitter</figcaption>
+        <img src='./Atri/78.jpeg'/>
+        <figcaption><a href="https://x.com/asta_konno/status/1863819279319355807?t=9oytBIJCmoeG_sVUFSL-Pg&s=19">Twitter</a></figcaption>
       </figure>
       <figure>
         <img src='./Atri/77.jpg'/>
-        <figcaption>Twitter</figcaption>
+        <figcaption><a href="https://x.com/asta_konno/status/1863819279319355807?t=9oytBIJCmoeG_sVUFSL-Pg&s=19">Twitter</a></figcaption>
+      </figure>
+    </div>
+    <div class="row">
+      <figure>
+        <img src='./Atri/81.jpeg'/>
+        <figcaption><a href="https://x.com/akiba_gema/status/1861599949345169773">Twitter</a></figcaption>
+      </figure>
+      <figure>
+        <img src='./Atri/82.jpeg'/>
+        <figcaption><a href="https://x.com/akiba_gema/status/1861599949345169773">Twitter</a></figcaption>
+      </figure>
+      <figure>
+        <img src='./Atri/73.jpg'/>
+        <figcaption>Original</figcaption>
       </figure>
     </div>
     I was able to get a few images, but had to leave early at the start of the exhibition
@@ -43,7 +59,7 @@ Both the [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and [visu
     <h3>Nagoya Softmap</h3>
     <figure>
       <img src='./Atri/76.jpg'/>
-      <figcaption>Twitter</figcaption>
+      <figcaption><a href="https://x.com/sakunagoNZ46227/status/1867789440267301124">Twitter</a></figcaption>
     </figure>
 
 ## Google Map
@@ -117,11 +133,25 @@ Try to come during weekend to avoid taking photo of actual students.
 ### (!)Somewhere in Choshi
 <figure class="inline"> 
   <img src='./Atri/71.jpeg'/>
-  <figcaption>Twitter</figcaption>
+  <figcaption><a href="https://x.com/negima105/status/1863913406304264550/photo/2">Twitter</a></figcaption>
 </figure>
 No particular street as there's no store names, but somewhere along the walk this
 location should be found.
 <br style="clear:both" />
+
+??? note "Choshi Station Exhibition"
+    <div class="row">
+      <figure>
+        <img src='./Atri/79.jpeg'/>
+        <figcaption><a href="https://x.com/up5710/status/1827299539797340665">Twitter</a></figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/80.jpeg'/>
+         <figcaption><a href="https://x.com/up5710/status/1827299539797340665">Twitter</a></figcaption>
+      </figure>
+    </div>
+    Only ran around the time of the TV anime, but the [handout's pdf](https://www.city.choshi.chiba.jp/content/000048061.pdf)
+    can still be found online.
 
 ### (!)Nakanocho Rail Yard
 <div class="row">
@@ -171,7 +201,7 @@ tours are cancelled for maintenance.
   </figure>
     <figure>
      <img src='./Atri/38.jpeg'/>
-     <figcaption>Twitter</figcaption>
+     <figcaption><a href="https://x.com/negima105/status/1863923959496065363/photo/3">Twitter</a></figcaption>
   </figure>
 </div>
 
@@ -281,7 +311,7 @@ tours are cancelled for maintenance.
 <div class="row">
   <figure>
     <img src='./Atri/41.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/sasakure_op/status/1844902569895919671/photo/3">Twitter</a></figcaption>
   </figure>
   <figure>
      <img src='./Atri/27.jpg'/>
@@ -338,15 +368,15 @@ of Atri. This is also a popular place to get some food too.
 <div class="row">
   <figure>
     <img src='./Atri/31.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863918635540172931/photo/1">Twitter</a></figcaption>
   </figure>
   <figure>
     <img src='./Atri/32.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863918635540172931/photo/1">Twitter</a></figcaption>
   </figure>
   <figure>
     <img src='./Atri/33.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863918635540172931/photo/1">Twitter</a></figcaption>
   </figure>
 </div>
 
@@ -447,16 +477,6 @@ if there's a few people left so you can go inside without anyone there and get p
 to take some photos.
 
 ### (!)Kaze no Atelier
-<div class="row">
-  <figure>
-    <img src='./Atri/24.png'/>
-    <figcaption>Anime</figcaption>
-  </figure>
-  <figure>
-     <img src='./Atri/24a.jpg'/>
-     <figcaption>Original</figcaption>
-  </figure>
-</div>
 <div class="row">
   <figure>
     <img src='./Atri/14.png'/>
@@ -564,15 +584,15 @@ reduce the sun glare.
 <div class="row">
   <figure>
     <img src='./Atri/37.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863922065667170414/photo/1">Twitter</a></figcaption>
   </figure>
   <figure>
     <img src='./Atri/39.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863922065667170414/photo/1">Twitter</a></figcaption>
   </figure>
   <figure>
     <img src='./Atri/40.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863922065667170414/photo/1">Twitter</a></figcaption>
   </figure>
 </div>
 Go for the crosswalk and then to the station so it's easier to return to Choshi 
@@ -592,15 +612,15 @@ station.
 <div class="row">
   <figure>
     <img src='./Atri/34.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863920262586191978/photo/1">Twitter</a></figcaption>
   </figure>
   <figure>
     <img src='./Atri/35.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863920262586191978/photo/1">Twitter</a></figcaption>
   </figure>
   <figure>
     <img src='./Atri/36.jpeg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/negima105/status/1863920262586191978/photo/1">Twitter</a></figcaption>
   </figure>
 </div>
 For this station, just get on and at the end of the line just tell the staff where
@@ -609,7 +629,7 @@ you came from.
 ### (!)Aeon Mall
 <figure class="inline">
   <img src='./Atri/30.jpeg'/>
-  <figcaption>Twitter</figcaption>
+  <figcaption><a href="https://x.com/negima105/status/1863914805305987463/photo/3">Twitter</a></figcaption>
 </figure>
 This is mostly only accessible by car, so try to get a bike to get here. The suggested
 path by Google maps from Tokawa Station to Aeon Mall was to go back to Choshi Station
