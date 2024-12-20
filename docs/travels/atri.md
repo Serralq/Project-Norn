@@ -24,8 +24,8 @@ Both the [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and [visu
         <figcaption>Twitter</figcaption>
       </figure>
     </div>
-    I was able to get a few images, but I had to leave early at the start of the exhibition
-    to get as many photo of Choshi as I could and then when I came back to Tokyo again,
+    I was able to get a few images, but had to leave early at the start of the exhibition
+    to get as many photo of Choshi as possible and then when I came back to Tokyo again,
     only the signboard and elevator was left...
 
     <h3>Den Den Town, Osaka</h3>
