@@ -76,8 +76,9 @@ Estimated length: 2 days (average), 1 day (minimum)
 
 To get to Choshi, you must head to Choshi station first then take a train backwards
 to the west most station(1) and then go to the temple before reaching the next station.
-From there, take the train to Choshi station again and get your rental bike to reach
-every other spot. The Aeon mall spot(2) has no easy public transport access so it's 
+From there, take the train to Choshi station again and get your rental bike(81 479-26-4755)
+to reach every other spot. The rental bikes are in Choshi Station and with appointments
+only via phone call. The Aeon mall spot(2) has no easy public transport access so it's 
 still best to head there using the bike. Trains from Tokyo open around 5am, and the 
 first trains should reach Choshi around 9am, with the last trains to Tokyo around 6pm.
 With your best efforts, it is possible to reach every location without having to stay
