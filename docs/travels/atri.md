@@ -68,7 +68,7 @@ first trains should reach Choshi around 9am, with the last trains to Tokyo aroun
 With your best efforts, it is possible to reach every location without having to stay
 the night in Choshi.
 
-<h3>Shiishiba Station</h3>
+### Shiishiba Station
 <div class="row">
   <figure>
     <img src='./Atri/1.png'/>
@@ -80,7 +80,7 @@ the night in Choshi.
   </figure>
 </div>
 
-<h3>Unakami Hachimangū</h3>
+### Unakami Hachimangū
 <div class="row">
   <figure>
     <img src='./Atri/2.png'/>
@@ -102,7 +102,7 @@ the night in Choshi.
     of the path.
 
 
-<h3>Choshi Shiritsu Choshi Junior High School</h3>
+### Choshi Shiritsu Choshi Junior High School
 <div class="row">
   <figure>
     <img src='./Atri/3.png'/>
@@ -115,7 +115,7 @@ the night in Choshi.
 </div>
 Try to come during weekend to avoid taking photo of actual students.
 
-<h3>Somewhere in Choshi (Incomplete)</h3>
+### Somewhere in Choshi (Incomplete)
 <figure class="inline"> 
   <img src='./Atri/71.jpeg'/>
   <figcaption>Original</figcaption>
@@ -124,7 +124,7 @@ No particular street as there's no store names, but somewhere along the walk thi
 location should be found.
 <br style="clear:both" />
 
-<h3>Nakanocho Rail Yard (Incomplete)</h3>
+### Nakanocho Rail Yard (Incomplete)
 <div class="row">
   <figure>
     <img src='./Atri/4.png'/>
@@ -160,7 +160,7 @@ tours are cancelled for maintenance.
     This also had some anime collab and parts of the exhibition is still here.
 
 
-<h3>Choko Shrine</h3>
+### Choko Shrine
 <div class="row">
   <figure>
     <img src='./Atri/5.png'/>
@@ -184,7 +184,7 @@ tours are cancelled for maintenance.
     This is an active shrine, so it is very possible to have a festival here, as seen
     to the left.
 
-<h3>Sanoya</h3>
+### Sanoya
 <div class="row">
   <figure>
     <img src='./Atri/6.png'/>
@@ -196,7 +196,7 @@ tours are cancelled for maintenance.
   </figure>
 </div>
 
-<h3>Choshi Port Tower</h3>
+### Choshi Port Tower
 <div class="row">
   <figure>
     <img src='./Atri/7.png'/>
@@ -268,7 +268,7 @@ tours are cancelled for maintenance.
     imagining that the characters would've been here before (even if it was most 
     likely flooded given the condition of the port tower in the ad break image).
 
-<h3>The HILL</h3>
+### The HILL
 <div class="row">
   <figure>
     <img src='./Atri/27a.jpg'/>
@@ -301,7 +301,7 @@ but there will be a few sections that requires climbing a bit with both hands.
     This comes from the lower outer layer walkway on the cliffside. This portion
     does not require any climbing.
 
-<h3>Inubōsaki Lighthouse</h3>
+### Inubōsaki Lighthouse
 <figure class="inline"> 
   <img src='./Atri/61.jpg'/>
   <figcaption>Original</figcaption>
@@ -336,7 +336,8 @@ of Atri. This is also a popular place to get some food too.
 
 
 ## Dotonbori, Osaka
-<h3>Kani Doraku Dotonbori Main Branch</h3>
+
+### Kani Doraku Dotonbori Main Branch
 <div class="row">
   <figure>
     <img src='./Atri/72.jpeg'/>
@@ -359,7 +360,7 @@ Dotonbori street to get more correct photo.
     the locations are only a 5 min walk so finding the correct location should be simple.
 
 ## Ashikita, Kumamoto
-<h3>Akasaki Elementary School (Incomplete)</h3>
+### Akasaki Elementary School (Incomplete)
 <div class="row">
   <figure>
     <img src='./Atri/28.jpg'/>
