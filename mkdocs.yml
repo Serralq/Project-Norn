@@ -88,6 +88,7 @@ nav:
       - travels/index.md
       # Alphabetical order
       - "ATRI: My Dear Moments": travels/atri.md
+      - Hoshizora No Memoria: travels/hoshizora.md
   - About:
       - about/index.md
       - Why Bother Writing: about/about.md
