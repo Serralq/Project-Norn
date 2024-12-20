@@ -46,9 +46,8 @@ Both the [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and [visu
       <figcaption>Twitter</figcaption>
     </figure>
 
-## Map
+## Google Map
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KEnbHTSlb0lKALzkqKzuQvwMtPBmpGM&ehbc=2E312F"></iframe>
-
 
 ## Choshi, Chiba
 
@@ -115,16 +114,16 @@ the night in Choshi.
 </div>
 Try to come during weekend to avoid taking photo of actual students.
 
-### Somewhere in Choshi (Incomplete)
+### (!)Somewhere in Choshi
 <figure class="inline"> 
   <img src='./Atri/71.jpeg'/>
-  <figcaption>Original</figcaption>
+  <figcaption>Twitter</figcaption>
 </figure>
 No particular street as there's no store names, but somewhere along the walk this
 location should be found.
 <br style="clear:both" />
 
-### Nakanocho Rail Yard (Incomplete)
+### (!)Nakanocho Rail Yard
 <div class="row">
   <figure>
     <img src='./Atri/4.png'/>
@@ -325,6 +324,298 @@ of Atri. This is also a popular place to get some food too.
     Inside of the lighthouse area is a small museum of the Japan coast guards with
     a pad to write that you've been here. Also, across the street is a dino statue.
 
+### Inubo Station
+<div class="row">
+  <figure>
+    <img src='./Atri/8.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/8a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/31.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/32.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/33.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+</div>
+
+### Ocean View Observatory
+<div class="row">
+  <figure>
+    <img src='./Atri/10.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/10a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/9.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/9a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/12.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/12a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/11.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/11a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+Come during the evening to get this perfect shot of the sunset. There's also some
+binoculars to place your phone against and get a few images of the windmills.
+
+??? note "Amagami Anime Campaign P2"
+    <div class="row">
+      <figure>
+        <img src='./Atri/64.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+        <img src='./Atri/65.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+        <img src='./Atri/66.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    
+### Kaze no Atelier (Outside)
+<div class="row">
+  <figure>
+    <img src='./Atri/25.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/25a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/26.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/26a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/24.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/24a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+Don't forget that this is a real business and if we want to keep visiting then we've
+got to be polite. Try to check if there's anyone in the restaurant and stay outside
+if there's a few people left so you can go inside without anyone there and get permission 
+to take some photos.
+
+### (!)Kaze no Atelier
+<div class="row">
+  <figure>
+    <img src='./Atri/24.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/24a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/14.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/14a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/68.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/19.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/19a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/20.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/20a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/21.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/21a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/18.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/18a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/13.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/13a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/15.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/15a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/16.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/16b.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/16a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+Lots and lots of shots here, so order something to be polite and use the time to wait
+for people to leave and plan out how to take everyshot to be as efficient as possible.
+Also, don't be like me and forget that there are window binders you can pull down to
+reduce the sun glare.
+
+### (!)ED Crosswalk
+<div class="row">
+  <figure>
+    <img src='./Atri/22.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/22a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/37.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/39.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/40.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+</div>
+Go for the crosswalk and then to the station so it's easier to return to Choshi 
+station.
+
+### (!)Tokawa Station
+<div class="row">
+  <figure>
+    <img src='./Atri/23.png'/>
+    <figcaption>Anime</figcaption>
+  </figure>
+  <figure>
+     <img src='./Atri/23a.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
+</div>
+<div class="row">
+  <figure>
+    <img src='./Atri/34.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/35.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/36.jpeg'/>
+    <figcaption>Twitter</figcaption>
+  </figure>
+</div>
+For this station, just get on and at the end of the line just tell the staff where
+you came from.
+
+### (!)Aeon Mall
+<figure class="inline">
+  <img src='./Atri/30.jpeg'/>
+  <figcaption>Twitter</figcaption>
+</figure>
+This is mostly only accessible by car, so try to get a bike to get here. The suggested
+path by Google maps from Tokawa Station to Aeon Mall was to go back to Choshi Station
+and then from there take a bus to Aeon Mall.
+
+<br style="clear:both" />
 
 ??? note "Next Time"
     - Don't forget to reserve a bike
@@ -333,7 +624,6 @@ of Atri. This is also a popular place to get some food too.
         - Try to redo photo
     - Missing spots, Aeon Mall, Windmill shots
     - Checking more anime frames
-
 
 ## Dotonbori, Osaka
 
@@ -358,9 +648,9 @@ Dotonbori street to get more correct photo.
     </figure>
     The space above the crab is the giveaway between the two locations. Moreover,
     the locations are only a 5 min walk so finding the correct location should be simple.
-
+    
 ## Ashikita, Kumamoto
-### Akasaki Elementary School (Incomplete)
+### (!)Akasaki Elementary School
 <div class="row">
   <figure>
     <img src='./Atri/28.jpg'/>
@@ -368,7 +658,7 @@ Dotonbori street to get more correct photo.
   </figure>
   <figure>
     <img src='./Atri/29.jpg'/>
-    <figcaption>Twitter</figcaption>
+    <figcaption><a href="https://x.com/akeyoake/status/1631605334883336192">Twitter</a></figcaption>
   </figure>
 </div>
 
