@@ -2,6 +2,9 @@
 description: ATRI anime and visual novel IRL locations 
 date:
   created: 2024-12-20
+social:
+  cards_layout_options:
+    background_color: green 
 ---
 <link rel="stylesheet" href="./travels.css" />
 

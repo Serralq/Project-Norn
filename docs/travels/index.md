@@ -1,3 +1,8 @@
+---
+social:
+  cards_layout_options:
+    background_color: green 
+---
 <link rel="stylesheet" href="./travels.css" />
 # Travels
 
