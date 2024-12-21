@@ -1,13 +1,14 @@
 ---
 description: ATRI anime and visual novel IRL locations 
 date:
-  created: 2024-12-18
+  created: 2024-12-20
 ---
 <link rel="stylesheet" href="./travels.css" />
 
 # ATRI: My Dear Moments
 Both the ATRI [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and 
-[visual novel](https://vndb.org/v27448) IRL locations w/ tips to make the trip better
+[visual novel](https://vndb.org/v27448) IRL locations w/ tips about traveling to 
+the IRL locations.
 
 ??? note "Blu-ray Release Exhibitions"
     The following are images from around the release of Blu-ray discs.
@@ -74,9 +75,9 @@ Both the ATRI [anime](https://anilist.co/anime/154963/ATRI-My-Dear-Moments) and
 </figure>
 Estimated length: 2 days (average), 1 day (minimum)
 
-To get to Choshi, you must head to Choshi station first then take a train backwards
+To get to Choshi, head to Choshi station first then take a train backwards
 to the west most station(1) and then go to the temple before reaching the next station.
-From there, take the train to Choshi station again and get your rental bike(81 479-26-4755)
+From there, take the train to Choshi station again and get the rental bike(81 479-26-4755)
 to reach every other spot. The rental bikes are in Choshi Station and with appointments
 only via phone call. The Aeon mall spot(2) has no easy public transport access so it's 
 still best to head there using the bike. Trains from Tokyo open around 5am, and the 
@@ -113,7 +114,7 @@ the night in Choshi.
       <img src='./Atri/43.jpg'/>
       <figcaption>Original</figcaption>
     </figure>
-    According to the city website, you need a reservation since this is not always
+    According to the city website, a reservation is needed since this is not always
     staffed. There's also a nearby walking trail with another gate at the end
     of the path.
 
@@ -320,7 +321,7 @@ tours are cancelled for maintenance.
   </figure>
 </div>
 This is the only hill with a view of a lighthouse, so this is most likely the correct
-place. This is above a house but if you come from the left side there is a way to hike up,
+place. This is above a house but from the left side there is a way to hike up,
 but there will be a few sections that requires climbing a bit with both hands.
 
 ??? note "Additional views"
@@ -423,7 +424,7 @@ of Atri. This is also a popular place to get some food too.
   </figure>
 </div>
 Come during the evening to get this perfect shot of the sunset. There's also some
-binoculars to place your phone against and get a few images of the windmills.
+binoculars to place a phone against and get a few images of the windmills.
 
 ??? note "Amagami Anime Campaign P2"
     <div class="row">
@@ -474,7 +475,7 @@ binoculars to place your phone against and get a few images of the windmills.
 </div>
 Don't forget that this is a real business and if we want to keep visiting then we've
 got to be polite. Try to check if there's anyone in the restaurant and stay outside
-if there's a few people left so you can go inside without anyone there and get permission 
+if there's a few people left so it is possible to go inside without anyone there and get permission 
 to take some photos.
 
 ### (!)Kaze no Atelier
@@ -568,7 +569,7 @@ to take some photos.
 </div>
 Lots and lots of shots here, so order something to be polite and use the time to wait
 for people to leave and plan out how to take everyshot to be as efficient as possible.
-Also, don't be like me and forget that there are window binders you can pull down to
+Also, don't be like me and forget that there are window binders to pull down to
 reduce the sun glare.
 
 ### (!)ED Crosswalk
