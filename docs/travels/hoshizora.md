@@ -368,11 +368,11 @@ This shrine is the bigger and more central shrine, that another article has ment
   </figure>
   <figure>
     <img src="./Hoshizora/24.jpg"/>
-    <figcaption>>Game CG</figcaption>
+    <figcaption>Game CG</figcaption>
   </figure>
   <figure>
     <img src="./Hoshizora/26.jpg"/>
-    <figcaption>>Game CG</figcaption>
+    <figcaption>Game CG</figcaption>
   </figure>
 </div>
 This location has the most CGs. If you have extra time, consider taking a break here
