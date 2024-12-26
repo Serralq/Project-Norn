@@ -2,9 +2,6 @@
 description: Hoshizora no Memoria IRL locations
 date:
   created: 2024-12-21
-social:
-  cards_layout_options:
-    background_color: green 
 ---
 <link rel="stylesheet" href="./travels.css" />
 # Hoshizora No Memoria

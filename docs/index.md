@@ -74,7 +74,7 @@ template:
       tickInterval 2week
       todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
       section Meta
-        ReAssessment              :milestone,  m1, 24-12-26, 0d
+        ReAssessment              :milestone,  m1, 25-01-26, 0d
         Restart Project Tracker   :milestone,  m5, 24-12-08, 0d
       section Exceptions
         ReOrganization            :            m3 , 24-06-17, 24-06-20
@@ -84,7 +84,7 @@ template:
         Blogging                  :            t1 , 24-06-01, 24-06-17
         Server PC                 :            t2 , 24-06-04, 24-06-19
         Centralize Data           :            t3 , 24-06-19, 24-07-07
-        Travel Blog               :active,     t4 , 24-12-08, until m1
+        Travel Blog               :active,     t4 , 24-12-08, 24-12-20
         Backup Phone              :active,     t5 , 24-12-08, until m1
       section JpTimeline
         Monolingual start         :milestone,  j11, 24-12-08, 0d
@@ -101,7 +101,9 @@ template:
     ```
     <div class="margin-bot-neg"></div>
     ??? note "Time Logs (Warning: Light mode)"
-        === "Visual"
+        === "Visual(25Q1)"
+            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1469719202&amp;format=interactive"></iframe>
+        === "Visual(24Q4)"
             <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1071971459&amp;format=interactive"></iframe>
         === "Visual (24Q3)"
             <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
@@ -109,6 +111,5 @@ template:
             <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false"></iframe>
 
     ??? note "Immersion Logs (Warning: Light mode)"
-        === "24Q4"
-            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=368691580&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=368691580&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
