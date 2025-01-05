@@ -402,6 +402,7 @@ and simply imagine the characters infront of myself.
 ??? note "Next Time"
     - Visit Animex again for more photo cards
     - Get sakura blossom photo
+    - Visit Sapporo for studio favorite's
 
 ## Saitama
 ### (!)Saitama Municipal Youth Astronomical Museum
