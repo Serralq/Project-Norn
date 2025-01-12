@@ -205,15 +205,31 @@ tours are cancelled for maintenance.
      <img src='./Atri/38.jpeg'/>
      <figcaption><a href="https://x.com/negima105/status/1863923959496065363/photo/3">Twitter</a></figcaption>
   </figure>
+  </figure>
+    <figure>
+     <img src='./Atri/85.jpg'/>
+     <figcaption>Original</figcaption>
+  </figure>
 </div>
 
 ??? note "Festivals"
+    <div class="row">
     <figure class="inline"> 
       <img src='./Atri/48.jpg'/>
       <figcaption>Original</figcaption>
     </figure>
+    <figure class="inline"> 
+      <img src='./Atri/83.jpg'/>
+      <figcaption>Original</figcaption>
+    </figure>
+    <figure class="inline"> 
+      <img src='./Atri/86.jpg'/>
+      <figcaption>Original</figcaption>
+    </figure>
+    </div>
     This is an active shrine, so it is very possible to have a festival here, as seen
-    to the left.
+    to the left and during the New Year festival you can ring the bell too. Finally,
+    the shrine has their own goshuin and special goshuin book too.
 
 ### Sanoya
 <div class="row">
@@ -355,6 +371,21 @@ of Atri. This is also a popular place to get some food too.
     </div>
     Inside of the lighthouse area is a small museum of the Japan coast guards with
     a pad to write that you've been here. Also, across the street is a dino statue.
+
+??? note "New Years"
+    <div class="row">
+      <figure>
+        <img src='./Atri/87.jpg'/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+         <img src='./Atri/88.jpg'/>
+         <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    There's also a general city wide event to see the first sunrise along choshi's
+    beach. Beaware that there are specific bike routes and also that it can get a
+    little busy.
 
 ### Inubo Station
 <div class="row">
