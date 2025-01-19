@@ -723,6 +723,23 @@ going inside as late as 2023.
 ??? note "Next Time"
     - Get lots of shots like [this](https://togetter.com/li/2093392)
 
+## Ko Island, Okayama
+### (!)Road side
+<div class="row">
+  <figure>
+    <img src='./Atri/90.jpg'/>
+    <figcaption>Game CG</figcaption>
+  </figure>
+  <figure>
+    <img src='./Atri/89.jpeg'/>
+    <figcaption><a href="https://x.com/K1PEF/status/1880443140408295563/photo/1">Twitter</a></figcaption>
+  </figure>
+</div>
+
+This probably isn't the exact inspiration, especially since this type of scenery 
+in Japan is not exclusive to this particular location, but nontheless this looks similar.
+[Source](https://x.com/Voltaire4116594/status/1880828348949217660?t=cyfgmDLMoelRAOI15abdRA&s=19)
+
 ## Sources
 - Base Google Maps
     - [https://www.google.com/maps/...](https://www.google.com/maps/d/u/0/edit?mid=1KEnbHTSlb0lKALzkqKzuQvwMtPBmpGM&ll=35.7084884362651%2C140.84304807604605&z=16)
