@@ -1,5 +1,6 @@
 # About
-Why project Norn?
+
+## Why project Norn?
 [Norn greyrat](https://mushokutensei.fandom.com/wiki/Norn_Greyrat) is a favorite character of mine and she's an author so it simply made sense.
 
 ## TODO CV

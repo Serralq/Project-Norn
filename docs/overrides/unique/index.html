@@ -12,7 +12,11 @@
         aria-label="Last updated:"
         data-md-level="0"
       >
-        <div class="md-nav__title">Last updated</div>
+        <div class="md-nav__title">Currently Reading:</div>
+        <a href="https://vndb.org/v27449">
+        <img src="img/1.jpg" style="width:100%; ">
+        </a>
+        <div class="md-nav__title">Last updated:</div>
         <ul class="md-nav__list" data-md-scrollfix>
           {% for file in (pages | selectattr("page.meta.date") |
           sort(attribute="page.meta.date.created", reverse=true))[:10] %}
@@ -79,7 +83,7 @@
           </li>
           {% endfor %}
         </ul>
-        <div class="md-nav__title">Bookmarks</div>
+        <div class="md-nav__title">Bookmarks:</div>
         <ul class="md-nav__list" data-md-scrollfix>
           <li class="md-nav__item">
             <a
