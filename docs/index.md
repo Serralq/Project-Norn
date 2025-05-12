@@ -7,17 +7,18 @@ template:
 ---
 <!-- from the mkdoc's search bar -->
 <h1 id="welcome">Welcome (ﾉ ◕ ヮ ◕)ﾉ*:・ﾟ ✧<a class="headerlink" href="#welcome" title="Permanent link">#</a>
-<div class="md-search__inner" role="search"> 
+<div class="md-search__inner" role="search">
 <form class="md-search__form" name="search" action="http://www.google.com/search" method="get">
-<input type="text" name="q" style="top:-10px" type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required=""> 
-<label class="md-search__icon md-icon" for="__search"> 
+<input type="text" name="q" style="top:-10px" type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+<label class="md-search__icon md-icon" for="__search">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-<path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg> 
+<path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg> </label> 
- </form> 
+<path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg> </label>
+ </form>
  </div>
 </h1>
+
 <div class="grid grid-smaller">
   <a href="tech/index.html" class="card card-link deep-purple">
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"></path></svg></span>
@@ -45,71 +46,18 @@ template:
     I use Emacs btw
   </a>
 </div>
-## Timeline
+## Projects
 <!-- Projects + Post Sections -->
-=== "2024"
-    <div class="margin-bot-neg"></div>
-    ``` mermaid
-    ---
-    displayMode: compact
-    ---
-    %%{
-      init: {
-        'theme': 'base',
-        'themeVariables': {
-          'darkMode': 'true',
-          'fontFamily': 'hermit',
-          'primaryColor': '#4051b5',
-          'primaryBorderColor': '#16181D',
-          'tertiaryColor': '#546d78',
-          'tertiaryTextColor': '#E2E4E9D1',
-          'textColor': '#E2E4E9D1',
-          'noteTextColor': '#E2E4E9D1'
-        }
-      }
-    }%%
-    gantt
-      dateFormat YY-MM-DD
-      axisFormat %m-%d
-      tickInterval 2week
-      todayMarker stroke-width:3px,stroke:#E2E4E9,opacity:0.5
-      section Meta
-        ReAssessment              :milestone,  m1, 25-01-26, 0d
-        Restart Project Tracker   :milestone,  m5, 24-12-08, 0d
-      section Exceptions
-        ReOrganization            :            m3 , 24-06-17, 24-06-20
-        Travel System             :            m4 , 24-07-07, 24-08-10
-      section TechTimeline
-      section Tech
-        Blogging                  :            t1 , 24-06-01, 24-06-17
-        Server PC                 :            t2 , 24-06-04, 24-06-19
-        Centralize Data           :            t3 , 24-06-19, 24-07-07
-        Travel Blog               :active,     t4 , 24-12-08, 24-12-20
-        Backup Phone              :active,     t5 , 24-12-08, until m1
-      section JpTimeline
-        Monolingual start         :milestone,  j11, 24-12-08, 0d
-        Internship Deadline       :milestone,  j12, 25-02-26, 0d
-      section Japanese
-        Bunpro/N3                     :            j1 , 24-06-01, 24-06-15
-        BunPro + Anki                 :            j2 , after j1, 24-08-14
-        Read VN                       :            j3 , after j1, 24-08-02
-        Visa                          :            j4 , 24-06-15, 24-06-21
-        Practice (8hr * 7d = X / 56)  :            j6 , 24-08-28, 24-09-04
-      section Stationaries
-      section TravelTimeline
-        
-    ```
-    <div class="margin-bot-neg"></div>
-    ??? note "Time Logs (Warning: Light mode)"
-        === "Visual(25Q1)"
-            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1469719202&amp;format=interactive"></iframe>
-        === "Visual(24Q4)"
-            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1071971459&amp;format=interactive"></iframe>
-        === "Visual (24Q3)"
-            <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
-        === "Raw Table"
-            <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false"></iframe>
 
-    ??? note "Immersion Logs (Warning: Light mode)"
-        <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=368691580&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+??? note "Time Logs (Warning: Light mode)"
+    === "Visual(25Q1)"
+        <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1469719202&amp;format=interactive"></iframe>
+    === "Visual(24Q4)"
+        <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1071971459&amp;format=interactive"></iframe>
+    === "Visual (24Q3)"
+        <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
+    === "Raw Table"
+        <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false"></iframe>
 
+??? note "Immersion Logs (Warning: Light mode)"
+    <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=368691580&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
