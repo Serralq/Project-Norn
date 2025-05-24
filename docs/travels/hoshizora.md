@@ -37,8 +37,12 @@ in Hokkaido in the winter.
 ### (!)Temiya Park
 <div class="row">
   <figure>
-    <img src='./Hoshizora/31.png'/>
+    <img src="./Hoshizora/31.png"/>
     <figcaption>Game CG</figcaption>
+  </figure>
+  <figure>
+    <img src="./Hoshizora/74.jpg"/>
+    <figcaption>Original</figcaption>
   </figure>
 </div>
 <div class="row">
@@ -106,6 +110,12 @@ red walls.
     path to a smaller shrine office. From there, ring the bell and a nice
     grandma should be able to help get goods from this shrine, which could be 
     considered auxiliary goods of HoshiMemo.
+  
+    Also note that the mamori seems to change over time, so it would be worth
+    visiting each time if possible. Also when the grandma is there, she would
+    generally give just a pre-written shrine stamp, but when the grandpa is there
+    he can write it out himself. If you can get the written stamp, he generally
+    asks to give whatever you can to the shrine in return.
 
 ### (!)Otaru Station
 <div class="row">
@@ -128,11 +138,11 @@ This station does not look exactly the same as the CG, but instead served as an 
       </figure>
       <figure>
         <img src="./Hoshizora/46.jpg"/>
-        <figcaption>Original</figcaption>
+        <figcaption>Original (Dec 2024)</figcaption>
       </figure>
       <figure>
-        <img src="./Hoshizora/62.jpg"/>
-        <figcaption>Original</figcaption>
+        <img src="./Hoshizora/79.jpg"/>
+        <figcaption>Original (May 2025)</figcaption>
       </figure>
     </div>
     <div class="row">
@@ -156,6 +166,40 @@ This station does not look exactly the same as the CG, but instead served as an 
     is also very active in promotions via anime events. In 2024, I'm aware there was
     a Mea-tan party and a anime fest here.
 
+??? note "Card Vending Machine"
+    <div class="row">
+      <figure>
+        <img src="./Hoshizora/62.jpg"/>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+        <img src='./Hoshizora/75.jpg'>
+        <figcaption>Original</figcaption>
+      </figure>
+      <figure>
+        <img src="./Hoshizora/76.jpg"/>
+        <figcaption>Original</figcaption>
+      </figure>
+    </div>
+    This takes 200 yen per picture card and there's two sections, one for Mare and
+    one for Yume. There's also a few secret cards within each machine. I was able
+    to get one secret from Yume and was given one secret by a fellow fan from Mare.
+
+??? note "Music Box Kaimeiro"
+    <figure>
+      <img src="./Hoshizora/77.jpg"/>
+      <figcaption>Original</figcaption>
+    </figure>
+    A fellow fan of HoshiMemo had commissioned a few music boxes which are sold
+    in Otaru music box store called Kaimeiro. There's also a variety of other
+    Anime and Studio Favorite music offered. The process requires you to choose
+    a music machine and the kind of music box to hold the machine. There's also
+    a variety of accessories to attach to the music box. Another customization option
+    is to get a image printed onto the wooden boxes, this is not availible for the
+    plastic boxes. However, this would require some time for the store to complete
+    and will be shipped to you are a period of time. The staff members are used
+    to overseas customers so don't be discouraged from getting your own music boxes.
+
 ### Otaru Port
 <div class="row">
   <figure>
@@ -174,6 +218,8 @@ This station does not look exactly the same as the CG, but instead served as an 
 As of Nov 2024, the main building in the Game CG is being torn down. During the trip,
 the demolition crane was moving, however in Google Street View as of summer of 2024,
 the building was intact.
+
+However, there's other port locations, so a similar image to the CG can still be possible.
 
 ### Otaru Canal
 <div class="row">
@@ -378,6 +424,17 @@ This shrine is the bigger and more central shrine, that another article has ment
 This location has the most CGs. If you have extra time, consider taking a break here
 and maybe even get some studying here. 
 
+??? "Sakura Seasons"
+    Sakura season for Otaru is generally around early May, but check online for the
+    most accurate information. This also coincides with Golden Week which is a series
+    of national holidays which can lead to higher ticket prices especially for the
+    weekends and the days before and after the weekends. If possible try to travel
+    just a single day extra past Golden Week to save money.
+    
+    The sakuras for Otaru and the sakura up around Asahi Oberservation Deck also
+    generally bloom one week apart leading to the two zones not overlapping for when
+    they are in full bloom so it may be worth spending two weeks in Otaru. 
+
 ### (!)Around Asahi Observation Deck
 <div class="row">
   <figure>
@@ -398,6 +455,22 @@ and simply imagine the characters infront of myself.
     up during winter, so pay attention to not distrub anything here. Because of this
     artwork to get the Game CG to match with the IRL photo, the other side of the
     deck has to be used and in post mirror the image.
+
+??? note "Rest spots"
+    <figure>
+      <img src="./Hoshizora/78.jpg"/>
+      <figcaption>Original</figcaption>
+    </figure>
+    Nearby, about a 10 minute walk, is a full cabin shelter that can help protect
+    against the wind, but near summer time there's can be a few bugs.
+
+??? note "Path to Asahi Deck"
+    There's a path from the base of the mountain to Asahi Deck. From the base,
+    the route starts roughly around Otaru Shiritsu Seiryo Junior High School, and ends
+    at Asahi Deck. This path is more steep but also shorter so try to go downhill first
+    and only when there is sunlight availible. When approaching Asahi Deck from the 
+    usual route, on your right should be a slight indent which leads to the alternate
+    walking path.
 
 ??? note "Next Time"
     - Visit Animex again for more photo cards
