@@ -50,6 +50,8 @@ template:
 <!-- Projects + Post Sections -->
 
 ??? note "Time Logs (Warning: Light mode)"
+    === "Visual(25Q2)"
+        <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1500730605&amp;format=interactive"></iframe>
     === "Visual(25Q1)"
         <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1469719202&amp;format=interactive"></iframe>
     === "Visual(24Q4)"
