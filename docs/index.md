@@ -5,6 +5,7 @@ hide:
 template:
   unique/index.html
 ---
+
 <!-- from the mkdoc's search bar -->
 <h1 id="welcome">Welcome (ﾉ ◕ ヮ ◕)ﾉ*:・ﾟ ✧<a class="headerlink" href="#welcome" title="Permanent link">#</a>
 <div class="md-search__inner" role="search">
@@ -45,6 +46,7 @@ template:
     I use Emacs btw
   </a>
 </div>
+
 ## Projects
 <!-- Projects + Post Sections -->
 ??? note "Time Logs (Warning: Light mode)"
