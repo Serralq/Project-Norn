@@ -51,7 +51,7 @@ template:
 </div>
 <!-- Welcome:1 ends here -->
 
-<!-- [[file:../../../../../Norn.org::*Timeline Footer][Timeline Footer:1]] -->
+<!-- [[file:../../../../../Norn.org::*Time Logs][Time Logs:1]] -->
 ## Projects
 <!-- Projects + Post Sections -->
 ??? note "Time Logs (Warning: Light mode)"
@@ -67,4 +67,4 @@ template:
         <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false"></iframe>
 ??? note "Immersion Logs (Warning: Light mode)"
     <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?gid=368691580&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-<!-- Timeline Footer:1 ends here -->
+<!-- Time Logs:1 ends here -->
