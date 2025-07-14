@@ -94,7 +94,7 @@ nav:
       - "ATRI: My Dear Moments": travels/atri.md
       - "Café Stella and the Reapers' Butterflies": travels/cafestella.md
       - Hoshizora No Memoria: travels/hoshizora.md
-  - About:
+  - About/Resume:
       - about/index.md
       - Why Bother Writing: about/about.md
       - Argumentative Zettelkasten: about/zettlr.md
