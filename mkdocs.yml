@@ -75,16 +75,17 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  # - pymdownx.superfences:
+  # custom_fences:
+  # - name: mermaid
+  # class: mermaid
+  # format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Index: index.md
   - Tech:
       - tech/index.md
+      - "NixOS is for your Future Self": tech/nixos.md
   - Stationaries:
       - stationary/index.md
   - Travels:
