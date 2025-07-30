@@ -273,5 +273,3 @@ disk space, but removing this now becomes trivial. Simply delete everything
 except the opt-in files and rebuild. This approaches preserves the power of
 reinstall but without all of the hassle of reinstalling.
 
-## Bibliography 
-
