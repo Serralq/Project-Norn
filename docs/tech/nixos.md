@@ -273,3 +273,31 @@ disk space, but removing this now becomes trivial. Simply delete everything
 except the opt-in files and rebuild. This approaches preserves the power of
 reinstall but without all of the hassle of reinstalling.
 
+???+ note "Source + Further Readings Combined"
+     - These are just a subset of what I personally used to get to where I am.
+     - General overview of Nix and NixOS:
+       - https://www.youtube.com/watch?v=CwfKlX3rA6E
+     - Setting up the general build system:
+       - https://www.youtube.com/watch?v=a67Sv4Mbxmc
+     - Understanding Nix's language and terminology:
+       - https://www.youtube.com/watch?v=5D3nUU1OVx8
+     - The main wiki is incomplete, but it's the best place to start debugging:
+       - https://nixos.wiki/wiki/Main_Page
+     - 99% of all the options in NixOS, NixPkgs, and Homemanager:
+       - https://search.nixos.org/packages
+     - There's also flakes to learn about too
+     - Nix Impermanence explained: 
+       - https://www.youtube.com/watch?v=QtBouFMyrWg
+     - Nix Impermanence documentation: 
+       - https://github.com/nix-community/impermanence
+     - NixOS's wiki on Nix Impermanence:
+       - https://nixos.wiki/wiki/Impermanence
+     - GNU Stow's manual: 
+       - https://www.gnu.org/software/stow/manual/stow.html
+     - Video alternatives: 
+       - https://www.youtube.com/watch?v=NoFiYOqnC4o
+       - https://www.youtube.com/watch?v=y6XCebnB9gs
+     - Chris Maiorana's explanation of Org-Attach: 
+       - https://www.youtube.com/watch?v=UPUdbLFJmqs
+       - https://www.youtube.com/watch?v=MVjuVH-moAc
+
