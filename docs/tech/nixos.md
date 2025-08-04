@@ -203,7 +203,7 @@ basic NixOS installation to also cover disk partitioning, which I find dangerous
        [Imperance](https://nixos.wiki/wiki/Impermanence)
 
 ### Via GNU Stow
-A simipler solution, which I currently utilize, is called GNU stow. GNU stow is
+A simpler solution, which I currently utilize, is called GNU stow. GNU stow is
 called a symlink farm. It simply takes a folder and creates links so the folder
 can be at two places at once. In my use case, I use stow to create a copy of my
 main file system but within the ~/stow directory.
