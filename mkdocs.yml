@@ -24,6 +24,7 @@ theme:
     accent: light blue
   font:
     text: JetBrains Mono
+    code: JetBrains Mono
   icon:
     logo: simple/bookstack
   custom_dir: docs/overrides

@@ -2,10 +2,6 @@
 .twemoji {
   --md-icon-size: 1.3em !important;
 }
-@hermit {
-  font-family: "Hermit";
-  src: "./docs/stylesheets/fonts/Hermit/Hermit-Regular.otf";
-}
 
 /* Removes the top level header */
 .hidden-header {
