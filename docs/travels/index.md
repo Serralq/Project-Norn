@@ -8,8 +8,9 @@
 ## Gear
 - Camera
 
-| Start Date | Gear           |
-|------------|----------------|
-| Aug 2024   | Oneplus 9      |
-| Jan 2025   | Google Pixel 7 |
+| Start Date | Gear                           |
+|------------|--------------------------------|
+| Aug 2024   | Oneplus 9                      |
+| Jan 2025   | Google Pixel 7                 |
+| Sept 2025  | Sony A6100 + Tamron 17-70 f2.8 |
 
