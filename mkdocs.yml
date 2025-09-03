@@ -85,8 +85,9 @@ markdown_extensions:
 nav:
   - Index: index.md
   - Tech:
-      - tech/index.md
-      - "NixOS is for your Future Self": tech/nixos.md
+      - tech/nixos.md
+      # tech/index.md # Until another page, make the index the singular page
+      # - "NixOS is for your Future Self": tech/nixos.md
   - Stationaries:
       - stationary/index.md
   - Travels:
