@@ -7,10 +7,12 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
-    - navigation.path
     - navigation.footer
     - navigation.indexes
+    - navigation.expand
     - toc.follow
     - search.suggest
     - search.highlight
