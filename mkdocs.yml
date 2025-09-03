@@ -7,8 +7,8 @@ theme:
   name: material
   features:
     - navigation.tabs
-    - navigation.instant
-    - navigation.instant.progress
+    # - navigation.instant
+    # - navigation.instant.progress
     - navigation.tracking
     - navigation.footer
     - navigation.indexes
