@@ -1,9 +1,13 @@
 <link rel="stylesheet" href="./travels.css" />
 # Travels
 
-## General View (per town)
+## Japan Overview (per town)
 <p></p>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DCZp3LiDwleHcWnvkfi9Dzf0CI5-Xzs&ehbc=2E312F"></iframe>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DCZp3LiDwleHcWnvkfi9Dzf0CI5-Xzs&ehbc=2E312F&noprof=1"></iframe>
+
+## US Overview (per town)
+<p></p>
+<iframe src="https://www.google.com/maps/d/embed?mid=1HCiQ-HQWmxW_1Zevc6lpJCfCh2U-ktk&ehbc=2E312F&noprof=1"></iframe>
 
 ## Gear
 - Camera

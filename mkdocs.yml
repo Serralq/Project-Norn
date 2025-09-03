@@ -95,10 +95,14 @@ nav:
   - Travels:
       - travels/index.md
       - "VN Stores in Japan": travels/visualnovelstores.md
-      # Alphabetical order
-      - "ATRI: My Dear Moments": travels/atri.md
-      - "Café Stella and the Reapers' Butterflies": travels/cafestella.md
-      - Hoshizora No Memoria: travels/hoshizora.md
+      - Japan Portfolio:
+        # Alphabetical order
+        - "ATRI: My Dear Moments": travels/atri.md
+        - "Café Stella and the Reapers' Butterflies": travels/cafestella.md
+        - Hoshizora No Memoria: travels/hoshizora.md
+        # TODO add image portfolio
+      - US Portfolio:
+        - US Scenery
   - About/Resume:
       - about/index.md
       - Why Bother Writing: about/about.md
