@@ -1,13 +1,15 @@
 <link rel="stylesheet" href="./travels.css" />
 # Travels
+## TODO Upload and organize raw image folder
+([Source Folder](https://copyparty.serralq.dev/Public/))
 
-## Japan Overview (per town)
-<p></p>
+## Japan Overview (per town) 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DCZp3LiDwleHcWnvkfi9Dzf0CI5-Xzs&ehbc=2E312F&noprof=1"></iframe>
+([Source Folder](https://copyparty.serralq.dev/Public/))
 
-## US Overview (per town)
-<p></p>
+## US Overview (per town) 
 <iframe src="https://www.google.com/maps/d/embed?mid=1HCiQ-HQWmxW_1Zevc6lpJCfCh2U-ktk&ehbc=2E312F&noprof=1"></iframe>
+([Source Folder](https://copyparty.serralq.dev/Public/))
 
 ## Gear
 - Camera
