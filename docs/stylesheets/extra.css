@@ -36,7 +36,13 @@ h1 {
 .card-link.blue-grey:hover {
   background-color: #546d78 !important;
 }
-
+/* These two colors came from mkdocs-material button background color (dark) */
+.card-link.light-blue:hover {
+  background-color: #88c0d0 !important;
+}
+.card-link.amber:hover {
+  background-color: #ebcb8b !important;
+}
 /* Use dashed unordered lists */
 .md-content li:not(.task-list-item)::marker {
   content: "- ";
