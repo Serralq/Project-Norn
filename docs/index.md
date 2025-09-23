@@ -54,6 +54,12 @@ template:
 ??? note "Time Logs (Warning: Light mode)"
     === "Visual(25Q3)"
         <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=708035039&amp;format=interactive"></iframe>
+
+        | Legend      | Description                          |
+        | ----------- | ------------------------------------ |
+        | JP-ish      | > 1d projects (ex: Japanese)         |
+        | Projects    | < 1d projects                        |
+        | Checkbox    | reccuring tasks (added: 9/23)        |
     === "Visual(25Q2)"
         <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1500730605&amp;format=interactive"></iframe>
     === "Visual(25Q1)"
@@ -64,4 +70,3 @@ template:
         <iframe width="100%" height="350"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=913390942&amp;format=interactive"></iframe>
     === "Raw Table"
         <iframe width="950" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false"></iframe>
-<!-- Weird Update  -->
