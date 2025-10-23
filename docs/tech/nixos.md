@@ -272,3 +272,35 @@ browser-based electron applications, generate cache or temp files that clogs up
 disk space, but removing this now becomes trivial. Simply delete everything
 except the opt-in files and rebuild. This approaches preserves the power of
 reinstall but without all of the hassle of reinstalling.
+
+## Windows Version
+The annoying parts of Windows is that OS level changes are often based in
+registry or weird ass non file locations, but by remote desktoping into Windows
+and only projecting the application screen, via
+[WinBoat](https://www.winboat.app) or
+[WinApps](https://github.com/winapps-org/winapps), all settings related to the
+Windows UI can be ignored, and the majority of the remaining changes are dll
+files.
+
+But having an actual remote instance of Windows creates latency so instead I
+currently run windows in a docker container so the remote Window instance is
+actually local. Then for non-functional media files are mounted into the docker
+container from the host NixOS system to benefit from the previously mentioned
+stow organization system.
+
+For building this docker container, I started from the official ISO and then ran
+Tiny11 build script to build the actual ISO I would use to get a stripped down
+version of Windows 11. Then rather than rebuild this ISO everytime I get a
+missing dll error, I kept a directory on the host machine which parallels the
+Windows structure and would add the missing dll in both the host and docker
+container. Then anytime I would rebuild the container I can also just follow the
+path of the hosted directory to replace the docker window's directory.
+
+In summary:
+
+1. Download Windows 11
+2. Debloat Windows into a personal ISO copy
+3. Create docker container from the ISO copy
+4. Utilize WinApps to remote into docker container
+5. Add media files into shared folder
+6. Add functional files to Windows and parallel host directory
