@@ -3,21 +3,17 @@
   --md-icon-size: 1.3em !important;
 }
 
-/* Removes the top level header */
-.hidden-header {
-  display: none;
-}
-.hidden-header-cleanup {
-  margin-top: -40px;
-}
-
+/* Headers should have equal margins
+ * Thus h1 should not have special treatment */
 h1 {
   margin-bottom: 0px !important;
 }
-/* Linked cards */
+
+/* Everyone has nicer borders */
 .note, .card-link {
   border-width: 2px !important;
 }
+/* Linked cards */
 .card-link {
   color: var(--md-typeset-color) !important;
   background-color: #1E2738 !important;
@@ -26,13 +22,13 @@ h1 {
   box-sizing: border-box;
   box-shadow: inset 0px 0px 0px 2px #448aff;
 
-  /* border-color: var(--md-default-fg-color--light) !important; */
   transition:
     background-color 0.25s,
     color 125ms,
     border 0.25s,
     box-shadow 0.25s !important;
 }
+/* Special colors for hovering */
 .card-link:hover {
   border: 2px solid #448aff !important;
 }
@@ -48,7 +44,8 @@ h1 {
 .card-link.blue-grey:hover {
   background-color: #546d78 !important;
 }
-/* These two colors came from mkdocs-material button background color (dark) */
+/* These two colors came from mkdocs-material button background color */
+/* Not the same as the actual class name anymore */
 .card-link.light-blue:hover {
   background-color: #42a5f5 !important;
 }
@@ -174,20 +171,17 @@ h6:after {
   }
 }
 
-/* Custom application */
-.margin-bot-neg {
-  margin-bottom: -20px;
-}
-
+/* For hovering over url links */
 .custom_link:hover {
   color: #0091eb !important;
 }
 
+/* For total size of entire website */
 .md-grid {
   max-width: 1360px;
-
 }
-/* Max width */
+/* Max width breakpoints */
+/* To remove the pixel dust of landing page welcome */
 @media (max-width: 512px) {
     .mobile {
         display: none;
