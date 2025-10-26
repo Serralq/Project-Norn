@@ -7,7 +7,7 @@ template:
 ---
 
 <!-- from the mkdoc's search bar -->
-<h1 id="welcome">Welcome (ﾉ ◕ ヮ ◕)ﾉ*:・ﾟ ✧<a class="headerlink" href="#welcome" title="Permanent link">#</a>
+<h1 id="welcome">Welcome (ﾉ ◕ ヮ ◕)ﾉ<span class="mobile">*:・ﾟ ✧</span>
 </h1>
 <div class="grid grid-smaller">
   <a href="tech/nixos.html" class="card card-link deep-purple">

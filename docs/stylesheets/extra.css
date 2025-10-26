@@ -185,4 +185,11 @@ h6:after {
 
 .md-grid {
   max-width: 1360px;
+
+}
+/* Max width */
+@media (max-width: 512px) {
+    .mobile {
+        display: none;
+    }
 }
