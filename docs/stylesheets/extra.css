@@ -15,14 +15,26 @@ h1 {
   margin-bottom: 0px !important;
 }
 /* Linked cards */
+.note, .card-link {
+  border-width: 2px !important;
+}
 .card-link {
   color: var(--md-typeset-color) !important;
-  border-color: var(--md-default-fg-color--light) !important;
+  background-color: #1E2738 !important;
+  /* Allow for border inside of element */
+  border: 5px solid #1E2738 !important;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 2px #448aff;
+
+  /* border-color: var(--md-default-fg-color--light) !important; */
   transition:
     background-color 0.25s,
     color 125ms,
     border 0.25s,
     box-shadow 0.25s !important;
+}
+.card-link:hover {
+  border: 2px solid #448aff !important;
 }
 .card-link.deep-purple:hover {
   background-color: #7e56c2 !important;
@@ -31,17 +43,17 @@ h1 {
   background-color: #795649 !important;
 }
 .card-link.green:hover {
-  background-color: #4cae4f !important;
+  background-color:  #4cae4f !important;
 }
 .card-link.blue-grey:hover {
   background-color: #546d78 !important;
 }
 /* These two colors came from mkdocs-material button background color (dark) */
 .card-link.light-blue:hover {
-  background-color: #88c0d0 !important;
+  background-color: #42a5f5 !important;
 }
 .card-link.amber:hover {
-  background-color: #ebcb8b !important;
+  background-color: #ff8a66 !important;
 }
 /* Use dashed unordered lists */
 .md-content li:not(.task-list-item)::marker {
