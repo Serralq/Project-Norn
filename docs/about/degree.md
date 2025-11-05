@@ -2,7 +2,7 @@
 date:
   created: 2025-09-25
 ---
-# Job Market Hell
+# From a student's POV, about the Job Market
 After high school graduation, I landed a job by automating so much during my
 internship at the project management office which resulted in a full time tech
 position. It was more that I had stumbled into this job, but now I keep hearing
@@ -15,7 +15,7 @@ understanding of concepts like TCP or SSH, so which determining which way the
 wind is blowing is like trying to figure out the chances of alien life, it's
 really simple to be a wrong by a magnitude in either direction.
 
-# Value of CS Degree
+## Value of CS Degree
 But, I was able to talk a mechanical engineer PhD student, and he gave me parts of
 his perspective. This is my understanding of what he shared.
 
@@ -32,7 +32,7 @@ Beyond the minimum required budget, college still provides the CS student with
 professors and a set curiculumn that gives guidance to avoid all the worst
 pitfalls.
 
-# Etc.
+## Etc.
 So a CS degree is not the same as a business degree, but my working theory to
 explain my confusion is that the CS student body has a business major mindset.
 

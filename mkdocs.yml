@@ -86,8 +86,8 @@ nav:
   - Index: index.md
   - Tech:
       - tech/index.md # Until another page, make the index the singular page
-      - "NixOS is for your Future Self": tech/nixos.md
-      - "Practical Proxy": tech/proxy.md
+      - Why use NixOS: tech/nixos.md
+      - Network Proxy Basics: tech/proxy.md
   - Stationaries:
       - stationary/index.md
   - Travels:
