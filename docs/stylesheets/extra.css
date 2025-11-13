@@ -14,6 +14,7 @@ h1 {
   border-width: 2px !important;
 }
 /* Linked cards */
+/* TODO Add images once it feels right */
 .card-link {
   color: var(--md-typeset-color) !important;
   background-color: #1E2738 !important;
@@ -22,24 +23,31 @@ h1 {
   box-sizing: border-box;
   box-shadow: inset 0px 0px 0px 2px #448aff;
 
+  /* For if there is a background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   transition:
     background-color 0.25s,
     color 125ms,
     border 0.25s,
+    background-image 1.25s,
     box-shadow 0.25s !important;
 }
 /* Special colors for hovering */
 .card-link:hover {
-  border: 2px solid #448aff !important;
+  border: 3px solid #448aff !important;
 }
 .card-link.deep-purple:hover {
-  background-color: #7e56c2 !important;
+  background-image: url('../img/tech.gif');
+  border: 3px solid #7e56c2 !important;
 }
 .card-link.brown:hover {
   background-color: #795649 !important;
 }
 .card-link.green:hover {
-  background-color:  #4cae4f !important;
+  background-image: url('../img/travel.gif');
+  border: 3px solid  #4cae4f !important;
 }
 .card-link.blue-grey:hover {
   background-color: #546d78 !important;
