@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="./travels.css" />
 # Visual Novel Stores
 
-## Google Maps
 <p></p>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1vPoERq7wcgHiZpHcuX5IzLwrO1Dfn88&ehbc=2E312F"></iframe>
 
