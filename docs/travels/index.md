@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="./travels.css" />
 # Japan Overview (per town) 
+<!-- For extra margins -->
+<p></p>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DCZp3LiDwleHcWnvkfi9Dzf0CI5-Xzs&ehbc=2E312F&noprof=1"></iframe>
 ([Source Folder](https://copyparty.serralq.dev/Public/))
 
