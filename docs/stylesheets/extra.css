@@ -106,7 +106,8 @@ h6:after {
 }
 
 /* Custom Banner Images */
-@media screen and (min-width: 960px) {
+/* Only remove normal banner once left side bar appears */
+@media screen and (min-width: 1220px) {
   /* Current top tab */
   .md-tabs__item--active {
     background: var(--md-primary-fg-color);
