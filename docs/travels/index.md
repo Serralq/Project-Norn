@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="./travels.css" />
-# Travels
-## TODO Upload and organize raw image folder
+# TODO Upload and organize raw image folder
 ([Source Folder](https://copyparty.serralq.dev/Public/))
 
 ## Japan Overview (per town) 

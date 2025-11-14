@@ -78,13 +78,13 @@ markdown_extensions:
 nav:
   - Index: index.md
   - Tech:
-      - tech/index.md # Until another page, make the index the singular page
+      # - tech/Tech.md # Until another page, make the index the singular page
       - Why use NixOS: tech/nixos.md
       - Network Proxy Basics: tech/proxy.md
   - Stationaries:
-      - stationary/index.md
+      - Stationaries: stationary/index.md
   - Travels:
-      - travels/index.md
+      - Travels: travels/index.md
       - "VN Stores in Japan": travels/visualnovelstores.md
       - Japan Portfolio:
           # Alphabetical order
@@ -97,7 +97,7 @@ nav:
   - Saku: https://jellyfin.serralq.dev
   - Tonda: https://copyparty.serralq.dev
   - About/Resume:
-      - about/index.md
+      - About/Resume: about/index.md
       - Why Bother Writing: about/about.md
       - Argumentative Zettelkasten: about/zettlr.md
       - As a CS student: about/degree.md
