@@ -17,7 +17,7 @@ h1 {
 /* TODO Add images once it feels right */
 .card-link {
   color: var(--md-typeset-color) !important;
-  background-color: #1E2738 !important;
+  background-color: #1E2738;
   /* Allow for border inside of element */
   border: 5px solid #1E2738 !important;
   box-sizing: border-box;
