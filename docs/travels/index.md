@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="./travels.css" />
-# TODO Upload and organize raw image folder
-([Source Folder](https://copyparty.serralq.dev/Public/))
-
-## Japan Overview (per town) 
+# Japan Overview (per town) 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1DCZp3LiDwleHcWnvkfi9Dzf0CI5-Xzs&ehbc=2E312F&noprof=1"></iframe>
 ([Source Folder](https://copyparty.serralq.dev/Public/))
 
@@ -19,3 +16,6 @@
 | Jan 2025   | Google Pixel 7                 |
 | Sept 2025  | Sony A6100 + Tamron 17-70 f2.8 |
 
+
+## TODO Upload and organize raw image folder
+([Source Folder](https://copyparty.serralq.dev/Public/))
