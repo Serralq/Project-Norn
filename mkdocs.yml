@@ -9,13 +9,18 @@ theme:
     - navigation.tabs
     - navigation.tracking
     - navigation.footer
+    - navigation.instant.preview
     - navigation.indexes
     - navigation.expand
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
     - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.copy
+    - content.code.select
   language: en
   palette:
     media: "(prefers-color-scheme: dark)"
@@ -44,6 +49,7 @@ plugins:
   - glightbox
   - autolinks
   - privacy
+  - optimize
 
 markdown_extensions:
   - admonition
