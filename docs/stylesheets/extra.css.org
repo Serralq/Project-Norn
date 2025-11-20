@@ -1,10 +1,21 @@
-/* [[file:extra.css.org::*Misc][Misc:1]] */
+* Build( extra.css )
+:PROPERTIES:
+:header-args: :comments link :mkdirp yes :tangle extra.css
+:END:
+** Misc
+- variables
+- headers
+- unordered lists symbol
+- link hover color
+- max width
+- elements to disappear when on mobile
+#+BEGIN_SRC css
 .twemoji {
   --md-icon-size: 1.3em !important;
 }
 
 /* Headers should have equal margins
- * Thus h1 should not have special treatment */
+ ,* Thus h1 should not have special treatment */
 h1 {
   margin-bottom: 0px !important;
 }
@@ -45,9 +56,10 @@ h6:after {
         display: none;
     }
 }
-/* Misc:1 ends here */
-
-/* [[file:extra.css.org::*Link cards][Link cards:1]] */
+#+END_SRC
+** TODO Link cards
+- Add images once it feels right
+#+BEGIN_SRC css
 /* Everyone has nicer borders */
 .note, .card-link {
   border-width: 2px !important;
@@ -79,9 +91,11 @@ h6:after {
     minmax(min(100%, 12rem), 1fr)
   ) !important;
 }
-/* Link cards:1 ends here */
 
-/* [[file:extra.css.org::*Custom link color classes][Custom link color classes:1]] */
+#+END_SRC
+*** TODO Custom link color classes
+- Replace with more fun image for immich
+#+BEGIN_SRC css
 /* Special colors for hovering */
 .card-link:hover {
   border: 3px solid #448aff !important;
@@ -114,9 +128,9 @@ h6:after {
   background-image: url('../img/immich.png');
   border: 3px solid #ff1947 !important;
 }
-/* Custom link color classes:1 ends here */
-
-/* [[file:extra.css.org::*Custom banner images][Custom banner images:1]] */
+#+END_SRC
+*** Custom banner images
+#+BEGIN_SRC css
 /* Custom Banner Images */
 /* Only remove normal banner once left side bar appears */
 @media screen and (min-width: 1220px) {
@@ -164,4 +178,4 @@ h6:after {
     justify-content: flex-end;
   }
 }
-/* Custom banner images:1 ends here */
+#+END_SRC
