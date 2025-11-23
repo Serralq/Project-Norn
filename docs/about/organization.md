@@ -47,7 +47,7 @@ compiled program, and the query is the runtime process after the compiletime
 using this compiled system, and the process is the compiler and database to
 create the compiled system.
 
-## Defining use case and inspirations
+## Defining Use Case
 Rather than imagine every possible use case, I simply wait for when I have a use
 case that appears more than twice (this isn't percise, just that it felt
 annoying).
@@ -63,7 +63,7 @@ Rather than tyring to keep all the system aligned with the process at all times,
 I simply let my intuition run and at the end check for issues, repeating with my
 intuition until there is no issues left.
 
-## Actually using this
+## Implementation Details
 Is not as simple, since while the shape of the answer is already provided, each
 step since needs adaptation. 
 
