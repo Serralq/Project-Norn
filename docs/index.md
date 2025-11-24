@@ -36,6 +36,7 @@ template:
   </a>
 </div>
 ## Extra Servers
+(Only works when the development server is up)
 
 <div class="grid grid-smaller">
   <a href="https://saku.serralq.dev" class="card card-link light-blue">
