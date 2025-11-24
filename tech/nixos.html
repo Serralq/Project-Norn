@@ -1,0 +1,1986 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Serralq's personal blog">
+      
+      
+        <meta name="author" content="Serralq">
+      
+      
+        <link rel="canonical" href="https://serralq.dev/tech/nixos.html">
+      
+      
+        <link rel="prev" href="../index.html">
+      
+      
+        <link rel="next" href="proxy.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+     
+<title>Why use NixOS</title>
+ 
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../assets/external/fonts.googleapis.com/css.217acf6a.css">
+        <style>:root{--md-text-font:"JetBrains Mono";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="Why use NixOS - Project Norn">
+<meta property="og:description" content="Serralq's personal blog">
+<meta property="og:image" content="https://serralq.dev/assets/images/social/tech/nixos.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://serralq.dev/tech/nixos.html">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Why use NixOS - Project Norn">
+<meta property="twitter:description" content="Serralq's personal blog">
+<meta property="twitter:image" content="https://serralq.dev/assets/images/social/tech/nixos.png">
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nixos-is-for-your-future-self" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to configuration -->
+
+
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+
+        <!-- Link to home -->
+        <a href="../index.html" title="Project Norn" class="md-header__button md-logo" aria-label="Project Norn" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.33.33 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.727l-13.675 7.895a.33.33 0 0 1-.33 0zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25M24 9.845 10.325 17.74a.33.33 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2z"></path></svg>
+
+        </a>
+
+        <!-- Button to open drawer -->
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+        </label>
+
+        <!-- Header title -->
+        <div class="md-header__title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Project Norn
+                    </span>
+                </div>
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        
+                        Why use NixOS
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color palette -->
+        
+
+        <!-- Site language selector -->
+        
+
+        <!-- Button to open search modal -->
+        
+
+        <!-- Repository information -->
+        
+    </nav>
+
+    <!-- Navigation tabs (sticky) -->
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="nixos.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tech
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../stationary/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Stationaries
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../travels/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Travels
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://jellyfin.serralq.dev" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Saku
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://copyparty.serralq.dev" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tonda
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../about/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About/Resume
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Project Norn" class="md-nav__button md-logo" aria-label="Project Norn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.33.33 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.727l-13.675 7.895a.33.33 0 0 1-.33 0zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25M24 9.845 10.325 17.74a.33.33 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2z"></path></svg>
+
+    </a>
+    Project Norn
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why use NixOS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="nixos.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why use NixOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#defining-declarative-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining: Declarative Programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining: Declarative Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thesis-of-nixos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thesis of NixOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-1-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1: Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-2-package-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2: Package Managers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-3-custom-install-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3: Custom Install Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counter-1-amnesia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter 1: Amnesia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#holy-trinity-nix-nixpkgs-nixos-and-homemanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Holy Trinity: Nix, NixPkgs, NixOS, (and Homemanager)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catch-all-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catch-all Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catch-all Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-impermanence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via Impermanence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-gnu-stow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via GNU Stow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-org-attach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via Org-Attach
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-flushing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache Flushing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Version
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="proxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Proxy Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../stationary/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stationaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stationaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../travels/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Travels
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Travels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../travels/visualnovelstores.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VN Stores in Japan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Japan Portfolio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Japan Portfolio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../travels/atri.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATRI: My Dear Moments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../travels/cafestella.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Café Stella and the Reapers' Butterflies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../travels/hoshizora.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoshizora No Memoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US Portfolio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    US Portfolio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../US Scenery" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jellyfin.serralq.dev" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Saku
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://copyparty.serralq.dev" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tonda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../about/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About/Resume
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About/Resume
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/about.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Bother Writing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/zettlr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Argumentative Zettelkasten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/degree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    As a CS student
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/organization.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Universal Organizational
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#defining-declarative-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining: Declarative Programming
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining: Declarative Programming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thesis-of-nixos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thesis of NixOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-1-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1: Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-2-package-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2: Package Managers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-3-custom-install-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3: Custom Install Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counter-1-amnesia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter 1: Amnesia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#holy-trinity-nix-nixpkgs-nixos-and-homemanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Holy Trinity: Nix, NixPkgs, NixOS, (and Homemanager)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catch-all-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catch-all Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catch-all Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-impermanence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via Impermanence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-gnu-stow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via GNU Stow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-org-attach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via Org-Attach
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-flushing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache Flushing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows Version
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+<small>Last Updated: 2025-07-30</small>
+ <h1 id="nixos-is-for-your-future-self">NixOS is for your Future Self<a class="headerlink" href="#nixos-is-for-your-future-self" title="Permanent link">#</a></h1>
+<p>Do you remember what you ate 1 year ago? In general, this doesn't matter, since
+the cost of forgetting is proportional to size of the event and thus to the size
+of the memory. That's to say, if you forget something small, it won't affect you
+too much, and the things that would affect you by a non-trivial amount would be
+large enough to not be forgotten within the relevant time span. </p>
+<p>But for code, a single fleeting line could break a configuration months later,
+costing dozens of fustrating and avoidable hours of debugging. That's the
+problem I aim to solve with NixOS, is how to not forget with the minimal cost.</p>
+<details class="note" open="open">
+<summary>Minimum Viable Product</summary>
+<p>A reliable system which minimizes information loss.</p>
+</details>
+<h2 id="defining-declarative-programming">Defining: Declarative Programming<a class="headerlink" href="#defining-declarative-programming" title="Permanent link">#</a></h2>
+<p>Most operating systems follow an imperative model, which means you tell it what
+to do, as compared to NixOS which follows a declarative model, which means you
+tell it what you want. For example, to install a package in Arch would follow
+require inputting the following command into the terminal:</p>
+<pre><code>sudo pacman -S hyprland
+</code></pre>
+<p>Compared to installing a package in NixOS would requires a few more steps, first
+to edit your configuration.nix file:</p>
+<pre><code>...
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+...
+</code></pre>
+<p>and then to rebuild the system:</p>
+<pre><code>nixos-rebuild switch
+</code></pre>
+<h3 id="thesis-of-nixos">Thesis of NixOS<a class="headerlink" href="#thesis-of-nixos" title="Permanent link">#</a></h3>
+<p>Both install process achieves the same result, but only NixOS will keep a
+preserve the information for future rebuilds within the configuration file. The
+imperative approach leaves an inadequate history trail. Thusly, I will demonstrate
+how NixOS in particular is able to sidestep additional information traps
+compared to other systems.</p>
+<details class="note" open="open">
+<summary>Spec: Written</summary>
+<p>NixOS keeps a written config of all system changes</p>
+</details>
+<h2 id="case-1-documentation">Case 1: Documentation<a class="headerlink" href="#case-1-documentation" title="Permanent link">#</a></h2>
+<p>The subsequent question would be why not just keep a list of applications? But
+comments and documentation can lie. Can you guarentee that you would never
+forget to write down every application you've installed? What about the small
+terminal helper you installed for a single script? Will you forget to uninstall
+this program or maybe say that you'll write it down later, only to forget it.</p>
+<p>Even if you are a super human and never sucuumb to laziness, can you trust that
+your previous self never did. It may be a fact that you never did, but you would
+also need perfect memory to confirm that the documentation is reliable. </p>
+<p>However, with code, the execution of the program also automatically checks and
+reflects the true state of your configuration. If you fail to code an
+application install, the application will not be installed, and if you installed
+an application you did not need, then the application will still be within your
+configuration file. There is no code which run without a correct syntax.</p>
+<details class="note" open="open">
+<summary>Spec: Verification</summary>
+<p>NixOS's config is verifiable via code execution</p>
+</details>
+<h2 id="case-2-package-managers">Case 2: Package Managers<a class="headerlink" href="#case-2-package-managers" title="Permanent link">#</a></h2>
+<p>Another option is to use a package manager such as homebrew or pacman which
+automatically keeps a list of all installed application, but these have two
+large issues.</p>
+<p>First, these package managers makes no distinction between applications you
+installed and application that were installed as dependencies within the global
+namespace. That's to say that as that any application can access another
+application's installed dependency. However, not every install and code will or
+can be managed by the package manager. These two facts combined can lead to a
+depenedency relation between the original package's dependency and the external
+program, but this dependency is only implicit and unwritten. Of course, there's
+still a causality chain from uninstall to program crash, but this now requires
+also investigating an uninstall dependency removals which is a class of issue
+that NixOS avoids by only exposing the intended output of an install.</p>
+<details class="note" open="open">
+<summary>Spec: Scope</summary>
+<p>NixOS's config specificies (almost) all of userspace</p>
+</details>
+<p>Secondly, regular uninstalls remove history. In NixOS, the installation list is
+a text file that can be tracked with version software such as Git. Thus, each
+uninstall is added to the history of file changes rather than removing the
+information from the install list. </p>
+<p>Uninstalls must be safe, else the disk will pile up requiring either a risky
+reinstall or extra money to upgrade your storage.</p>
+<details class="note" open="open">
+<summary>Spec: History</summary>
+<p>NixOS's config is a version-able text file</p>
+</details>
+<h2 id="case-3-custom-install-script">Case 3: Custom Install Script<a class="headerlink" href="#case-3-custom-install-script" title="Permanent link">#</a></h2>
+<p>Another solution is to create an install script. Have a list of every explicit
+change and installation within your system fufills most previous spec, but what
+happens when you change the system. To guarentee the script runs, you would have
+to re-install the system after each change. Moreover, you would have to delete everything
+beforehand to ensure artifcats from a previous install does not pollute the
+current install. This is possible, but it is magnitudes simpiler in a declarative
+system. </p>
+<p>By specifying the goal and not the process, NixOS can simply unlink all
+"uninstall" and if you happen to reinstall the application, a link would be
+created again. This preserves the result of an uninstall without the cost of the
+uninstall process. This simple shortcut reduces the cost of deleting and then
+re-installing, enabling for more atomic updates.</p>
+<details class="note" open="open">
+<summary>Spec: Automation</summary>
+<p>NixOS's config automates away the cost of rebuilds, enabling frequent rebuilds</p>
+</details>
+<h2 id="counter-1-amnesia">Counter 1: Amnesia<a class="headerlink" href="#counter-1-amnesia" title="Permanent link">#</a></h2>
+<p>Yes, it is expected to forget the content of each file, but as I wrote each
+file, it is trivial to simply read the file again. My definition of information
+loss wouldn't be forgetting the information, but when that information is no
+longer accessible, in any form. Only information which was never recorded, or
+poorly organized that the information loses its required context, or buried in a sea of
+irrelevant information, would be considered lost.</p>
+<details class="note" open="open">
+<summary>Addenum</summary>
+<p>Information is lost when it cannot be accessed, not when it is forgotten</p>
+</details>
+<h2 id="holy-trinity-nix-nixpkgs-nixos-and-homemanager">Holy Trinity: Nix, NixPkgs, NixOS, (and Homemanager)<a class="headerlink" href="#holy-trinity-nix-nixpkgs-nixos-and-homemanager" title="Permanent link">#</a></h2>
+<ul>
+<li>Nix is just the implmentation language</li>
+<li>NixPkgs is an implmentation of Nix for handling installs and uninstalls</li>
+<li>NixOS is an implmentation of Nix for handling system level configurations,
+  such as wifi, keyboard, launch services, etc.</li>
+<li>Homemanager is an implementation of Nix for handling application level configurations</li>
+</ul>
+<p>Each is it's own seperate part. It is also possible to only integrate parts of
+your system. For example, NixPkgs can be used within MacOS, using Nix-Darwin,
+and a NixOS system can also run other package managers such as Python's pip or
+Javascript's npm.</p>
+<p>For Homemanager, I would reccomend only paritially configuring application
+within Nix. You can use as much or as little of it as you wish, but due to the
+incompleteness of homemanager compared to the near infinite application
+configurations, it's simplier to utilize dotfiles or one of the other
+techniques discussed later in the article, when there is not a convienent
+Homemanager option.</p>
+<details class="note" open="open">
+<summary>Further Readings</summary>
+<ul>
+<li>These are just a subset of what I personally used to get to where I am.</li>
+<li>General overview of Nix and NixOS:
+   <a href="https://www.youtube.com/watch?v=CwfKlX3rA6E">NoBoilerPlate's Video</a></li>
+<li>Setting up the general build system:
+   <a href="https://www.youtube.com/watch?v=a67Sv4Mbxmc">Vimjoyer's Video</a></li>
+<li>Understanding Nix's language and terminology:
+   <a href="https://www.youtube.com/watch?v=5D3nUU1OVx8">Surma's Video</a></li>
+<li>The main wiki is incomplete, but it's the best place to start debugging:
+   <a href="https://nixos.wiki/wiki/Main_Page">Nix's Wiki</a></li>
+<li>99% of all the options in NixOS, NixPkgs, and Homemanager:
+   <a href="https://search.nixos.org/packages">Search Portal</a></li>
+<li>There's also flakes to learn about too</li>
+</ul>
+</details>
+<h2 id="catch-all-files">Catch-all Files<a class="headerlink" href="#catch-all-files" title="Permanent link">#</a></h2>
+<p>This only leaves the file system. This would also encompass non-dotfile application level
+configurations.</p>
+<p>Dotfile applications despite not following a declarative style, follow each spec
+laid out previously. Dotfiles are just special text files, almost never system
+generated, and runs on each applicaiton initialization.</p>
+<p>For non-dotfile applications, they are generally system-generated based on
+defaults or user inputs in a graphical config panel but each setting still exists
+as files written outside of the main installed executable. Given this, the
+configuration can be treated the same as regular arbitrary file data.</p>
+<p>For regular arbitrary file data, the best compromise I've found is to utilize an
+opt-in rather than an opt-out system. This means that each file should be
+automatically trashed unless otherwise specified within a file. This allows for
+a functional written history of what I've decided to keep. This is written and
+function since without writting the opt-in's, the files would be deleted.
+However, details within the opt-in folders can be system-generated and
+information becomes lost. The best mitigation would be to create as granular of
+a selection as possible.</p>
+<h3 id="via-impermanence">Via Impermanence<a class="headerlink" href="#via-impermanence" title="Permanent link">#</a></h3>
+<p>The most comprehensive solution within the Nix ecosystem is called
+<a href="https://nixos.wiki/wiki/Impermanence">Impermanence</a>. This sets out the disk
+structure, specifically a permanent and a imperanent volume. Then on each boot
+the impermanent volume is unmounted, recreated, and then symlinks to the
+permanent is added. I do not use this solution since this requires expanding the
+basic NixOS installation to also cover disk partitioning, which I find dangerous.</p>
+<details class="note" open="open">
+<summary>Further Readings</summary>
+<ul>
+<li>Nix Impermanence explained: 
+   <a href="https://www.youtube.com/watch?v=QtBouFMyrWg">NixCon2023 Talk</a></li>
+<li>Nix Impermanence documentation: 
+   <a href="https://github.com/nix-community/impermanence">Github</a></li>
+<li>NixOS's wiki on Nix Impermanence:
+   <a href="https://nixos.wiki/wiki/Impermanence">Imperance</a></li>
+</ul>
+</details>
+<h3 id="via-gnu-stow">Via GNU Stow<a class="headerlink" href="#via-gnu-stow" title="Permanent link">#</a></h3>
+<p>A simpler solution, which I currently utilize, is called GNU stow. GNU stow is
+called a symlink farm. It simply takes a folder and creates links so the folder
+can be at two places at once. In my use case, I use stow to create a copy of my
+main file system but within the ~/stow directory.</p>
+<p>Running stow . within the stow/ directory</p>
+<pre><code>stow/
+stow/.config/
+stow/.config/wezterm
+stow/.config/nvim
+stow/.config/yazi
+stow/.scripts/alarm.sh
+</code></pre>
+<p>Would result in the following links</p>
+<pre><code>.config/             -&gt; stow/.config/
+.config/wezterm      -&gt; stow/.config/wezterm
+.config/nvim         -&gt; stow/.config/nvim
+.config/yazi         -&gt; stow/.config/yazi
+.scripts/alarm.sh    -&gt; stow/.scripts/alarm.sh
+</code></pre>
+<p>This is also applicable to any kind of folder/file, including media files,
+spreadsheet files, non-coding files.</p>
+<pre><code>stow/Downloads/&lt;Files&gt;
+Downloads/&lt;Files&gt;   -&gt; stow/Downloads/&lt;Files&gt;
+</code></pre>
+<p>Despite ending in the same locations as the regular system generated files, the
+starting stow/ folder will only hold opt-in folders, satisfying spec 2.
+To verify the system functions only requires limited manual intervention: delete
+every thing and then repopulate with nixos-rebuild and stow.</p>
+<details class="note" open="open">
+<summary>Further Readings</summary>
+<ul>
+<li>GNU Stow's manual: 
+   <a href="https://www.gnu.org/software/stow/manual/stow.html">GNU Foundation</a></li>
+<li>Video alternatives: 
+   <a href="https://www.youtube.com/watch?v=NoFiYOqnC4o">Typcraft's Video</a>,
+   <a href="https://www.youtube.com/watch?v=y6XCebnB9gs">Dream of Autonomy's Video</a></li>
+</ul>
+</details>
+<h3 id="via-org-attach">Via Org-Attach<a class="headerlink" href="#via-org-attach" title="Permanent link">#</a></h3>
+<p>Another way to mitigate forgetting, is to keep extra context attached to the
+files and a way to accomplish this is by keep each file attached to a note,
+using an application like
+<a href="https://orgmode.org/manual/Attachments.html">Org-Attach</a>. That's to say, stop
+using folders to organize files and notes to organize information and instead
+combine the two. This way all the information is in one place. This does not
+guarentee memory, but it does reduce the chance of forgetting.</p>
+<p>This does not require every file to be within Org-Attach, but the benfits scale
+with Org's usage, so for my workflow, files in Downloads after a month are either
+inserted into Org-Roam else be deleted. The exceptions are files whose path I
+need to type out in the terminal often.</p>
+<details class="note" open="open">
+<summary>Further Readings</summary>
+<ul>
+<li>Chris Maiorana's explanation of Org-Attach: 
+ <a href="https://www.youtube.com/watch?v=UPUdbLFJmqs">Part 1</a>,
+ <a href="https://www.youtube.com/watch?v=MVjuVH-moAc">Part 2</a></li>
+</ul>
+</details>
+<h2 id="cache-flushing">Cache Flushing<a class="headerlink" href="#cache-flushing" title="Permanent link">#</a></h2>
+<p>For performance optimization, most applications, and especially browsers and
+browser-based electron applications, generate cache or temp files that clogs up
+disk space, but removing this now becomes trivial. Simply delete everything
+except the opt-in files and rebuild. This approaches preserves the power of
+reinstall but without all of the hassle of reinstalling.</p>
+<h2 id="windows-version">Windows Version<a class="headerlink" href="#windows-version" title="Permanent link">#</a></h2>
+<p>The annoying parts of Windows is that OS level changes are often based in
+registry or weird ass non file locations, but by remote desktoping into Windows
+and only projecting the application screen, via
+<a href="https://www.winboat.app">WinBoat</a> or
+<a href="https://github.com/winapps-org/winapps">WinApps</a>, all settings related to the
+Windows UI can be ignored, and the majority of the remaining changes are dll
+files.</p>
+<p>But having an actual remote instance of Windows creates latency so instead I
+currently run windows in a docker container so the remote Window instance is
+actually local. Then for non-functional media files are mounted into the docker
+container from the host NixOS system to benefit from the previously mentioned
+stow organization system.</p>
+<p>For building this docker container, I started from the official ISO and then ran
+Tiny11 build script to build the actual ISO I would use to get a stripped down
+version of Windows 11. Then rather than rebuild this ISO everytime I get a
+missing dll error, I kept a directory on the host machine which parallels the
+Windows structure and would add the missing dll in both the host and docker
+container. Then anytime I would rebuild the container I can also just follow the
+path of the hosted directory to replace the docker window's directory.</p>
+<p>In summary:</p>
+<ol>
+<li>Download Windows 11</li>
+<li>Debloat Windows into a personal ISO copy</li>
+<li>Create docker container from the ISO copy</li>
+<li>Utilize WinApps to remote into docker container</li>
+<li>Add media files into shared folder</li>
+<li>Add functional files to Windows and parallel host directory</li>
+</ol>
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Index
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="proxy.html" class="md-footer__link md-footer__link--next" aria-label="Next: Network Proxy Basics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Network Proxy Basics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tracking", "navigation.footer", "navigation.instant.preview", "navigation.indexes", "navigation.expand", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/highlight.js"></script>
+      
+    
+  
+<script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
