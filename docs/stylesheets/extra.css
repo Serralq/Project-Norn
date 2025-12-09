@@ -114,6 +114,10 @@ h6:after {
   background-image: url('../img/immich.png');
   border: 3px solid #ff1947 !important;
 }
+.card-link.pink:hover {
+  background-image: url('../img/doom.png');
+  border: 3px solid #e92063 !important;
+}
 /* Custom link color classes:1 ends here */
 
 /* [[file:extra.css.org::*Custom banner images][Custom banner images:1]] */

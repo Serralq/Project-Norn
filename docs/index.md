@@ -7,6 +7,7 @@ template:
 ---
 
 # Welcome (ﾉ ◕ ヮ ◕)ﾉ<span class="mobile">*:・ﾟ ✧</span>
+<!-- use the :icon: format to get the html element which I'll copy from -->
 <div class="grid grid-smaller">
   <a href="tech/nixos.html" class="card card-link deep-purple">
   <!-- Took original icon and used ai to flip it -->

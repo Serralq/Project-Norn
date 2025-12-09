@@ -128,6 +128,10 @@ h6:after {
   background-image: url('../img/immich.png');
   border: 3px solid #ff1947 !important;
 }
+.card-link.pink:hover {
+  background-image: url('../img/doom.png');
+  border: 3px solid #e92063 !important;
+}
 #+END_SRC
 *** Custom banner images
 #+BEGIN_SRC css
