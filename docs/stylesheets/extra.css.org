@@ -112,7 +112,8 @@ h6:after {
   border: 3px solid  #4cae4f !important;
 }
 .card-link.blue-grey:hover {
-  background-color: #546d78 !important;
+  background-image: url('../img/resume.png');
+  border: 3px solid #546d78 !important;
 }
 /* These two colors came from mkdocs-material button background color */
 /* Not the same as the actual class name anymore */
