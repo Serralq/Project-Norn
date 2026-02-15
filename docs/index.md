@@ -71,9 +71,8 @@ template:
 ??? quote "(Warning: Light mode)"
     === "Visual(26Q1)"
         <iframe width="760" height="380"  frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1118861380&amp;format=interactive"></iframe>
-
-        <div style="width: 1800px; height: 320px;">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false" style="width: 1800px; height: 600px; transform: scale(0.55); transform-origin: 0 0; "></iframe>
+        <div style="width: 200%; height: 350px;">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false" style="width: 85%; height: 600px; transform: scale(0.58); transform-origin: 0 0; "></iframe>
         </div>
     === "Visual(25Q4)"
         <img src="./spreadsheet/25Q4.svg" />
