@@ -304,6 +304,7 @@ h6:after {
     align-items: flex-start; /* Aligns Author, Separators, and Rows to the left */
     width: fit-content;      /* Shrinks width so the parent custom-footer-grid can center it */
     max-width: 100%;         /* Prevents overflow on small screens */
+    margin: 0px 10px;
 }
 
 /* Add this new class */
