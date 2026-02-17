@@ -110,8 +110,6 @@ nav:
             # TODO add image portfolio
           - US Portfolio:
                 - US Scenery
-    - Saku: https://jellyfin.serralq.dev
-    - Tonda: https://copyparty.serralq.dev
     - About/Resume:
           - About/Resume: about/index.md
           - Why Bother Writing: about/about.md

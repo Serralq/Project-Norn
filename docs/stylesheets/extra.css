@@ -251,7 +251,7 @@ h6:after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 /* --- 2. Links with Animated Underline --- */
@@ -288,13 +288,9 @@ h6:after {
 }
 
 /* Icons */
-.footer-link .twemoji {
-    height: 2rem;
-    width: 2rem;
-}
-.footer-link .twemoji svg {
-    height: 2rem;
-    width: 2rem;
+.footer-link .twemoji, .footer-link .twemoji svg {
+    height: 1.4rem;
+    width: 1.4rem;
 }
 .md-footer__link svg {
     color: var(--md-primary-fg-color);
