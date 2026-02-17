@@ -204,7 +204,7 @@ h6:after {
     position: relative; 
     
     /* Horizontal spacing */
-    padding-left: 10px; 
+    padding-left: 20px; 
     
     /* Ensure text sits ON TOP */
     z-index: 2; 
@@ -295,3 +295,32 @@ h6:after {
 .md-footer__link svg {
     color: var(--md-primary-fg-color);
 }
+
+/* Wrapper to group text content and left-align it */
+.footer-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns Author, Separators, and Rows to the left */
+    width: fit-content;      /* Shrinks width so the parent custom-footer-grid can center it */
+    max-width: 100%;         /* Prevents overflow on small screens */
+}
+
+/* Add this new class */
+.footer-label {
+    min-width: 100px; /* Adjust this value if you need more/less space */
+    display: inline-block;
+    color: var(--md-footer-fg-color); /* Ensures text color matches theme */
+}
+
+/* Update the wrapper rule to ensure vertical alignment is clean */
+.footer-content-wrapper .footer-socials {
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center; /* Aligns the label text vertically with the links */
+}
+
+/* Optional: If you want the separator lines inside the wrapper to align left as well */
+.footer-content-wrapper .footer-separator {
+    align-self: flex-start;
+}
+
