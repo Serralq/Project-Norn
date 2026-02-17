@@ -80,7 +80,7 @@ markdown_extensions:
     - pymdownx.snippets
     - material.extensions.preview:
           configurations:
-              - targets:
+              - sources:
                     exclude:
                         - index.md
     # - pymdownx.superfences:
