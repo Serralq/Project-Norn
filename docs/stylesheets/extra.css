@@ -29,8 +29,9 @@ h6:after {
 
 /* For hovering over url links */
 /* Since this is html element I made */
+/* only for index page since index link base color is different */
 .custom_link:hover {
-  color: #0091eb !important;
+  color: var(--md-primary-fg-color) !important;
 }
 
 /* For total size of entire website */
@@ -324,3 +325,19 @@ h6:after {
     align-self: flex-start;
 }
 
+/* --- Currently Reading Image Animation --- */
+
+/* 1. Base State: Scaled down to 90% */
+.reading-card-img {
+    width: 100%;            /* Fills the container width */
+    transform: scale(0.9);  /* Shrinks visual size to 90% */
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth ease-out */
+    display: block;         /* Removes potential inline spacing gaps */
+    border-radius: 4px;     /* Optional: Adds subtle rounding to corners */
+}
+
+/* 2. Hover State: Grows to 100% */
+/* We target the LINK hover to trigger the IMAGE transform */
+.reading-card-link:hover .reading-card-img {
+    transform: scale(1);
+}

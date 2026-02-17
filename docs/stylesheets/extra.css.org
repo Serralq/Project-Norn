@@ -93,8 +93,7 @@ h6:after {
 }
 
 #+END_SRC
-*** TODO Custom link color classes
-- Replace with more fun image for immich
+*** Custom link color classes
 #+BEGIN_SRC css
 /* Special colors for hovering */
 .card-link:hover {
@@ -134,7 +133,8 @@ h6:after {
   border: 3px solid #e92063 !important;
 }
 #+END_SRC
-*** Custom banner images
+*** TODO Custom banner images
+- Add more banner images
 #+BEGIN_SRC css
 /* Custom Banner Images */
 /* Only remove normal banner once left side bar appears */
