@@ -170,3 +170,132 @@ h6:after {
   }
 }
 /* Custom banner images:1 ends here */
+/* Custom Footer Styling */
+.md-footer {
+    /* background-color: var(--md-footer-bg-color); */
+    background-color: color-mix(in srgb, var(--md-footer-bg-color), var(--md-default-bg-color));
+    /* background-color: #202329; */
+    position: relative;
+    z-index: 20; 
+}
+.md-footer-meta {
+    /* background-color: #2e3440; */
+    background-color: var(--md-footer-bg-color);
+}
+
+.custom-footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 1. Name with Purple Box --- */
+/* --- 1. Name with Purple Box --- */
+.footer-author {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--md-footer-fg-color);
+    letter-spacing: 1px;
+    
+    position: relative; 
+    
+    /* Horizontal spacing */
+    padding-left: 10px; 
+    
+    /* Ensure text sits ON TOP */
+    z-index: 2; 
+    
+    /* Ensure the container height hugs the text tightly so bottom:0 works well */
+    line-height: 1.2; 
+    display: inline-block; /* Helps the box sit correctly relative to text flow */
+}
+
+/* The Purple Box */
+.footer-author::before {
+    content: "";
+    position: absolute;
+    
+    /* Position: Aligned to bottom */
+    bottom: 18px;            /* Lifted slightly to sit on the text baseline */
+    left: -30px;
+    
+    /* Reset top/transform from previous step */
+    top: auto;
+    transform: none;
+    
+    /* Size */
+    width: 105px;
+    height: 18px;
+    
+    background-color: var(--md-primary-fg-color);
+    opacity: 0.4;
+    z-index: 1; 
+}
+/* Centered Line Separator */
+/* .md-footer .md-footer-meta { */
+/*     background-color: var(--md-default-bg-color); */
+/* } */
+.footer-separator {
+    width: 60px;
+    height: 2px;
+    background-color: var(--md-footer-fg-color);
+    opacity: 0.3;
+    margin: 1.5rem 0;
+}
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* --- 2. Links with Animated Underline --- */
+.footer-link {
+    color: white !important;
+    transition: opacity 0.25s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    position: relative;     /* Required for positioning the ::after element */
+    padding-bottom: 8px;    /* Make space for the box to appear */
+}
+
+/* The Sliding Box (Hidden by default) */
+.footer-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;              /* Start at 0 width */
+    height: 4px;            /* Thickness of the box */
+    background-color: var(--md-primary-fg-color); /* Deep Purple */
+    transition: width 0.3s ease-out; /* The sliding animation */
+}
+
+/* Hover Effects */
+.footer-link:hover {
+    opacity: 1;
+    /* Removed scale transform to keep the underline steady */
+}
+
+/* Trigger animation on hover */
+.footer-link:hover::after {
+    width: 100%;            /* Extend to full width */
+}
+
+/* Icons */
+.footer-link .twemoji {
+    height: 2rem;
+    width: 2rem;
+}
+.footer-link .twemoji svg {
+    height: 2rem;
+    width: 2rem;
+}
+.md-footer__link svg {
+    color: var(--md-primary-fg-color);
+}

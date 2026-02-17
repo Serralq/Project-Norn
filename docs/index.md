@@ -2,6 +2,7 @@
 hide:
   navigation
   toc
+  my/footer
 template:
   unique/index.html
 ---
