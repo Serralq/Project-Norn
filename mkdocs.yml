@@ -77,6 +77,9 @@ markdown_extensions:
     - pymdownx.tabbed:
           alternate_style: true
     - pymdownx.snippets
+    # Do not enable in theme, keep here for config to actually apply
+    # Exclude index since preview is only good to fill the context
+    #   but not for a completely new start (eg starting at index)
     - material.extensions.preview:
           configurations:
               - sources:
