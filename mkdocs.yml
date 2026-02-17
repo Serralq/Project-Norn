@@ -2,6 +2,7 @@ site_name: Project Norn
 site_description: Serralq's personal blog
 site_author: Serralq
 site_url: https://serralq.dev
+# DO NOT FORGET TO SYNC ALL THE NAV CHANGES
 
 theme:
     name: material
