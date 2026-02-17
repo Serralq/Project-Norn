@@ -4,108 +4,115 @@ site_author: Serralq
 site_url: https://serralq.dev
 
 theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.tracking
-    - navigation.footer
-    - navigation.instant.preview
-    - navigation.indexes
-    - navigation.expand
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
-    - toc.follow
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.copy
-    - content.code.select
-  language: en
-  palette:
-    media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    primary: dark blue
-    accent: light blue
-  font:
-    text: JetBrains Mono
-    code: JetBrains Mono
-  icon:
-    logo: simple/bookstack
-  custom_dir: docs/overrides
+    name: material
+    features:
+        - navigation.tabs
+        - navigation.tracking
+        - navigation.footer
+        - navigation.indexes
+        - navigation.expand
+        - navigation.instant
+        - navigation.instant.preview
+        - navigation.instant.prefetch
+        - navigation.instant.progress
+        - toc.follow
+        - search.suggest
+        - search.highlight
+        # To enable when there's code snippets, and large enough
+        - content.tabs.link
+        - content.code.copy
+        - content.code.select
+    language: en
+    palette:
+        media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: dark blue
+        accent: light blue
+    font:
+        text: JetBrains Mono
+        code: JetBrains Mono
+    icon:
+        logo: simple/bookstack
+    custom_dir: docs/overrides
 
 docs_dir: "docs"
 
 extra_css:
-  - stylesheets/extra.css
+    - stylesheets/extra.css
 extra_javascript:
-  - javascripts/extra.js
-  - javascripts/highlight.js
+    - javascripts/extra.js
+    - javascripts/highlight.js
 
 plugins:
-  - social
-  - search
-  - offline
-  - glightbox
-  - autolinks
-  - privacy
-  # - optimize
-  # TODO Currently makes png look worse
+    - social
+    - search
+    - offline
+    - glightbox
+    # TODO Fix the image click feature
+    - autolinks
+    - privacy
+    # - optimize
+    # TODO Currently makes png look worse
 
 markdown_extensions:
-  - admonition
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - footnotes
-  - attr_list
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - toc:
-      permalink: "#"
-  - tables
-  - pymdownx.betterem
-  - pymdownx.details
-  - pymdownx.highlight:
-      auto_title: true
-      linenums: true
-      linenums_style: pymdownx-inline
-  - pymdownx.inlinehilite
-  - pymdownx.mark
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.snippets
-  # - pymdownx.superfences:
-  # custom_fences:
-  # - name: mermaid
-  # class: mermaid
-  # format: !!python/name:pymdownx.superfences.fence_code_format
+    - admonition
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - footnotes
+    - attr_list
+    - md_in_html
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - toc:
+          permalink: "#"
+    - tables
+    - pymdownx.betterem
+    - pymdownx.details
+    - pymdownx.highlight:
+          auto_title: true
+          linenums: true
+          linenums_style: pymdownx-inline
+    - pymdownx.inlinehilite
+    - pymdownx.mark
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.snippets
+    - material.extensions.preview:
+          configurations:
+              - targets:
+                    exclude:
+                        - index.md
+    # - pymdownx.superfences:
+    # custom_fences:
+    # - name: mermaid
+    # class: mermaid
+    # format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - Index: index.md
-  - Tech:
-      # - tech/Tech.md # Until another page, make the index the singular page
-      - Why use NixOS: tech/nixos.md
-      - Network Proxy Basics: tech/proxy.md
-  - Stationaries:
-      - Stationaries: stationary/index.md
-  - Travels:
-      - Travels: travels/index.md
-      - "VN Stores in Japan": travels/visualnovelstores.md
-      - Japan Portfolio:
-          # Alphabetical order
-          - "ATRI: My Dear Moments": travels/atri.md
-          - "Café Stella and the Reapers' Butterflies": travels/cafestella.md
-          - Hoshizora No Memoria: travels/hoshizora.md
-        # TODO add image portfolio
-      - US Portfolio:
-          - US Scenery
-  - Saku: https://jellyfin.serralq.dev
-  - Tonda: https://copyparty.serralq.dev
-  - About/Resume:
-      - About/Resume: about/index.md
-      - Why Bother Writing: about/about.md
-      - Argumentative Zettelkasten: about/zettlr.md
-      - As a CS student: about/degree.md
-      - Universal Organizational: about/organization.md
+    - Index: index.md
+    - Tech:
+          # - tech/Tech.md # Until another page, make the index the singular page
+          - Why use NixOS: tech/nixos.md
+          - Network Proxy Basics: tech/proxy.md
+    - Stationaries:
+          - Stationaries: stationary/index.md
+    - Travels:
+          - Travels: travels/index.md
+          - "VN Stores in Japan": travels/visualnovelstores.md
+          - Japan Portfolio:
+                # Alphabetical order
+                - "ATRI: My Dear Moments": travels/atri.md
+                - "Café Stella and the Reapers' Butterflies": travels/cafestella.md
+                - Hoshizora No Memoria: travels/hoshizora.md
+            # TODO add image portfolio
+          - US Portfolio:
+                - US Scenery
+    - Saku: https://jellyfin.serralq.dev
+    - Tonda: https://copyparty.serralq.dev
+    - About/Resume:
+          - About/Resume: about/index.md
+          - Why Bother Writing: about/about.md
+          - Argumentative Zettelkasten: about/zettlr.md
+          - As a CS student: about/degree.md
+          - Universal Organizational: about/organization.md
