@@ -41,7 +41,7 @@ h6:after {
 /* For hovering over url links */
 /* Since this is html element I made */
 /* only for index page since index link base color is different */
-.custom_link:hover {
+.custom_link:hover, .md-footer__button svg  {
   color: var(--md-primary-fg-color) !important;
 }
 
