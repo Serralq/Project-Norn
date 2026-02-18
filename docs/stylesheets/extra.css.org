@@ -200,6 +200,7 @@ h6:after {
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Fills the entire viewport */
+    padding: 0px 16px;
 }
 #+END_SRC
 *** Footer Author
