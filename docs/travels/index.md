@@ -1,3 +1,7 @@
+---
+hide:
+  my/footer
+---
 <link rel="stylesheet" href="./travels.css" />
 # Japan Overview (per town) 
 <!-- For extra margins -->

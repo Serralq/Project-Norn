@@ -1,3 +1,7 @@
+---
+hide:
+  my/footer
+---
 # TODO Hardware images
 ![418](../img/418.png)
 <div class="footnote">

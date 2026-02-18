@@ -1,3 +1,7 @@
+---
+hide:
+  my/footer
+---
 # Socials / Links
 <div class="grid grid-smaller">
   <a href="https://x.com/Serralq" class="card card-link">
