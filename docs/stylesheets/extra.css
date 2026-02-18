@@ -171,48 +171,34 @@ h6:after {
   }
 }
 /* Custom banner images:1 ends here */
-/* Custom Footer Styling */
+
+/* [[file:extra.css.org::*Footer Social Box][Footer Social Box:1]] */
 .md-footer {
-    /* background-color: var(--md-footer-bg-color); */
+    /* In between the blog article and content */
     background-color: color-mix(in srgb, var(--md-footer-bg-color), var(--md-default-bg-color));
-    /* background-color: #202329; */
-    position: relative;
-    z-index: 20; 
+    z-index: 20; /* Stops the sidebar from overlapping */
 }
+/* The actual footer social card */
 .md-footer-meta {
-    /* background-color: #2e3440; */
     background-color: var(--md-footer-bg-color);
 }
-
 .custom-footer-grid {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 0;
-    box-sizing: border-box;
+    min-height: 100vh; /* Fills the entire viewport */
 }
+/* Footer Social Box:1 ends here */
 
-/* --- 1. Name with Purple Box --- */
-/* --- 1. Name with Purple Box --- */
+/* [[file:extra.css.org::*Footer Author][Footer Author:1]] */
 .footer-author {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--md-footer-fg-color);
     letter-spacing: 1px;
-    
-    position: relative; 
-    
-    /* Horizontal spacing */
     padding-left: 20px; 
     
-    /* Ensure text sits ON TOP */
-    z-index: 2; 
-    
-    /* Ensure the container height hugs the text tightly so bottom:0 works well */
+    /* Prepping for the purple box */
+    position: relative; 
     line-height: 1.2; 
-    display: inline-block; /* Helps the box sit correctly relative to text flow */
 }
 
 /* The Purple Box */
@@ -221,25 +207,20 @@ h6:after {
     position: absolute;
     
     /* Position: Aligned to bottom */
-    bottom: 18px;            /* Lifted slightly to sit on the text baseline */
+    bottom: 18px;
     left: -30px;
     
-    /* Reset top/transform from previous step */
-    top: auto;
-    transform: none;
-    
-    /* Size */
     width: 105px;
     height: 18px;
     
     background-color: var(--md-primary-fg-color);
-    opacity: 0.4;
-    z-index: 1; 
+    opacity: 0.3;
+    z-index: 1; /* Above the text */
 }
+/* Footer Author:1 ends here */
+
+/* [[file:extra.css.org::*Footer Contents][Footer Contents:1]] */
 /* Centered Line Separator */
-/* .md-footer .md-footer-meta { */
-/*     background-color: var(--md-default-bg-color); */
-/* } */
 .footer-separator {
     width: 60px;
     height: 2px;
@@ -250,17 +231,15 @@ h6:after {
 
 .footer-socials {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
 }
 
 /* --- 2. Links with Animated Underline --- */
 .footer-link {
     color: white !important;
-    transition: opacity 0.25s, transform 0.2s;
+    transition: opacity 0.3s, transform 0.2s;
+    opacity: 0.8;
     display: flex;
-    align-items: center;
     position: relative;     /* Required for positioning the ::after element */
     padding-bottom: 8px;    /* Make space for the box to appear */
 }
@@ -271,74 +250,47 @@ h6:after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;              /* Start at 0 width */
-    height: 4px;            /* Thickness of the box */
-    background-color: var(--md-primary-fg-color); /* Deep Purple */
-    transition: width 0.3s ease-out; /* The sliding animation */
-}
-
-/* Hover Effects */
-.footer-link:hover {
-    opacity: 1;
-    /* Removed scale transform to keep the underline steady */
+    width: 0%;
+    height: 4px;
+    background-color: var(--md-primary-fg-color); 
+    transition: width 0.3s ease-out;
 }
 
 /* Trigger animation on hover */
 .footer-link:hover::after {
-    width: 100%;            /* Extend to full width */
+    width: 100%;
+}
+.footer-link:hover {
+    opacity: 1;
 }
 
 /* Icons */
 .footer-link .twemoji, .footer-link .twemoji svg {
-    height: 1.4rem;
-    width: 1.4rem;
-}
-.md-footer__link svg {
-    color: var(--md-primary-fg-color);
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 /* Wrapper to group text content and left-align it */
 .footer-content-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns Author, Separators, and Rows to the left */
-    width: fit-content;      /* Shrinks width so the parent custom-footer-grid can center it */
-    max-width: 100%;         /* Prevents overflow on small screens */
-    margin: 0px 10px;
+    align-items: flex-start;
+    max-width: 100%;
 }
 
-/* Add this new class */
 .footer-label {
-    min-width: 100px; /* Adjust this value if you need more/less space */
-    display: inline-block;
-    color: var(--md-footer-fg-color); /* Ensures text color matches theme */
+    min-width: 100px;
 }
+/* Footer Contents:1 ends here */
 
-/* Update the wrapper rule to ensure vertical alignment is clean */
-.footer-content-wrapper .footer-socials {
-    justify-content: flex-start;
-    text-align: left;
-    align-items: center; /* Aligns the label text vertically with the links */
-}
-
-/* Optional: If you want the separator lines inside the wrapper to align left as well */
-.footer-content-wrapper .footer-separator {
-    align-self: flex-start;
-}
-
-/* --- Currently Reading Image Animation --- */
-
-/* 1. Base State: Scaled down to 90% */
+/* [[file:extra.css.org::*Currently Reading Hover Effect][Currently Reading Hover Effect:1]] */
 .reading-card-img {
-    width: 100%;            /* Fills the container width */
-    transform: scale(0.9);  /* Shrinks visual size to 90% */
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth ease-out */
-    display: block;         /* Removes potential inline spacing gaps */
-    border-radius: 4px;     /* Optional: Adds subtle rounding to corners */
+    width: 100%;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 4px;
 }
-
-/* 2. Hover State: Grows to 100% */
-/* We target the LINK hover to trigger the IMAGE transform */
 .reading-card-link:hover .reading-card-img {
     transform: scale(1);
 }
+/* Currently Reading Hover Effect:1 ends here */

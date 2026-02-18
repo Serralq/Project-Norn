@@ -40,8 +40,9 @@ h6:after {
 
 /* For hovering over url links */
 /* Since this is html element I made */
+/* only for index page since index link base color is different */
 .custom_link:hover {
-  color: #0091eb !important;
+  color: var(--md-primary-fg-color) !important;
 }
 
 /* For total size of entire website */
@@ -182,5 +183,128 @@ h6:after {
     display: flex;
     justify-content: flex-end;
   }
+}
+#+END_SRC
+** Footer Social Box
+#+BEGIN_SRC css
+.md-footer {
+    /* In between the blog article and content */
+    background-color: color-mix(in srgb, var(--md-footer-bg-color), var(--md-default-bg-color));
+    z-index: 20; /* Stops the sidebar from overlapping */
+}
+/* The actual footer social card */
+.md-footer-meta {
+    background-color: var(--md-footer-bg-color);
+}
+.custom-footer-grid {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Fills the entire viewport */
+}
+#+END_SRC
+*** Footer Author
+#+BEGIN_SRC css
+.footer-author {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-left: 20px; 
+    
+    /* Prepping for the purple box */
+    position: relative; 
+    line-height: 1.2; 
+}
+
+/* The Purple Box */
+.footer-author::before {
+    content: "";
+    position: absolute;
+    
+    /* Position: Aligned to bottom */
+    bottom: 18px;
+    left: -30px;
+    
+    width: 105px;
+    height: 18px;
+    
+    background-color: var(--md-primary-fg-color);
+    opacity: 0.3;
+    z-index: 1; /* Above the text */
+}
+#+END_SRC
+*** Footer Contents
+#+BEGIN_SRC css
+/* Centered Line Separator */
+.footer-separator {
+    width: 60px;
+    height: 2px;
+    background-color: var(--md-footer-fg-color);
+    opacity: 0.3;
+    margin: 1.5rem 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 30px;
+}
+
+/* --- 2. Links with Animated Underline --- */
+.footer-link {
+    color: white !important;
+    transition: opacity 0.3s, transform 0.2s;
+    opacity: 0.8;
+    display: flex;
+    position: relative;     /* Required for positioning the ::after element */
+    padding-bottom: 8px;    /* Make space for the box to appear */
+}
+
+/* The Sliding Box (Hidden by default) */
+.footer-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: var(--md-primary-fg-color); 
+    transition: width 0.3s ease-out;
+}
+
+/* Trigger animation on hover */
+.footer-link:hover::after {
+    width: 100%;
+}
+.footer-link:hover {
+    opacity: 1;
+}
+
+/* Icons */
+.footer-link .twemoji, .footer-link .twemoji svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Wrapper to group text content and left-align it */
+.footer-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.footer-label {
+    min-width: 100px;
+}
+#+END_SRC
+** Currently Reading Hover Effect
+#+BEGIN_SRC css
+.reading-card-img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 4px;
+}
+.reading-card-link:hover .reading-card-img {
+    transform: scale(1);
 }
 #+END_SRC
