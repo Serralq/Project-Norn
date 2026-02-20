@@ -12,7 +12,7 @@
                 <div class="md-nav__title">Last updated:</div>
                 <ul class="md-nav__list" data-md-scrollfix>
                     {% for file in (pages | selectattr("page.meta.date") |
-                    sort(attribute="page.meta.date.created", reverse=true))[:10] %}
+                    sort(attribute="page.meta.date.created", reverse=true))[:15] %}
 
                     <li class="md-nav__item">
                         {% if 'about' in file.url %}
