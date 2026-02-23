@@ -158,9 +158,9 @@ h6:after {
   }
   /* The top banner */
   .md-tabs {
-    background-image: url('../img/banner.png');
+    background-image: var(--md-banner-image, url('../img/banner.png'));
+    background-position: var(--md-banner-position, center center);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     height: 120px;
     position: relative;
@@ -209,25 +209,25 @@ h6:after {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    padding-left: 20px; 
-    
+    padding-left: 20px;
+
     /* Prepping for the purple box */
-    position: relative; 
-    line-height: 1.2; 
+    position: relative;
+    line-height: 1.2;
 }
 
 /* The Purple Box */
 .footer-author::before {
     content: "";
     position: absolute;
-    
+
     /* Position: Aligned to bottom */
     bottom: 18px;
     left: -30px;
-    
+
     width: 105px;
     height: 18px;
-    
+
     background-color: var(--md-primary-fg-color);
     opacity: 0.3;
     z-index: 1; /* Above the text */
@@ -268,7 +268,7 @@ h6:after {
     left: 0;
     width: 0%;
     height: 4px;
-    background-color: var(--md-primary-fg-color); 
+    background-color: var(--md-primary-fg-color);
     transition: width 0.3s ease-out;
 }
 

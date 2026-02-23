@@ -68,7 +68,7 @@ template:
 
 (Only works when the development server is up)
 
-## Time Logs
+## Time Logs:
 <!-- Projects + Post Sections -->
 ??? quote "(Warning: Light mode)"
     === "Visual(26Q1)"
