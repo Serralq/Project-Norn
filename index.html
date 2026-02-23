@@ -1,0 +1,1591 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Serralq's personal blog">
+      
+      
+        <meta name="author" content="Serralq">
+      
+      
+        <link rel="canonical" href="https://serralq.dev/index.html">
+      
+      
+      
+        <link rel="next" href="tech/nixos.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+     
+<title>Project Norn</title>
+<!-- Adds scripts -->
+<script src="javascripts/highlight.js"></script>
+ 
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="assets/external/fonts.googleapis.com/css.217acf6a.css">
+        <style>:root{--md-text-font:"JetBrains Mono";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="Project Norn">
+<meta property="og:description" content="Serralq's personal blog">
+<meta property="og:image" content="https://serralq.dev/assets/images/social/index.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://serralq.dev/index.html">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Project Norn">
+<meta property="twitter:description" content="Serralq's personal blog">
+<meta property="twitter:image" content="https://serralq.dev/assets/images/social/index.png">
+<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#article-tags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to configuration -->
+
+
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+
+        <!-- Link to home -->
+        <a href="index.html" title="Project Norn" class="md-header__button md-logo" aria-label="Project Norn" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.33.33 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.727l-13.675 7.895a.33.33 0 0 1-.33 0zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25M24 9.845 10.325 17.74a.33.33 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2z"></path></svg>
+
+        </a>
+
+        <!-- Button to open drawer -->
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+        </label>
+
+        <!-- Header title -->
+        <div class="md-header__title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Project Norn
+                    </span>
+                </div>
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        
+                        Index
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color palette -->
+        
+
+        <!-- Site language selector -->
+        
+
+        <!-- Button to open search modal -->
+        
+
+        <!-- Repository information -->
+        
+    </nav>
+
+    <!-- Navigation tabs (sticky) -->
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tech/nixos.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tech
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="stationary/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Stationaries
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="travels/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Travels
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="about/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About/Resume
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+           
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Project Norn" class="md-nav__button md-logo" aria-label="Project Norn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.33.33 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.727l-13.675 7.895a.33.33 0 0 1-.33 0zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25M24 9.845 10.325 17.74a.33.33 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2z"></path></svg>
+
+    </a>
+    Project Norn
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Servers:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Logs:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tech/nixos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why use NixOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tech/proxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Proxy Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="stationary/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stationaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stationaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="travels/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Travels
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Travels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="travels/visualnovelstores.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VN Stores in Japan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Japan Portfolio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Japan Portfolio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="travels/atri.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATRI: My Dear Moments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="travels/cafestella.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Café Stella and the Reapers' Butterflies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="travels/hoshizora.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoshizora No Memoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US Portfolio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    US Portfolio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="US Scenery" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="about/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About/Resume
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About/Resume
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Bother Writing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/zettlr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Argumentative Zettelkasten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/degree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    As a CS student
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/organization.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Universal Organizational
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Servers:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Logs:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="navigation">
+    <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+            <!-- Add profile picture + links to be memorable, also move the currently reading ot bottom to balance it out -->
+            <nav class="md-nav md-nav--secondary md-nav--integrated" aria-label="Last updated:" data-md-level="0">
+                <div class="md-nav__title">Currently Reading:</div>
+                <a href="https://vndb.org/v27449" class="reading-card-link">
+                    <img src="img/1.png" class="reading-card-img" alt="Currently Reading">
+                </a>
+                <div class="md-nav__title">Last updated:</div>
+                <ul class="md-nav__list" data-md-scrollfix>
+                    
+
+                    <li class="md-nav__item">
+                        
+                        <a class="md-nav__link custom_link" href="about/organization.html" style="color: #546d78">
+                            <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11.997.011c-1.79.015-3.452.397-4.968 1.093l.005-.002c3.638 2.026 6.955 5.634 8.932 8.241.398.534.753 1.006 1.078 1.434l.004-.019c.412-1.738-.313-5.239-1.518-7.331-.117-.203-.201-.379-.187-.392l.006.002.002-.007c.098.024 1.031.995 1.373 1.433.599.767.832 1.213 1.162 2.23.858 2.645 1.424 4.801 1.901 7.249.239 1.228.675 3.458.731 3.884.007.057-.009.128-.01.143a5.164 5.164 0 0 0-.29-.264c-.645-.568-1.924-1.417-3.183-2.114-1.57-.87-3.118-1.614-6.575-3.162-3.156-1.413-4.61-2.086-5.751-2.661l-1.024-.51c.12.301.249.624.399 1.005 0 0 1.933 1.08 2.174 1.408 0 0 2.322 4.367 3.353 6.955.767 1.949 1.634 4.264 2.155 4.904l.06.069c-1.026-.251-5.745-2.598-5.745-2.598-.518-4.399-1.969-9.61-3.855-14.94a7.259 7.259 0 0 1-.125-.271c.001-.015.141.121.311.303C4.313 8.13 8.368 9.98 12.675 10.775a16.48 16.48 0 0 0 3.533.223c-.307-.392-.64-.821-1.009-1.302-3.418-4.455-6.774-6.326-9.78-7.469-.079-.028-.154-.061-.231-.088A11.902 11.902 0 0 0 .669 8.071a11.97 11.97 0 0 0-.67 4.016l.003-.088c.033 5.018 3.129 9.616 8.052 11.33 1.335.465 2.696.68 4.032.67l-.088-.003c5.018-.033 9.616-3.129 11.33-8.052.465-1.335.68-2.696.67-4.032l-.003.088c-.033-5.018-3.129-9.616-8.052-11.33A11.966 11.966 0 0 0 11.911 0l.088.003zm6.133 6.11-.002.007c-.001 0 0 0 0 0l.002-.007c.531.511 1.376 1.503 2.336 2.062.789.99 1.216 1.963 1.748 2.629-.219-.188-1.111-.972-1.111-.972s-1.378-1.305-2.141-2.153c-.293-.326-.32-.38-.478-.628-.062-.097-.275-.825-.354-.935h-.001l.002-.007z">
+                                    </path>
+                                </svg></span>
+                            
+                                             Universal Organizational 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                                <a class="md-nav__link custom_link" href="tech/proxy.html" style="color: #7e56c2">
+                                    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z">
+                                            </path>
+                                        </svg></span>
+                                    
+                                             Network Proxy Basics 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                        <a class="md-nav__link custom_link" href="about/degree.html" style="color: #546d78">
+                            <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11.997.011c-1.79.015-3.452.397-4.968 1.093l.005-.002c3.638 2.026 6.955 5.634 8.932 8.241.398.534.753 1.006 1.078 1.434l.004-.019c.412-1.738-.313-5.239-1.518-7.331-.117-.203-.201-.379-.187-.392l.006.002.002-.007c.098.024 1.031.995 1.373 1.433.599.767.832 1.213 1.162 2.23.858 2.645 1.424 4.801 1.901 7.249.239 1.228.675 3.458.731 3.884.007.057-.009.128-.01.143a5.164 5.164 0 0 0-.29-.264c-.645-.568-1.924-1.417-3.183-2.114-1.57-.87-3.118-1.614-6.575-3.162-3.156-1.413-4.61-2.086-5.751-2.661l-1.024-.51c.12.301.249.624.399 1.005 0 0 1.933 1.08 2.174 1.408 0 0 2.322 4.367 3.353 6.955.767 1.949 1.634 4.264 2.155 4.904l.06.069c-1.026-.251-5.745-2.598-5.745-2.598-.518-4.399-1.969-9.61-3.855-14.94a7.259 7.259 0 0 1-.125-.271c.001-.015.141.121.311.303C4.313 8.13 8.368 9.98 12.675 10.775a16.48 16.48 0 0 0 3.533.223c-.307-.392-.64-.821-1.009-1.302-3.418-4.455-6.774-6.326-9.78-7.469-.079-.028-.154-.061-.231-.088A11.902 11.902 0 0 0 .669 8.071a11.97 11.97 0 0 0-.67 4.016l.003-.088c.033 5.018 3.129 9.616 8.052 11.33 1.335.465 2.696.68 4.032.67l-.088-.003c5.018-.033 9.616-3.129 11.33-8.052.465-1.335.68-2.696.67-4.032l-.003.088c-.033-5.018-3.129-9.616-8.052-11.33A11.966 11.966 0 0 0 11.911 0l.088.003zm6.133 6.11-.002.007c-.001 0 0 0 0 0l.002-.007c.531.511 1.376 1.503 2.336 2.062.789.99 1.216 1.963 1.748 2.629-.219-.188-1.111-.972-1.111-.972s-1.378-1.305-2.141-2.153c-.293-.326-.32-.38-.478-.628-.062-.097-.275-.825-.354-.935h-.001l.002-.007z">
+                                    </path>
+                                </svg></span>
+                            
+                                             As a CS student 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                                <a class="md-nav__link custom_link" href="tech/nixos.html" style="color: #7e56c2">
+                                    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                            <path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z">
+                                            </path>
+                                        </svg></span>
+                                    
+                                             Why use NixOS 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                            <a class="md-nav__link custom_link" href="travels/cafestella.html" style="color: #4cae4f">
+                                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M20 8h-6c-1.66 0-3 1.34-3 3v7c0 1.66 1.34 3 3 3l-1 1v1h1l2-2.03h2L20 23h1v-1l-1-1c1.66 0 3-1.34 3-3v-7c0-1.66-1.34-3-3-3m-6 11c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m1-3h-8v-6h8v6M6.66 14.53 7 17l-1.05 1.06-1.76-3.18L1 13.11l1.06-1.08 2.5.37 3.87-3.87L1 4.62l1.42-1.41 9.19 2.12 3.89-3.89c.56-.585 1.56-.585 2.12 0 .59.59.59 1.56 0 2.12L14.18 7H14c-2.21 0-4 1.79-4 4v.19l-3.34 3.34Z">
+                                        </path>
+                                    </svg></span>
+                                
+                                             Café Stella and the Reapers' Butterflies 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                            <a class="md-nav__link custom_link" href="travels/hoshizora.html" style="color: #4cae4f">
+                                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M20 8h-6c-1.66 0-3 1.34-3 3v7c0 1.66 1.34 3 3 3l-1 1v1h1l2-2.03h2L20 23h1v-1l-1-1c1.66 0 3-1.34 3-3v-7c0-1.66-1.34-3-3-3m-6 11c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m1-3h-8v-6h8v6M6.66 14.53 7 17l-1.05 1.06-1.76-3.18L1 13.11l1.06-1.08 2.5.37 3.87-3.87L1 4.62l1.42-1.41 9.19 2.12 3.89-3.89c.56-.585 1.56-.585 2.12 0 .59.59.59 1.56 0 2.12L14.18 7H14c-2.21 0-4 1.79-4 4v.19l-3.34 3.34Z">
+                                        </path>
+                                    </svg></span>
+                                
+                                             Hoshizora No Memoria 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                            <a class="md-nav__link custom_link" href="travels/atri.html" style="color: #4cae4f">
+                                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M20 8h-6c-1.66 0-3 1.34-3 3v7c0 1.66 1.34 3 3 3l-1 1v1h1l2-2.03h2L20 23h1v-1l-1-1c1.66 0 3-1.34 3-3v-7c0-1.66-1.34-3-3-3m-6 11c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m1-3h-8v-6h8v6M6.66 14.53 7 17l-1.05 1.06-1.76-3.18L1 13.11l1.06-1.08 2.5.37 3.87-3.87L1 4.62l1.42-1.41 9.19 2.12 3.89-3.89c.56-.585 1.56-.585 2.12 0 .59.59.59 1.56 0 2.12L14.18 7H14c-2.21 0-4 1.79-4 4v.19l-3.34 3.34Z">
+                                        </path>
+                                    </svg></span>
+                                
+                                             ATRI: My Dear Moments 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                        <a class="md-nav__link custom_link" href="about/zettlr.html" style="color: #546d78">
+                            <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11.997.011c-1.79.015-3.452.397-4.968 1.093l.005-.002c3.638 2.026 6.955 5.634 8.932 8.241.398.534.753 1.006 1.078 1.434l.004-.019c.412-1.738-.313-5.239-1.518-7.331-.117-.203-.201-.379-.187-.392l.006.002.002-.007c.098.024 1.031.995 1.373 1.433.599.767.832 1.213 1.162 2.23.858 2.645 1.424 4.801 1.901 7.249.239 1.228.675 3.458.731 3.884.007.057-.009.128-.01.143a5.164 5.164 0 0 0-.29-.264c-.645-.568-1.924-1.417-3.183-2.114-1.57-.87-3.118-1.614-6.575-3.162-3.156-1.413-4.61-2.086-5.751-2.661l-1.024-.51c.12.301.249.624.399 1.005 0 0 1.933 1.08 2.174 1.408 0 0 2.322 4.367 3.353 6.955.767 1.949 1.634 4.264 2.155 4.904l.06.069c-1.026-.251-5.745-2.598-5.745-2.598-.518-4.399-1.969-9.61-3.855-14.94a7.259 7.259 0 0 1-.125-.271c.001-.015.141.121.311.303C4.313 8.13 8.368 9.98 12.675 10.775a16.48 16.48 0 0 0 3.533.223c-.307-.392-.64-.821-1.009-1.302-3.418-4.455-6.774-6.326-9.78-7.469-.079-.028-.154-.061-.231-.088A11.902 11.902 0 0 0 .669 8.071a11.97 11.97 0 0 0-.67 4.016l.003-.088c.033 5.018 3.129 9.616 8.052 11.33 1.335.465 2.696.68 4.032.67l-.088-.003c5.018-.033 9.616-3.129 11.33-8.052.465-1.335.68-2.696.67-4.032l-.003.088c-.033-5.018-3.129-9.616-8.052-11.33A11.966 11.966 0 0 0 11.911 0l.088.003zm6.133 6.11-.002.007c-.001 0 0 0 0 0l.002-.007c.531.511 1.376 1.503 2.336 2.062.789.99 1.216 1.963 1.748 2.629-.219-.188-1.111-.972-1.111-.972s-1.378-1.305-2.141-2.153c-.293-.326-.32-.38-.478-.628-.062-.097-.275-.825-.354-.935h-.001l.002-.007z">
+                                    </path>
+                                </svg></span>
+                            
+                                             Argumentative Zettelkasten 
+                                        </a>
+                    </li>
+                    
+
+                    <li class="md-nav__item">
+                        
+                        <a class="md-nav__link custom_link" href="about/about.html" style="color: #546d78">
+                            <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M11.997.011c-1.79.015-3.452.397-4.968 1.093l.005-.002c3.638 2.026 6.955 5.634 8.932 8.241.398.534.753 1.006 1.078 1.434l.004-.019c.412-1.738-.313-5.239-1.518-7.331-.117-.203-.201-.379-.187-.392l.006.002.002-.007c.098.024 1.031.995 1.373 1.433.599.767.832 1.213 1.162 2.23.858 2.645 1.424 4.801 1.901 7.249.239 1.228.675 3.458.731 3.884.007.057-.009.128-.01.143a5.164 5.164 0 0 0-.29-.264c-.645-.568-1.924-1.417-3.183-2.114-1.57-.87-3.118-1.614-6.575-3.162-3.156-1.413-4.61-2.086-5.751-2.661l-1.024-.51c.12.301.249.624.399 1.005 0 0 1.933 1.08 2.174 1.408 0 0 2.322 4.367 3.353 6.955.767 1.949 1.634 4.264 2.155 4.904l.06.069c-1.026-.251-5.745-2.598-5.745-2.598-.518-4.399-1.969-9.61-3.855-14.94a7.259 7.259 0 0 1-.125-.271c.001-.015.141.121.311.303C4.313 8.13 8.368 9.98 12.675 10.775a16.48 16.48 0 0 0 3.533.223c-.307-.392-.64-.821-1.009-1.302-3.418-4.455-6.774-6.326-9.78-7.469-.079-.028-.154-.061-.231-.088A11.902 11.902 0 0 0 .669 8.071a11.97 11.97 0 0 0-.67 4.016l.003-.088c.033 5.018 3.129 9.616 8.052 11.33 1.335.465 2.696.68 4.032.67l-.088-.003c5.018-.033 9.616-3.129 11.33-8.052.465-1.335.68-2.696.67-4.032l-.003.088c-.033-5.018-3.129-9.616-8.052-11.33A11.966 11.966 0 0 0 11.911 0l.088.003zm6.133 6.11-.002.007c-.001 0 0 0 0 0l.002-.007c.531.511 1.376 1.503 2.336 2.062.789.99 1.216 1.963 1.748 2.629-.219-.188-1.111-.972-1.111-.972s-1.378-1.305-2.141-2.153c-.293-.326-.32-.38-.478-.628-.062-.097-.275-.825-.354-.935h-.001l.002-.007z">
+                                    </path>
+                                </svg></span>
+                            
+                                             Why Bother Writing 
+                                        </a>
+                    </li>
+                    
+                </ul>
+                <!-- <div class="md-nav__title">Bookmarks:</div>
+                <ul class="md-nav__list" data-md-scrollfix>
+                  <li class="md-nav__item">
+                    <a class="md-nav__link custom_link" href="https://bunpro.jp/dashboard" style="color: #4051b5">
+                      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.329.329 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99L.3 17.615zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.726l-13.675 7.896a.329.329 0 0 1-.33 0L.19 8.963zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54-5.91 3.41zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25zM24 9.845 10.325 17.74a.329.329 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2V9.844z"></path></svg>
+                      </span>
+                      Bunpro
+                      </a>
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a class="md-nav__link custom_link" href="https://app.todoist.com/app/inbox" style="color: #4051b5">
+                      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.329.329 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99L.3 17.615zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.726l-13.675 7.896a.329.329 0 0 1-.33 0L.19 8.963zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54-5.91 3.41zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25zM24 9.845 10.325 17.74a.329.329 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2V9.844z"></path></svg>
+                      </span>
+                      Todoist
+                      </a>
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a class="md-nav__link custom_link" href="https://docs.google.com/spreadsheets/d/1tQHYlgy6ryYvr8YvEoy1IstR236tKlsZu6JAJiFWRuI/edit?gid=2077835138#gid=2077835138" style="color: #4051b5">
+                      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.329.329 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99L.3 17.615zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.726l-13.675 7.896a.329.329 0 0 1-.33 0L.19 8.963zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54-5.91 3.41zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25zM24 9.845 10.325 17.74a.329.329 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2V9.844z"></path></svg>
+                      </span>
+                      Timesheet
+                      </a>
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a class="md-nav__link custom_link" href="https://uflorida-my.sharepoint.com/:x:/r/personal/dao_al_ufl_edu/_layouts/15/Doc.aspx?sourcedoc=%7BF32E0F9A-3A4A-4683-A9F8-D2DE816D4790%7D&amp;file=Timesheets%20(2).xlsx&amp;action=default&amp;mobileredirect=true&amp;DefaultItemOpen=1&amp;ct=1744368276283&amp;wdOrigin=OFFICECOM-WEB.MAIN.EDGEWORTH&amp;cid=0a84441e-b631-4f3d-887c-46a24f3b469a&amp;wdPreviousSessionSrc=HarmonyWeb&amp;wdPreviousSession=ba92e3f7-f779-44ec-bb1a-7b453a42b976" style="color: #4051b5">
+                      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.329.329 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99L.3 17.615zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.726l-13.675 7.896a.329.329 0 0 1-.33 0L.19 8.963zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54-5.91 3.41zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25zM24 9.845 10.325 17.74a.329.329 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2V9.844z"></path></svg>
+                      </span>
+                      Timesheet (2)
+                      </a>
+                  </li>
+
+                  <li class="md-nav__item">
+                    <a class="md-nav__link custom_link" href="https://jimaku.cc" style="color: #4051b5">
+                      <span class="twemoji">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.329.329 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99L.3 17.615zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.726l-13.675 7.896a.329.329 0 0 1-.33 0L.19 8.963zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54-5.91 3.41zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25zM24 9.845 10.325 17.74a.329.329 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2V9.844z"></path></svg>
+                      </span>
+                      Subtitles
+                      </a>
+                  </li>
+                  </ul> -->
+            </nav>
+        </div>
+    </div>
+</div>
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                   <h1 id="article-tags">Article Tags:</h1>
+<!-- use the :icon: format to get the html element which I'll copy from -->
+<div class="grid grid-smaller">
+  <a href="tech/nixos.html" class="card card-link deep-purple">
+  <!-- Took original icon and used ai to flip it -->
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Z M7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Z m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"></path></svg></span>
+    <b>Tech</b>
+    <hr style="margin-bottom: 16px">
+    Whatever I happen to learn along the way
+  </a>
+  <a href="stationary/index.html" class="card card-link brown">
+    <b>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.54 3.5 4.96 4.97-1.43 1.41-4.95-4.95 1.42-1.43M3.5 19.78l6.5-6.47c-.1-.31-.03-.7.23-.96.39-.39 1.03-.39 1.42 0 .39.4.39 1.03 0 1.42-.26.26-.65.33-.96.23l-6.47 6.5 10.61-3.55 3.53-6.36-4.94-4.95-6.37 3.53L3.5 19.78Z"></path></svg></span>
+      Stationaries</b>
+    <hr style="margin-bottom: 16px">
+    Fountain pens, Gunpla, and more
+  </a>
+  <a href="travels/index.html" class="card card-link green">
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 8h-6c-1.66 0-3 1.34-3 3v7c0 1.66 1.34 3 3 3l-1 1v1h1l2-2.03h2L20 23h1v-1l-1-1c1.66 0 3-1.34 3-3v-7c0-1.66-1.34-3-3-3m-6 11c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m1-3h-8v-6h8v6M6.66 14.53 7 17l-1.05 1.06-1.76-3.18L1 13.11l1.06-1.08 2.5.37 3.87-3.87L1 4.62l1.42-1.41 9.19 2.12 3.89-3.89c.56-.585 1.56-.585 2.12 0 .59.59.59 1.56 0 2.12L14.18 7H14c-2.21 0-4 1.79-4 4v.19l-3.34 3.34Z"></path></svg></span>
+    <b>Travels</b>
+    <hr style="margin-bottom: 16px">
+    Across America and Japan
+  </a>
+  <a href="about/index.html" class="card card-link blue-grey">
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.997.011c-1.79.015-3.452.397-4.968 1.093l.005-.002c3.638 2.026 6.955 5.634 8.932 8.241.398.534.753 1.006 1.078 1.434l.004-.019c.412-1.738-.313-5.239-1.518-7.331-.117-.203-.201-.379-.187-.392l.006.002.002-.007c.098.024 1.031.995 1.373 1.433.599.767.832 1.213 1.162 2.23.858 2.645 1.424 4.801 1.901 7.249.239 1.228.675 3.458.731 3.884.007.057-.009.128-.01.143a5.164 5.164 0 0 0-.29-.264c-.645-.568-1.924-1.417-3.183-2.114-1.57-.87-3.118-1.614-6.575-3.162-3.156-1.413-4.61-2.086-5.751-2.661l-1.024-.51c.12.301.249.624.399 1.005 0 0 1.933 1.08 2.174 1.408 0 0 2.322 4.367 3.353 6.955.767 1.949 1.634 4.264 2.155 4.904l.06.069c-1.026-.251-5.745-2.598-5.745-2.598-.518-4.399-1.969-9.61-3.855-14.94a7.259 7.259 0 0 1-.125-.271c.001-.015.141.121.311.303C4.313 8.13 8.368 9.98 12.675 10.775a16.48 16.48 0 0 0 3.533.223c-.307-.392-.64-.821-1.009-1.302-3.418-4.455-6.774-6.326-9.78-7.469-.079-.028-.154-.061-.231-.088A11.902 11.902 0 0 0 .669 8.071a11.97 11.97 0 0 0-.67 4.016l.003-.088c.033 5.018 3.129 9.616 8.052 11.33 1.335.465 2.696.68 4.032.67l-.088-.003c5.018-.033 9.616-3.129 11.33-8.052.465-1.335.68-2.696.67-4.032l-.003.088c-.033-5.018-3.129-9.616-8.052-11.33A11.966 11.966 0 0 0 11.911 0l.088.003zm6.133 6.11-.002.007c-.001 0 0 0 0 0l.002-.007c.531.511 1.376 1.503 2.336 2.062.789.99 1.216 1.963 1.748 2.629-.219-.188-1.111-.972-1.111-.972s-1.378-1.305-2.141-2.153c-.293-.326-.32-.38-.478-.628-.062-.097-.275-.825-.354-.935h-.001l.002-.007z"></path></svg></span>
+    <b>About/Resume</b>
+    <hr style="margin-bottom: 16px">
+    I use Emacs and NixOS btw
+  </a>
+</div>
+<h2 id="project-servers">Project Servers:</h2>
+<div class="grid grid-smaller">
+  <a href="https://saku.serralq.dev" class="card card-link light-blue">
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 14.5a.898.898 0 0 0-1 1c0 .67-1 .67-1 0v-2.3l1.7-.5c.72-.34 1.21-1.02 1.3-1.8C20.5 5.5 16.7 2 12 2s-8.5 3.5-8.5 8.9c.06.8.56 1.5 1.3 1.8l1.7.5v2.3a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5.898.898 0 0 0-1-1 .898.898 0 0 0-1 1A2.394 2.394 0 0 0 6 18c1.41.06 2.56-1.09 2.5-2.5v-1.8h1v5.7c0 .67-1 .67-1 0a.898.898 0 0 0-1-1 .898.898 0 0 0-1 1A2.4 2.4 0 0 0 9 22c1.41.06 2.56-1.09 2.5-2.5V14h1v5.5A2.394 2.394 0 0 0 15 22c1.41.06 2.56-1.09 2.5-2.5 0-1.33-2-1.33-2 0 0 .67-1 .67-1 0v-5.7h1v1.8c0 1.36 1.13 2.46 2.5 2.4 1.41.06 2.56-1.09 2.5-2.5a.898.898 0 0 0-1-1m-8.9-9.8A5.57 5.57 0 0 0 7 7.3c-.17.2-.5.27-.7.1a.507.507 0 0 1-.1-.7 6.9 6.9 0 0 1 4.2-3c.27-.02.51.15.6.4.06.27-.12.55-.4.6"></path></svg></span>
+    <b>Project Saku</b>
+    <hr style="margin-bottom: 16px">
+    Jellyfin Server for Media Streaming
+  </a>
+  <a href="https://tonda.serralq.dev/Public/" class="card card-link amber">
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 8-1.33.09C9.81 7.07 7.4 4.5 5 4.5c0 0-1.97 2.96-.04 6.91-.55.83-.89 1.26-.96 2.25l-1.93.29.21.98 1.76-.26.14.71-1.57.94.47.89 1.45-.89C5.68 18.76 8.59 20 12 20s6.32-1.24 7.47-3.68l1.45.89.47-.89-1.57-.94.14-.71 1.76.26.21-.98-1.93-.29c-.07-.99-.41-1.42-.96-2.25C20.97 7.46 19 4.5 19 4.5c-2.4 0-4.81 2.57-5.67 3.59zm-3 3a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m6 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-4 3h2l-.7 1.39c.2.64.76 1.11 1.45 1.11a1.5 1.5 0 0 0 1.5-1.5h.5a2 2 0 0 1-2 2c-.75 0-1.4-.41-1.75-1-.35.59-1 1-1.75 1a2 2 0 0 1-2-2h.5a1.5 1.5 0 0 0 1.5 1.5c.69 0 1.25-.47 1.45-1.11z"></path></svg></span>
+    <b>Project Tonda</b>
+    <hr style="margin-bottom: 16px">
+    Copyparty Server for File Sharing
+  </a>
+  <a href="https://noa.serralq.dev" class="card card-link red">
+   <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"></path></svg></span>
+    <b>Project Noa</b>
+    <hr style="margin-bottom: 16px">
+    Immich Server for Photo Viewing
+  </a>
+  <a href="https://roxy.serralq.dev" class="card card-link pink">
+    <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m64 400 85.7-208.2c17-41.3 47.8-75.3 87.2-96.3l146.9-78.3c12.3-6.6 26.5 4.7 23 18.2l-37.2 142.4c-1.1 4.1-1.6 8.3-1.6 12.6 0 6.3 1.2 12.6 3.6 18.5L448 400H240.9l11.8-35.4 40.4-13.5c6.5-2.2 10.9-8.3 10.9-15.2s-4.4-13-10.9-15.2l-40.4-13.5-13.5-40.4c-2.2-6.4-8.3-10.8-15.2-10.8s-13 4.4-15.2 10.9l-13.5 40.4-40.4 13.5c-6.5 2.2-10.9 8.3-10.9 15.2s4.4 13 10.9 15.2l40.4 13.5 11.8 35.4H64zm215.6-258.5c-1.1-3.3-4.1-5.5-7.6-5.5s-6.5 2.2-7.6 5.5l-6.7 20.2-20.2 6.7c-3.3 1.1-5.5 4.1-5.5 7.6s2.2 6.5 5.5 7.6l20.2 6.7 6.7 20.2c1.1 3.3 4.1 5.5 7.6 5.5s6.5-2.2 7.6-5.5l6.7-20.2 20.2-6.7c3.3-1.1 5.5-4.1 5.5-7.6s-2.2-6.5-5.5-7.6l-20.2-6.7zM32 448h448c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32"></path></svg></span>
+    <b>Project Roxy</b>
+    <hr style="margin-bottom: 16px">
+    DoomMacs Server for shared note system
+  </a>
+</div>
+
+<p>(Only works when the development server is up)</p>
+<h2 id="time-logs">Time Logs:</h2>
+<!-- Projects + Post Sections -->
+<details class="quote">
+<summary>(Warning: Light mode)</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><input id="__tabbed_1_6" name="__tabbed_1" type="radio"><input id="__tabbed_1_7" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Visual(26Q1)</label><label for="__tabbed_1_2">Visual(25Q4)</label><label for="__tabbed_1_3">Visual(25Q3)</label><label for="__tabbed_1_4">Visual(25Q2)</label><label for="__tabbed_1_5">Visual(25Q1)</label><label for="__tabbed_1_6">Visual(24Q4)</label><label for="__tabbed_1_7">Visual (24Q3)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><iframe width="760" height="380" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubchart?oid=1118861380&amp;format=interactive"></iframe>
+</p><div style="width: 200%; height: 350px;">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTYWKfdC4tmViTQrKmYsMzdLZ3zz3znisICGPR681QxazRzx-ubClnYANn0GrwaN6ncMjWzgD6V7FaY/pubhtml?widget=true&amp;headers=false" style="width: 85%; height: 600px; transform: scale(0.58); transform-origin: 0 0; "></iframe>
+</div><p></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./spreadsheet/25Q4.svg"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./spreadsheet/25Q3.svg"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./spreadsheet/25Q2.svg"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./spreadsheet/25Q1.svg"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./spreadsheet/24Q4.svg"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./spreadsheet/24Q3.svg"></a></p>
+</div>
+</div>
+</div>
+</details>
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+
+        <!-- Link to previous page -->
+        
+
+        <!-- Link to next page -->
+        
+        
+        <a href="tech/nixos.html" class="md-footer__link md-footer__link--next" aria-label="Next: Why use NixOS">
+            <div class="md-footer__title">
+                <span class="md-footer__direction">
+                    Next
+                </span>
+                <div class="md-ellipsis">
+                    Why use NixOS
+                </div>
+            </div>
+            <div class="md-footer__button md-icon" style="color: var(--md-primary-fg-color) !important;">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+        </a>
+        
+    </nav>
+    
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.tracking", "navigation.footer", "navigation.indexes", "navigation.expand", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="javascripts/extra.js"></script>
+      
+        <script src="javascripts/highlight.js"></script>
+      
+    
+  
+<script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

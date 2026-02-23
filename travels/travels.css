@@ -1,0 +1,33 @@
+.row {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 450px) {
+    .row {
+        flex-wrap: wrap;
+    }
+}
+
+img {
+    max-height: 250px !important;
+}
+
+figure.inline {
+    float: left;
+    margin-right: 10px !important;
+}
+
+figure {
+    margin: 0px auto !important;
+}
+figcaption {
+    margin: 0.25em auto 0.25em !important;
+}
+iframe {
+    width: 640px;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+}
