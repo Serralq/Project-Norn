@@ -31,10 +31,10 @@ hide:
     <b>Github</b>
   </a>
 </div>
-## Resume, as of July, 2025
-<iframe 
-  src="./resume.pdf" 
-  width="100%" 
+## Resume, as of Oct, 2026
+<iframe
+  src="./resume.pdf"
+  width="100%"
   style="height: calc(100vw * 0.714); border: none;"
   type="application/pdf">
 </iframe>
