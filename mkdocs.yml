@@ -109,8 +109,8 @@ nav:
             # TODO add image portfolio
           - US Portfolio:
                 - US Scenery
-    - About/Resume:
-          - About/Resume: about/index.md
+    - whoami:
+          - whoami: about/index.md
           - Why Bother Writing: about/about.md
           - Argumentative Zettelkasten: about/zettlr.md
           - As a CS student: about/degree.md
