@@ -109,6 +109,7 @@ nav:
             # TODO add image portfolio
           - US Portfolio:
                 - US Scenery
+          - Notes: travels/notes.md
     - whoami:
           - whoami: about/index.md
           - Why Bother Writing: about/about.md
