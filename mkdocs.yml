@@ -96,6 +96,8 @@ nav:
           # - tech/Tech.md # Until another page, make the index the singular page
           - Why use NixOS: tech/nixos.md
           - Network Proxy Basics: tech/proxy.md
+          - Notes:
+                - Code: tech/notes/code.md
     - Stationaries:
           - Stationaries: stationary/index.md
     - Travels:
