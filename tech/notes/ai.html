@@ -1,0 +1,3422 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Serralq's personal blog">
+      
+      
+        <meta name="author" content="Serralq">
+      
+      
+        <link rel="canonical" href="https://serralq.dev/tech/notes/ai.html">
+      
+      
+        <link rel="prev" href="code.html">
+      
+      
+        <link rel="next" href="../../stationary/index.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+     
+<title>AI</title>
+ 
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.217acf6a.css">
+        <style>:root{--md-text-font:"JetBrains Mono";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI - Project Norn">
+<meta property="og:description" content="Serralq's personal blog">
+<meta property="og:image" content="https://serralq.dev/assets/images/social/tech/notes/ai.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://serralq.dev/tech/notes/ai.html">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="AI - Project Norn">
+<meta property="twitter:description" content="Serralq's personal blog">
+<meta property="twitter:image" content="https://serralq.dev/assets/images/social/tech/notes/ai.png">
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#channel-list" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to configuration -->
+
+
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="header.title">
+
+        <!-- Link to home -->
+        <a href="../../index.html" title="Project Norn" class="md-header__button md-logo" aria-label="Project Norn" data-md-component="logo">
+            
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.33.33 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.727l-13.675 7.895a.33.33 0 0 1-.33 0zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25M24 9.845 10.325 17.74a.33.33 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2z"></path></svg>
+
+        </a>
+
+        <!-- Button to open drawer -->
+        <label class="md-header__button md-icon" for="__drawer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+        </label>
+
+        <!-- Header title -->
+        <div class="md-header__title">
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Project Norn
+                    </span>
+                </div>
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        
+                        AI
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color palette -->
+        
+
+        <!-- Site language selector -->
+        
+
+        <!-- Button to open search modal -->
+        
+
+        <!-- Repository information -->
+        
+    </nav>
+
+    <!-- Navigation tabs (sticky) -->
+    
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../nixos.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tech
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stationary/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Stationaries
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../travels/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Travels
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  whoami
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Project Norn" class="md-nav__button md-logo" aria-label="Project Norn" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.301 17.615c-.13-.34-.522-1.512-.133-2.432l9.827 5.674a.33.33 0 0 0 .33 0L24 12.962v2.354l-13.84 7.99zm-.11-8.652c-.288.877.015 2.058.124 2.426l9.845 5.684L24 9.083V6.727l-13.675 7.895a.33.33 0 0 1-.33 0zm13.17-1.936a.332.332 0 0 1-.485-.207l-.28-1.133-2.126-.176a.33.33 0 0 1-.138-.614l5.578-3.22-1.702-.983-13.51 7.8 9.462 5.462 13.51-7.8-4.4-2.54zm-.182-1.729.232.938 5.198-3.001-2.04-1.178-4.993 2.884 1.31.108a.33.33 0 0 1 .293.25M24 9.845 10.325 17.74a.33.33 0 0 1-.33 0L.168 12.067c-.39.919.003 2.091.133 2.43l9.859 5.693L24 12.2z"></path></svg>
+
+    </a>
+    Project Norn
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nixos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why use NixOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proxy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Proxy Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="code.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ai.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#channel-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory-three-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theory: three parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Theory: three parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-just-test-out-and-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models: just test out and try
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Models: just test out and try">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#black-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Black box
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviews
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptions-hermes-as-reference-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscriptions / hermes as reference list /
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harnesses-opencode-go-as-reference-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harnesses / opencode go as reference list /
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goal-iff-humans-or-non-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal-&gt;IFF: humans OR non-Defaults
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal-&gt;IFF: humans OR non-Defaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limits-subset-of-futureme-can-do-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits: subset of future/me can do (+Internet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-opencode-top-list-as-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills / opencode top list as reference /
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-long-session-worse-memory-so-sessionnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context: Long session -&gt; worse memory, so session::new
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context: Long session -&gt; worse memory, so session::new">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tui
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-workflow-as-of-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Code) Workflow, as of now
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Code) Workflow, as of now">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Struct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular Interfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Singular Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-app-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model / App List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inline-ver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-chat-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full-chat-ver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-session-tui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular session: TUI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-facing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User facing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-session-burn-tokens-instead-of-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi session: Burn tokens instead of thinking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi session: Burn tokens instead of thinking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worktree-1-per-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worktree (1 per session)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-guit3code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default: GUI/T3Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workmux-local-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workmux: local sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-agents-summarize-their-context-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Agents =&gt; Summarize their context windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-understanding-merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Understanding / Merging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-only-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (AI-only) Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failures-any-time-it-isnt-one-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failures (any time it isn’t one shot)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failures (any time it isn’t one shot)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opencode-specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opencode specifics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-use-cases-and-impl-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular USE-cases and IMPL details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nextapplications-mcpapi-can-describe-but-cant-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next/Applications =&gt; MCP/API + (can describe, but can’t program)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next/Applications =&gt; MCP/API + (can describe, but can’t program)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nornvolatile-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Norn/“Volatile env”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-technical-non-devs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copy technical non-devs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-api-tool-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing API / Tool calls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-recall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Recall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-mimic-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI mimic character
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI mimic character">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-mare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Mare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-wikipedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ai code wikipedia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#petg-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Petg tracker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-use-github-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video-Use github page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#better-browser-automation-plug-and-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Better browser automation / Plug and play
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-jailbreak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini-Jailbreak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glasses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glasses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendar-like-the-new-york-subway-arrival-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calendar like the New York Subway arrival board
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-control-in-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version control in IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-ai-in-the-wild-andor-within-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding AI in the wild (and/or within assignments)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../stationary/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stationaries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stationaries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../travels/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Travels
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Travels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../travels/visualnovelstores.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VN Stores in Japan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Japan Portfolio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Japan Portfolio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../travels/atri.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATRI: My Dear Moments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../travels/cafestella.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Café Stella and the Reapers' Butterflies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../travels/hoshizora.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoshizora No Memoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    US Portfolio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    US Portfolio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../US Scenery" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../travels/notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../about/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    whoami
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    whoami
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Bother Writing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/zettlr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Argumentative Zettelkasten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/degree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    As a CS student
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/organization.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Universal Organizational
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/hw.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hw
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#channel-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory-three-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theory: three parts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Theory: three parts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models-just-test-out-and-try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models: just test out and try
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Models: just test out and try">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#black-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Black box
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviews
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriptions-hermes-as-reference-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscriptions / hermes as reference list /
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harnesses-opencode-go-as-reference-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harnesses / opencode go as reference list /
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goal-iff-humans-or-non-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal-&gt;IFF: humans OR non-Defaults
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal-&gt;IFF: humans OR non-Defaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limits-subset-of-futureme-can-do-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits: subset of future/me can do (+Internet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-opencode-top-list-as-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills / opencode top list as reference /
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-long-session-worse-memory-so-sessionnew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context: Long session -&gt; worse memory, so session::new
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context: Long session -&gt; worse memory, so session::new">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tui
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-workflow-as-of-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Code) Workflow, as of now
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Code) Workflow, as of now">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Struct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular Interfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Singular Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-app-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model / App List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inline-ver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-chat-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full-chat-ver
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singular-session-tui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Singular session: TUI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-facing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User facing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-session-burn-tokens-instead-of-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi session: Burn tokens instead of thinking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi session: Burn tokens instead of thinking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worktree-1-per-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worktree (1 per session)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-guit3code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default: GUI/T3Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workmux-local-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workmux: local sessions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-agents-summarize-their-context-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Agents =&gt; Summarize their context windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-understanding-merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Understanding / Merging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-only-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (AI-only) Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failures-any-time-it-isnt-one-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failures (any time it isn’t one shot)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failures (any time it isn’t one shot)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opencode-specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opencode specifics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-use-cases-and-impl-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular USE-cases and IMPL details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nextapplications-mcpapi-can-describe-but-cant-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next/Applications =&gt; MCP/API + (can describe, but can’t program)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Next/Applications =&gt; MCP/API + (can describe, but can’t program)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nornvolatile-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Norn/“Volatile env”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-technical-non-devs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copy technical non-devs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-api-tool-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing API / Tool calls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-recall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Recall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-mimic-character" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI mimic character
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI mimic character">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-mare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Mare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-wikipedia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ai code wikipedia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#petg-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Petg tracker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-use-github-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video-Use github page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#better-browser-automation-plug-and-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Better browser automation / Plug and play
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mini-jailbreak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mini-Jailbreak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glasses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glasses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendar-like-the-new-york-subway-arrival-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calendar like the New York Subway arrival board
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-control-in-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version control in IDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-ai-in-the-wild-andor-within-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding AI in the wild (and/or within assignments)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                   <div class="admonition warning">
+<p class="admonition-title">Internal Notes</p>
+<p>1) This is my own internal notes optimized for my own travel creation process and not explaining my travel system for an audience.</p>
+<p>2) This is a markdown export of my own org docs with a custom doom emacs instance as renderer, so the cannonical formatting that I see will be different than the markdown version you see.</p>
+<p>3) There will be broken links and other issues.</p>
+</div>
+<h2 id="channel-list">Channel List</h2>
+<p><a href="../authors.md">T3 Theo</a>
+<a href="../authors.md">Ben Davis(AI)</a></p>
+<h2 id="theory-three-parts">Theory: three parts</h2>
+<ul>
+<li>LLM: as internet knows</li>
+<li>Context: ¬(as internt knows)</li>
+<li>Goal / Taste: to start, to go above avg
+    Eg: like engineer</li>
+</ul>
+<h3 id="models-just-test-out-and-try">Models: just test out and try</h3>
+<ul>
+<li>Effort levels</li>
+<li>Multi-media: if possible, but costly
+    may try to have a summarizer subagent</li>
+<li>Usage limits
+    Tool limits</li>
+</ul>
+<h4 id="black-box">Black box</h4>
+<p>may need to try to explore this black box w/ different prompts</p>
+<h4 id="reviews">Reviews</h4>
+<p>split into tiers and by subscription</p>
+<ul>
+<li>Grok 4.1: ass</li>
+<li>Deepseek V4: Perfectly fine</li>
+<li>GLM 5.2: Perfectly fine</li>
+<li>Kimi 2.7: Perfectly fine</li>
+<li>Open Ai 5.5: Perfectly fine</li>
+<li>Claude 4.8: Perfectly fine</li>
+<li>Gemini subscription: Just for searches</li>
+</ul>
+<h4 id="subscriptions-hermes-as-reference-list">Subscriptions <em>/ hermes as reference list /</em></h4>
+<p>Use what’s reputable for now since it’s always changing:</p>
+<ul>
+<li>Claude: High (claude code only)</li>
+<li>Codex: Fast</li>
+<li>Opencode GO: Cheap (just a deepseek wrapper for cost benefits)</li>
+<li>Nous Research: All in one ai agents tool calls</li>
+</ul>
+<h4 id="harnesses-opencode-go-as-reference-list">Harnesses <em>/ opencode go as reference list /</em></h4>
+<h3 id="goal-iff-humans-or-non-defaults">Goal-&gt;IFF: humans OR non-Defaults</h3>
+<ul>
+<li>Task prompt</li>
+<li>Chat history + prev local/CLAUDE.md</li>
+<li>Instruction/Identify prompt, “as a <span class="underline">_</span>”<ul>
+<li>Tool prompt = skills.md, over time</li>
+</ul>
+</li>
+<li>Global prompt via global/CLAUDE.md</li>
+</ul>
+<h4 id="limits-subset-of-futureme-can-do-internet">Limits: subset of future/me can do (+Internet)</h4>
+<p>Must check <em>/ via git diff /</em></p>
+<h4 id="prompts">Prompts</h4>
+<ul>
+<li>I am about to paste my <material>. Tell me when you are done reading it.</material></li>
+<li>Act as a <role>, based on my <material>, <questions></questions></material></role></li>
+<li>
+<p>Details like: Detail, Task, Goal, Steps, Constraint, Format</p>
+</li>
+<li>
+<p>Claude.md: tell to add this itself</p>
+<ul>
+<li>Frequent: to not repeat myself
+    how to start
+    hard rules</li>
+</ul>
+</li>
+<li>
+<p>Example: <a href="https://github.com/Bad3r/nixos/blob/main/.agents/dendrite.md">PLAN.md</a></p>
+</li>
+</ul>
+<h4 id="skills-opencode-top-list-as-reference">Skills <em>/ opencode top list as reference /</em></h4>
+<p>[ only if I repeat, and want to copy ] =&gt;
+  another person’s pre made USE-case / inputs
+Repo’s:</p>
+<ul>
+<li><a href="https://github.com/t3dotgg/tstack">https://github.com/t3dotgg/tstack</a></li>
+<li><a href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a></li>
+<li><a href="https://www.youtube.com/watch?v=TpYBwkhy9JY">https://www.youtube.com/watch?v=TpYBwkhy9JY</a></li>
+</ul>
+<h3 id="context-long-session-worse-memory-so-sessionnew">Context: Long session -&gt; worse memory, so session::new</h3>
+<h4 id="tui">Tui</h4>
+<ul>
+<li>AI<ul>
+<li>Planning<ul>
+<li>Subagents</li>
+</ul>
+</li>
+<li>Auto<ul>
+<li>Compaction (local)</li>
+<li>Memory + Dream (global)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Tools</p>
+<ul>
+<li>Requieres definitions: some major ones<ul>
+<li>Bash: to allow for it to choose files</li>
+<li>Lsp: whenever possible</li>
+<li>Browser</li>
+</ul>
+</li>
+<li>Hooks: auto tooling</li>
+<li>MCP design: universal design<ul>
+<li>New standard: use login cmd -&gt; auth in browser
+    instead of manual token passing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>-&gt; Exa vs. Gptel.el(connector)</p>
+<p>Per/trends: Prebuilt w/ extra hooks such as
+  longer tasks
+  auto compact
+  auto sub agents</p>
+</li>
+</ul>
+<h2 id="code-workflow-as-of-now">(Code) Workflow, as of now</h2>
+<ol>
+<li>minimum add tool def, project skeleton</li>
+<li>then just do stuff / plan</li>
+<li>fastest model til too hard</li>
+<li>parrallel if possible, notification when done</li>
+<li>compact if want to notes for future repeated use</li>
+</ol>
+<h3 id="prompts_1">Prompts</h3>
+<h4 id="struct">Struct</h4>
+<ul>
+<li>What I want</li>
+<li>Define done</li>
+<li>When to stop and ask<ul>
+<li>Give it a way out</li>
+</ul>
+</li>
+<li>What I currently know + Confidence</li>
+<li>Copy <x></x></li>
+</ul>
+<h4 id="meta-data">Meta Data</h4>
+<p>Type what you want instead of clicking buttons like changing models
+Use voice dictation</p>
+<h3 id="singular-interfaces">Singular Interfaces</h3>
+<h4 id="model-app-list">Model / App List</h4>
+<ol>
+<li>
+<p>Previous</p>
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left"></colgroup>
+<colgroup><col class="org-left"></colgroup>
+<colgroup><col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Methods</th>
+<th scope="col" class="org-left">Via</th>
+<th scope="col" class="org-left">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Chat only</td>
+<td class="org-left">Gemini, Claude, T3</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">- Multi-modal chats</td>
+<td class="org-left">Codex, GPT.el</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">- Voice</td>
+<td class="org-left">OpenRouter</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">Inline completion++</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">Aidermacs</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">GPT.el</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">Tab complete</td>
+<td class="org-left">Jetbrains, ???</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">Single Session</td>
+<td class="org-left">Opencode</td>
+<td class="org-left">as it was trained for</td>
+</tr>
+<tr>
+<td class="org-left">- With test cases</td>
+<td class="org-left">Claude</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">- Create rules</td>
+<td class="org-left">Codex</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+<tr>
+<td class="org-left">Indepenedent Agent</td>
+<td class="org-left">Openclaw?</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+</tbody>
+</table><p></p>
+</li>
+<li>
+<p>As of Oct 2026</p>
+<p>Deepseek for more AI (aka background default)
+OpenAI for when I am waiting
+Claude for when OpenAI fails</p>
+</li>
+<li>
+<p>Based on floor and not ceiling</p>
+<p>If can allow for high floor = can go longer without failure
+Length of run is more powerful than actual intelligence</p>
+</li>
+</ol>
+<h4 id="inline-ver">Inline-ver</h4>
+<ul>
+<li>(treesitter) highlight =&gt; overlay</li>
+<li>“+” for more definitions</li>
+</ul>
+<h4 id="full-chat-ver">Full-chat-ver</h4>
+<ol>
+<li>Narrow buffer / :GPTEL<sub>TOPIC</sub>:</li>
+<li>
+<p>Send at point</p>
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left"></colgroup>
+<colgroup><col class="org-left"></colgroup>
+<colgroup><col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Input</th>
+<th scope="col" class="org-left">&nbsp;</th>
+<th scope="col" class="org-left">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">minibuffer</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">echo</td>
+</tr>
+<tr>
+<td class="org-left">session</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">session</td>
+</tr>
+<tr>
+<td class="org-left">file</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">file</td>
+</tr>
+</tbody>
+</table><p></p>
+</li>
+<li>
+<p>TODO Options, mix and match</p>
+<ul>
+<li>File/Image attach as txt</li>
+<li>Tags for which side of the ai prompt <img alt="🇦🇮" class="twemoji" src="../../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1e6-1f1ee.svg" title=":ai:"> or :user:</li>
+<li>Fixing gptel abort / when fails</li>
+</ul>
+</li>
+</ol>
+<h4 id="singular-session-tui">Singular session: TUI</h4>
+<ol>
+<li>
+<p>Custom cmds -&gt; Shortcuts</p>
+<ol>
+<li>
+<p>New project</p>
+<p>/init
+/ide
+/memory</p>
+</li>
+<li>
+<p>General memory</p>
+<p>/clear
+/compact
+/resume
+/rewind
+/context, /cost
+/effort, /model</p>
+</li>
+<li>
+<p>Github</p>
+<p>/review
+/security-review
+/simplify
+/undo, /diff, /commit, /pr</p>
+</li>
+</ol>
+</li>
+<li>
+<p>File only</p>
+<ul>
+<li>Worktree: multiple at a time, one agent per</li>
+<li>Permissions: optimize later<ul>
+<li>Review modes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Hooks</p>
+<ul>
+<li>Hooks: over time
+    Trigger: question / done
+    Context: branch / bookmark / folder name</li>
+</ul>
+</li>
+<li>
+<p>TODO Next hooks</p>
+<p>Next hooks:</p>
+<ul>
+<li>formatter</li>
+<li>test cases</li>
+<li>notification for questions</li>
+<li>Using sem for semantic git change logs</li>
+</ul>
+</li>
+</ol>
+<h4 id="user-facing">User facing</h4>
+<ul>
+<li>Will be API Pricing</li>
+<li>try Jev / decision models</li>
+</ul>
+<h3 id="multi-session-burn-tokens-instead-of-thinking">Multi session: Burn tokens instead of thinking</h3>
+<h4 id="worktree-1-per-session">Worktree (1 per session)</h4>
+<h4 id="default-guit3code">Default: GUI/T3Code</h4>
+<p>Just treat as inbox</p>
+<ol>
+<li>
+<p>General Kanban Board =&gt; Todoist</p>
+<p>If multi repeated stages</p>
+</li>
+</ol>
+<h4 id="workmux-local-sessions">Workmux: local sessions</h4>
+<p>Only after stable jj support
+Worktree whitelist of copy</p>
+<h4 id="canary">Canary</h4>
+<p>to check if it is following attention, context window isn’t too big
+then to ask it for a simple instruction to check</p>
+<h4 id="ai-agents-summarize-their-context-windows">AI Agents =&gt; Summarize their context windows</h4>
+<p><em>/ Other sections, when to use agents, here how to use agents /</em>
+Team:  Different goals
+Swarm: Repeat the same goals</p>
+<ol>
+<li>
+<p>As “team members”</p>
+<p>Copy these adaptations:</p>
+<ul>
+<li>Notification</li>
+<li>Inbox OR Kanban Board</li>
+</ul>
+</li>
+<li>
+<p>Best of N</p>
+<p>To brute force a solution</p>
+</li>
+<li>
+<p>Allow for exploration of wacky ideas</p>
+</li>
+</ol>
+<h4 id="loops">Loops</h4>
+<ol>
+<li>
+<p>Code Test / Reviewer</p>
+<p>Me:</p>
+<ul>
+<li>To give inline comments</li>
+</ul>
+<p>Ai:</p>
+<ul>
+<li>Allow for other models to review</li>
+<li>Allow it to validate itself</li>
+</ul>
+<p>Code:</p>
+<ul>
+<li>Give measurable tests, never allow regressions</li>
+<li>Make it cheap, have downloadable versions</li>
+</ul>
+</li>
+<li>
+<p>Goals</p>
+<p>To just go for it</p>
+</li>
+</ol>
+<h4 id="system-understanding-merging">System Understanding / Merging</h4>
+<ol>
+<li>
+<p>Intentions</p>
+<p>Baked into commit message and tests</p>
+</li>
+<li>
+<p>For Both</p>
+<p>Seperate API and Implementation
+Tiers of Importance</p>
+</li>
+<li>
+<p>For AI</p>
+<p>Treat as fresh employee</p>
+</li>
+<li>
+<p>For Self / Feature Flags</p>
+<p>Make assumptions and run with them
+Make fixes cheap + prev/testings+demo</p>
+<ul>
+<li>Feature flags</li>
+</ul>
+</li>
+</ol>
+<h4 id="ai-only-outputs">(AI-only) Outputs</h4>
+<p>sometimes best if interactive
+List to plug in for interactive:</p>
+<ul>
+<li>Trek</li>
+</ul>
+<p>List to copy from:</p>
+<ul>
+<li>
+<p><a href="https://vimjoyer.com/nixmap/">https://vimjoyer.com/nixmap/</a></p>
+</li>
+<li>
+<p>Scripting Tiers</p>
+<ol>
+<li>Me such as Auth</li>
+<li>Interactive (for AI)</li>
+<li>Programatically reproducable</li>
+</ol>
+</li>
+</ul>
+<h3 id="failures-any-time-it-isnt-one-shot">Failures (any time it isn’t one shot)</h3>
+<ul>
+<li>Need to plan and imagine more</li>
+<li>Add to skill to not repeat</li>
+<li>Find the red case and green case to find the border</li>
+</ul>
+<h4 id="opencode-specifics">Opencode specifics</h4>
+<p>Do a simple hello world to check if functioning
+If trying to jailbreak will also force it to hang</p>
+<h3 id="future-steps">Future Steps</h3>
+<ul>
+<li>First try with better ver,
+    Second ask for debug methods
+    then try with multiple ver at once
+    final try with multiple ver for debugs</li>
+<li>Any fail (fail to answer / fail to compile)
+    =&gt; Break it down: til can prompt with correct context / do it myself</li>
+<li>Check assumptions (within prompt)</li>
+<li>Assume to be lying: fix via:
+    Verify by me
+           by another src
+           by another ai</li>
+</ul>
+<h2 id="regular-use-cases-and-impl-details">Regular USE-cases and IMPL details</h2>
+<ul>
+<li>Like a human teacher to talk to, and hear explanation<ul>
+<li>Give examples</li>
+</ul>
+</li>
+<li>Cleaning data</li>
+<li>To find src, try deep research mode<ul>
+<li>Include documents like NotebookLLM<ul>
+<li>May require using chrome for pdf uploads</li>
+</ul>
+</li>
+<li><a href="https://elicit.com">https://elicit.com</a></li>
+<li><a href="https://www.perplexity.ai/">https://www.perplexity.ai/</a></li>
+<li><a href="https://scite.ai">https://scite.ai</a></li>
+<li>Gemini</li>
+<li>Ragi</li>
+</ul>
+</li>
+<li>to find the word for …</li>
+<li>To search sources in another language</li>
+<li>to be faster, by summarizing  w/ link and sources<ul>
+<li>To avoid sponsor info</li>
+<li>Due to possible missing details</li>
+<li><a href="https://www.prompthub.us/blog/better-summarization-with-chain-of-density-prompting">https://www.prompthub.us/blog/better-summarization-with-chain-of-density-prompting</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="nextapplications-mcpapi-can-describe-but-cant-program">Next/Applications =&gt; MCP/API + (can describe, but can’t program)</h2>
+<ul>
+<li>Yt subscription
+    Define category
+    Allow to sort into category
+    Check for correct nums
+    Check for correct sort (easier than sorting)</li>
+</ul>
+<h3 id="nornvolatile-env"><a href="../Norn.md">Norn</a>/“Volatile env”</h3>
+<p>Logs:</p>
+<ul>
+<li>Aug 2026
+    not perfect for complete web searches
+    table formatting (openai only)</li>
+</ul>
+<h3 id="copy-technical-non-devs">Copy technical non-devs</h3>
+<h3 id="missing-api-tool-calls">Missing API / Tool calls</h3>
+<p>x ai</p>
+<h3 id="local-recall">Local Recall</h3>
+<p>similar to Microsoft’s but with mine once ai is more efficient</p>
+<h3 id="ai-mimic-character">AI mimic character</h3>
+<ul>
+<li>Eleven labs / <a href="https://youtu.be/dQ841Pd6YvQ?si=oDjcw8gowAIvqHqd">Open src ver</a></li>
+<li>Character ai</li>
+</ul>
+<h4 id="ai-mare">AI <a href="https://x.com/kasasagiproject/status/1878372852841209991?t=6I0wqb71_FMIJTATFyZ98Q&amp;s=19">Mare</a></h4>
+<h3 id="ai-code-wikipedia">Ai code wikipedia</h3>
+<p>via deep wiki, maybe in future another better one will come</p>
+<h3 id="petg-tracker">Petg tracker</h3>
+<p>from manual typing on pc
+to   describing on phone</p>
+<h3 id="video-use-github-page"><a href="https://github.com/browser-use/video-use">Video-Use github page</a></h3>
+<h3 id="better-browser-automation-plug-and-play">Better browser automation / Plug and play</h3>
+<p>using hermes ai
+requires decent ai to know what it is doing</p>
+<h3 id="mini-jailbreak">Mini-Jailbreak</h3>
+<ul>
+<li>ask to fix code instead of search for vulnerability</li>
+<li>claim is for research</li>
+</ul>
+<h3 id="glasses">Glasses</h3>
+<p>Only if they get better</p>
+<h3 id="calendar-like-the-new-york-subway-arrival-board">Calendar like the New York Subway arrival board</h3>
+<h3 id="version-control-in-ide">Version control in IDE</h3>
+<ul>
+<li>To allow for a selection of text</li>
+<li>Auto splits, previews</li>
+<li>Then commit into a child commit with message</li>
+</ul>
+<h2 id="finding-ai-in-the-wild-andor-within-assignments">Finding AI in the wild (and/or within assignments)</h2>
+<ul>
+<li>Not x, it is x</li>
+<li>Emoji in README</li>
+<li>em-dash</li>
+<li>hooks to ping the professor</li>
+<li>white text</li>
+</ul>
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+
+        <!-- Link to previous page -->
+        
+        
+        <a href="code.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Code">
+            <!-- Has this style override since locally it is applied but on gh pages it is not -->
+            <div class="md-footer__button md-icon" style="color: var(--md-primary-fg-color) !important;">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+                <span class="md-footer__direction">
+                    Previous
+                </span>
+                <div class="md-ellipsis">
+                    Code
+                </div>
+            </div>
+        </a>
+        
+
+        <!-- Link to next page -->
+        
+        
+        <a href="../../stationary/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Stationaries">
+            <div class="md-footer__title">
+                <span class="md-footer__direction">
+                    Next
+                </span>
+                <div class="md-ellipsis">
+                    Stationaries
+                </div>
+            </div>
+            <div class="md-footer__button md-icon" style="color: var(--md-primary-fg-color) !important;">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+        </a>
+        
+    </nav>
+    
+
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid custom-footer-grid">
+            <div class="footer-content-wrapper">
+
+                <div class="footer-author">
+                    <a href="../../index.html" class="footer-link">
+                        Serralq
+                    </a>
+                </div>
+
+                <div class="footer-separator"></div>
+
+                <div class="footer-socials">
+                    <span class="footer-label">Blog Tags:</span>
+                    <a href="../nixos.html" class="footer-link">
+                        Tech
+                    </a>
+                    <a href="../../stationary/index.html" class="footer-link">
+                        Stationary
+                    </a>
+                    <a href="../../travels/index.html" class="footer-link">
+                        Travels
+                    </a>
+                    <a href="../../about/index.html" class="footer-link">
+                        whoami
+                    </a>
+                </div>
+
+                <div class="footer-separator"></div>
+
+                <div class="footer-socials">
+                    <span class="footer-label">Projects:</span>
+                    <a href="https://saku.serralq.dev" class="footer-link">
+                        Saku
+                    </a>
+                    <a href="https://tonda.serralq.dev/Public/" class="footer-link">
+                        Tonda
+                    </a>
+                    <a href="https://noa.serralq.dev" class="footer-link">
+                        Noa
+                    </a>
+                    <a href="https://roxy.serralq.dev" class="footer-link">
+                        Roxy
+                    </a>
+                </div>
+
+                <div class="footer-separator"></div>
+
+                <div class="footer-socials">
+                    <a href="https://x.com/Serralq" class="footer-link">
+                        <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23">
+                                </path>
+                            </svg></span>
+                    </a>
+
+                    <a href="https://www.instagram.com/serral.q/" class="footer-link">
+                        <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                                <path d="M194.4 211.7a53.3 53.3 0 1 0 59.2 88.6 53.3 53.3 0 1 0-59.2-88.6m142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12-18.1-7.1-57.6-6.8-83.1-6.5-4.1 0-7.9.1-11.2.1s-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2 0 4.1.1 7.9.1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2 2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5 4.1 0 7.9-.1 11.2-.1s7.2 0 11.4.1c25.5.3 64.8.7 82.9-6.5 6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83 0-4.2-.1-8.1-.1-11.4s0-7.1.1-11.4c.3-25.5.7-64.9-6.5-83-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5c18.1 12.1 30.6 30.9 34.9 52.2s-.2 43.5-12.3 61.6c-6 9-13.7 16.6-22.6 22.6s-19 10.1-29.6 12.2c-21.3 4.2-43.5-.2-61.6-12.3s-30.6-30.9-34.9-52.2.2-43.5 12.2-61.6 30.9-30.6 52.2-34.9 43.5.2 61.6 12.2h.1zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1 2.6-7.1 5.2-9.8 6.1-4.5 9.8-5.2 7.6-.4 11.1 1.1 6.5 3.9 8.6 7 3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2-3.9 3.2-6.2 4.2-4.8 1.5-7.3 1.5c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64zm-91 293c-18.7 18.7-41.4 24.6-67 25.9-26.4 1.5-105.6 1.5-132 0-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132 1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0 25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9-1.3 25.6-7.1 48.3-25.8 67z">
+                                </path>
+                            </svg></span>
+                    </a>
+                    <a href="https://line.me/ti/p/CCnSmBkfWM" class="footer-link">
+                        <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M19.365 9.863a.631.631 0 0 1 0 1.261H17.61v1.125h1.755a.63.63 0 1 1 0 1.259h-2.386a.63.63 0 0 1-.627-.629V8.108c0-.345.282-.63.63-.63h2.386a.63.63 0 0 1-.003 1.26H17.61v1.125zm-3.855 3.016a.63.63 0 0 1-.631.627.62.62 0 0 1-.51-.25l-2.443-3.317v2.94a.63.63 0 0 1-1.257 0V8.108a.627.627 0 0 1 .624-.628c.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63zm-5.741 0a.63.63 0 0 1-.631.629.63.63 0 0 1-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63zm-2.466.629H4.917a.634.634 0 0 1-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756a.63.63 0 0 1 0 1.259M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314">
+                                </path>
+                            </svg></span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/alexander-dao-b48524290/" class="footer-link">
+                        <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z">
+                                </path>
+                            </svg></span>
+                    </a>
+                    <a href="https://github.com/Serralq" class="footer-link">
+                        <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+                                </path>
+                            </svg></span>
+                    </a>
+                    <!-- <a href="mailto:yourname@example.com?subject=Project%20Inquiry&body=Hi%20Serralq,"
+                                            class="footer-link">
+                                            <span class="twemoji">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4-8 5-8-5V6l8 5 8-5z" />
+                                                </svg>
+                                            </span>
+                                        </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tracking", "navigation.footer", "navigation.indexes", "navigation.expand", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/highlight.js"></script>
+      
+    
+  
+<script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img) {
+            const imageSrc = img.dataset.src || img.src;
+            if (imageSrc) {
+                element.setAttribute('href', imageSrc);
+            } else {
+                console.log('No img element with src or data-src attribute found');
+            }
+        } else {
+            console.log('No img element found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
